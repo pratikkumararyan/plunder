@@ -1,0 +1,64 @@
+[gd_scene format=4 uid="uid://clk4ye50a5nt1"]
+
+[ext_resource type="Texture2D" uid="uid://crax6dxhjj0c3" path="res://Assets/personalAssets/tileset.png" id="1_o20dk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtyfn"]
+texture = ExtResource("1_o20dk")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1vivr"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_wtyfn")
+
+[node name="Node2D" type="Node2D" unique_id=1052754536]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=334021939]
+tile_map_data = PackedByteArray("AAAAABMAAAAAAAAAAAABABMAAAABAAAAAAACABMAAAABAAAAAAADABMAAAABAAAAAAAEABMAAAABAAAAAAAFABMAAAABAAAAAAAGABMAAAABAAAAAAAAABQAAAAAAAEAAAABABQAAAABAAEAAAACABQAAAABAAEAAAADABQAAAABAAEAAAAEABQAAAABAAEAAAAFABQAAAABAAEAAAAGABQAAAABAAEAAAAHABMAAAABAAAAAAAIABMAAAABAAAAAAAJABMAAAABAAAAAAAKABMAAAABAAAAAAALABMAAAABAAAAAAAMABMAAAABAAAAAAANABMAAAABAAAAAAAOABMAAAABAAAAAAAPABMAAAACAAAAAAAHABQAAAABAAEAAAAIABQAAAABAAEAAAAJABQAAAABAAEAAAAKABQAAAABAAEAAAALABQAAAABAAEAAAAMABQAAAABAAEAAAANABQAAAABAAEAAAAOABQAAAABAAEAAAAPABQAAAACAAEAAAA=")
+tile_set = SubResource("TileSet_1vivr")
+physics_quadrant_size = 32

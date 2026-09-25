@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://mpmmkfm8tonf"]
 
-[ext_resource type="PackedScene" uid="uid://o0jbe74yg8cv" path="res://Scenes/ground.tscn" id="1_ebmjs"]
+[ext_resource type="PackedScene" uid="uid://o0jbe74yg8cv" path="res://Scenes/backdrop.tscn" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://dn7ogb3qug3bl" path="res://Scenes/player.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://clk4ye50a5nt1" path="res://Scenes/platforms.tscn" id="3_wrm1d"]
 
 [node name="Node2D" type="Node2D" unique_id=260088929]
 
@@ -9,10 +10,14 @@
 z_index = -1
 position = Vector2(-2, 4)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1835412889]
-position = Vector2(579, 336)
-scale = Vector2(2, 2)
-
 [node name="Player" parent="." unique_id=1927365999 instance=ExtResource("2_qxrlw")]
 z_index = 1
-position = Vector2(259, 187)
+position = Vector2(75, 288)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1835412889]
+position = Vector2(252, 24)
+scale = Vector2(-2369.1082, 4501.789)
+limit_bottom = 650
+
+[node name="Platform" parent="." unique_id=1052754536 instance=ExtResource("3_wrm1d")]
+position = Vector2(11, 4)
