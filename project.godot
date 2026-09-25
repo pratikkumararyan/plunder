@@ -11,11 +11,13 @@ config_version=5
 [application]
 
 config/name="Plunder"
+run/main_scene="uid://mpmmkfm8tonf"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -23,12 +25,18 @@ window/stretch/aspect="expand"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[internationalization]
+
+rendering/root_node_layout_direction=1
+locale/line_breaking_strictness=2
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
