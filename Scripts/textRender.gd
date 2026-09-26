@@ -25,6 +25,8 @@ func _render_text() -> void:
 			imgPath = lettersFolder.path_join(str(imgNumber) + ".png")
 		elif char == '.': 
 			imgPath = lettersFolder.path_join("48.png")
+		elif char == '!':
+			imgPath = lettersFolder.path_join("46.png")
 			
 		if ResourceLoader.exists(imgPath):
 			var textureRect = TextureRect.new()

@@ -1,0 +1,35 @@
+[gd_scene format=4 uid="uid://bx50y686onrke"]
+
+[ext_resource type="Script" uid="uid://dh6tc37jljnol" path="res://Scripts/movingPlatform.gd" id="1_av4gc"]
+[ext_resource type="Texture2D" uid="uid://crax6dxhjj0c3" path="res://Assets/personalAssets/tileset.png" id="1_o6ags"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_av4gc"]
+texture = ExtResource("1_o6ags")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1vivr"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_av4gc")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vrlf"]
+size = Vector2(224, 95)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=640949387]
+script = ExtResource("1_av4gc")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=922066582]
+tile_map_data = PackedByteArray("AAD+//7/AAAAAAAAAAD///7/AAABAAAAAAAAAP7/AAABAAAAAAABAP7/AAABAAAAAAACAP7/AAABAAAAAAADAP7/AAABAAAAAAAEAP7/AAACAAAAAAD+////AAAAAAEAAAD/////AAABAAEAAAAAAP//AAABAAEAAAABAP//AAABAAEAAAACAP//AAABAAEAAAADAP//AAABAAEAAAAEAP//AAACAAEAAAD+/wAAAAAAAAIAAAD//wAAAAABAAIAAAAAAAAAAAABAAIAAAABAAAAAAABAAIAAAACAAAAAAABAAIAAAADAAAAAAABAAIAAAAEAAAAAAACAAIAAAA=")
+tile_set = SubResource("TileSet_1vivr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=310429883]
+position = Vector2(48, -15.5)
+shape = SubResource("RectangleShape2D_8vrlf")
