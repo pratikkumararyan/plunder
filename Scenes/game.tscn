@@ -13,7 +13,10 @@ position = Vector2(584, 341)
 position = Vector2(-2.5, -2.5)
 rotation = 3.1415927
 scale = Vector2(2369.1082, -4501.789)
-limit_bottom = 650
+limit_left = -9999931
+limit_top = -9999935
+limit_right = 10000069
+limit_bottom = 715
 
-[node name="Platform" parent="." unique_id=1052754536 instance=ExtResource("3_wrm1d")]
+[node name="Map" parent="." unique_id=1052754536 instance=ExtResource("3_wrm1d")]
 position = Vector2(511, 13)
