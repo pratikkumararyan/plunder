@@ -1,6 +1,15 @@
 [gd_scene format=4 uid="uid://clk4ye50a5nt1"]
 
 [ext_resource type="Texture2D" uid="uid://crax6dxhjj0c3" path="res://Assets/personalAssets/tileset.png" id="1_o20dk"]
+[ext_resource type="Texture2D" uid="uid://c8i6fwhe1ux4y" path="res://Assets/Palm Tree Island/Sprites/Objects/Flag/Flag 01.png" id="2_flrmx"]
+[ext_resource type="Texture2D" uid="uid://dpfx3mgko4h3j" path="res://Assets/Palm Tree Island/Sprites/Objects/Flag/Flag 02.png" id="3_7eu53"]
+[ext_resource type="Texture2D" uid="uid://dxwu2yxopfq8y" path="res://Assets/Palm Tree Island/Sprites/Objects/Flag/Flag 03.png" id="4_j1x5n"]
+[ext_resource type="Texture2D" uid="uid://wrp6ewat8ehb" path="res://Assets/Palm Tree Island/Sprites/Objects/Flag/Flag 04.png" id="5_h303j"]
+[ext_resource type="Texture2D" uid="uid://2fi3v68qv15x" path="res://Assets/Palm Tree Island/Sprites/Objects/Flag/Flag 05.png" id="6_gv3g0"]
+[ext_resource type="Texture2D" uid="uid://h8it3phixb3m" path="res://Assets/Palm Tree Island/Sprites/Objects/Flag/Flag 06.png" id="7_jsv3t"]
+[ext_resource type="Texture2D" uid="uid://c8nrd1nvmgh48" path="res://Assets/Palm Tree Island/Sprites/Objects/Flag/Flag 07.png" id="8_31ijy"]
+[ext_resource type="Texture2D" uid="uid://dpkmvt5ty3ji5" path="res://Assets/Palm Tree Island/Sprites/Objects/Flag/Flag 08.png" id="9_j3xtu"]
+[ext_resource type="Texture2D" uid="uid://sceyp8s0kjic" path="res://Assets/Palm Tree Island/Sprites/Objects/Flag/Flag 09.png" id="10_v6d0v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtyfn"]
 texture = ExtResource("1_o20dk")
@@ -56,9 +65,82 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wtyfn")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_flrmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7eu53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j1x5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h303j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gv3g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jsv3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_31ijy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_j3xtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_v6d0v")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SystemFont" id="SystemFont_s7wsd"]
+
 [node name="Node2D" type="Node2D" unique_id=1052754536]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=334021939]
-tile_map_data = PackedByteArray("AAAAABMAAAAAAAAAAAABABMAAAABAAAAAAACABMAAAABAAAAAAADABMAAAABAAAAAAAEABMAAAABAAAAAAAFABMAAAABAAAAAAAGABMAAAABAAAAAAAAABQAAAAAAAEAAAABABQAAAABAAEAAAACABQAAAABAAEAAAADABQAAAABAAEAAAAEABQAAAABAAEAAAAFABQAAAABAAEAAAAGABQAAAABAAEAAAAHABMAAAABAAAAAAAIABMAAAABAAAAAAAJABMAAAABAAAAAAAKABMAAAABAAAAAAALABMAAAABAAAAAAAMABMAAAABAAAAAAANABMAAAABAAAAAAAOABMAAAABAAAAAAAPABMAAAACAAAAAAAHABQAAAABAAEAAAAIABQAAAABAAEAAAAJABQAAAABAAEAAAAKABQAAAABAAEAAAALABQAAAABAAEAAAAMABQAAAABAAEAAAANABQAAAABAAEAAAAOABQAAAABAAEAAAAPABQAAAACAAEAAAA=")
+tile_map_data = PackedByteArray("AAAAABMAAAAAAAAAAAABABMAAAABAAAAAAACABMAAAABAAAAAAADABMAAAABAAAAAAAEABMAAAABAAAAAAAFABMAAAABAAAAAAAGABMAAAABAAAAAAAAABQAAAAAAAEAAAABABQAAAABAAEAAAACABQAAAABAAEAAAADABQAAAABAAEAAAAEABQAAAABAAEAAAAFABQAAAABAAEAAAAGABQAAAABAAEAAAAHABMAAAABAAAAAAAIABMAAAABAAAAAAAJABMAAAABAAAAAAAKABMAAAABAAAAAAALABMAAAABAAAAAAAMABMAAAABAAAAAAANABMAAAABAAAAAAAOABMAAAABAAAAAAAHABQAAAABAAEAAAAIABQAAAABAAEAAAAJABQAAAABAAEAAAAKABQAAAABAAEAAAALABQAAAABAAEAAAAMABQAAAABAAEAAAANABQAAAABAAEAAAAOABQAAAABAAEAAAAPABMAAAABAAAAAAAQABMAAAABAAAAAAARABMAAAABAAAAAAASABMAAAABAAAAAAATABMAAAABAAAAAAAUABMAAAABAAAAAAAVABMAAAABAAAAAAAWABMAAAABAAAAAAAXABMAAAABAAAAAAAYABMAAAABAAAAAAAZABMAAAABAAAAAAAaABMAAAABAAAAAAAbABMAAAABAAAAAAAcABMAAAABAAAAAAAdABMAAAABAAAAAAAeABMAAAABAAAAAAAfABMAAAABAAAAAAAgABMAAAABAAAAAAAhABMAAAABAAAAAAAiABMAAAACAAAAAAAPABQAAAABAAEAAAAQABQAAAABAAEAAAARABQAAAABAAEAAAASABQAAAABAAEAAAATABQAAAABAAEAAAAUABQAAAABAAEAAAAVABQAAAABAAEAAAAWABQAAAABAAEAAAAXABQAAAABAAEAAAAYABQAAAABAAEAAAAZABQAAAABAAEAAAAaABQAAAABAAEAAAAbABQAAAABAAEAAAAcABQAAAABAAEAAAAdABQAAAABAAEAAAAeABQAAAABAAEAAAAfABQAAAABAAEAAAAgABQAAAABAAEAAAAhABQAAAABAAEAAAAiABQAAAACAAEAAAAkABAAAAAAAAAAAAAlABAAAAABAAAAAAAmABAAAAABAAAAAAAnABAAAAABAAAAAAAoABAAAAABAAAAAAApABAAAAABAAAAAAAqABAAAAACAAAAAAAkABEAAAAAAAIAAAAlABEAAAABAAIAAAAmABEAAAABAAIAAAAnABEAAAABAAIAAAAoABEAAAABAAIAAAApABEAAAABAAIAAAAqABEAAAACAAIAAAA=")
 tile_set = SubResource("TileSet_1vivr")
 physics_quadrant_size = 32
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=291628111]
+position = Vector2(344, 569)
+sprite_frames = SubResource("SpriteFrames_s7wsd")
+autoplay = "default"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1364756386]
+offset_left = 199.0
+offset_top = 560.0
+offset_right = 356.0
+offset_bottom = 614.0
+theme_override_colors/default_color = Color(0.4691378, 0.73283285, 0.23437998, 1)
+theme_override_fonts/normal_font = SubResource("SystemFont_s7wsd")
+theme_override_font_sizes/normal_font_size = 22
+text = "Quit now..."
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1675344763]
+offset_left = 345.0
+offset_top = 562.0
+offset_right = 502.0
+offset_bottom = 616.0
+theme_override_colors/default_color = Color(0.4691378, 0.73283285, 0.23437998, 1)
+theme_override_fonts/normal_font = SubResource("SystemFont_s7wsd")
+theme_override_font_sizes/normal_font_size = 22
+text = "or see worse."
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=2145565629]
+offset_left = 1155.0
+offset_top = 450.0
+offset_right = 1374.0
+offset_bottom = 549.0
+theme_override_colors/default_color = Color(0.4691378, 0.73283285, 0.23437998, 1)
+theme_override_fonts/normal_font = SubResource("SystemFont_s7wsd")
+theme_override_font_sizes/normal_font_size = 22
+text = "Its a flood!
+Get to high ground!!!"
