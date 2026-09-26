@@ -1,25 +1,16 @@
 [gd_scene format=3 uid="uid://o0jbe74yg8cv"]
 
 [ext_resource type="Texture2D" uid="uid://fcb2e531dcii" path="res://Assets/Palm Tree Island/Sprites/Background/Additional Sky.png" id="1_jjp1w"]
-[ext_resource type="Texture2D" uid="uid://bxpritwte01io" path="res://Assets/Palm Tree Island/Sprites/Background/Big Clouds.png" id="6_1u5gw"]
-[ext_resource type="Texture2D" uid="uid://cs3twbydsakna" path="res://Assets/Palm Tree Island/Sprites/Background/Small Cloud 2.png" id="7_2r5v0"]
-[ext_resource type="Texture2D" uid="uid://c6mx0m6ssggyr" path="res://Assets/Palm Tree Island/Sprites/Background/Small Cloud 3.png" id="8_o2xhn"]
 
-[node name="Node2D" type="Node2D" unique_id=1804911951]
+[node name="CanvasLayer" type="CanvasLayer" unique_id=697910698]
+layer = -10
 
-[node name="AdditionalSky" type="Sprite2D" parent="." unique_id=1437962559]
-position = Vector2(581.75, 330.25)
-scale = Vector2(36.140625, 20.609375)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1590148039]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_jjp1w")
-
-[node name="BigClouds" type="Sprite2D" parent="." unique_id=1302921025]
-position = Vector2(316, 179)
-texture = ExtResource("6_1u5gw")
-
-[node name="SmallCloud2" type="Sprite2D" parent="." unique_id=1618126799]
-position = Vector2(678, 77)
-texture = ExtResource("7_2r5v0")
-
-[node name="SmallCloud3" type="Sprite2D" parent="." unique_id=1821046007]
-position = Vector2(999, 143)
-texture = ExtResource("8_o2xhn")
+expand_mode = 1
+stretch_mode = 6

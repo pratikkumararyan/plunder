@@ -1,6 +1,6 @@
 extends CharacterBody2D
 var speed = 200.0
-var jumpVelocity = -300.0
+var jumpVelocity = -400.0
 var acceleration = 1500.0
 var friction = 1200.0
 const gravity = 980
