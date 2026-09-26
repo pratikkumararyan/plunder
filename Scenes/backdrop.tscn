@@ -1,16 +1,9 @@
 [gd_scene format=3 uid="uid://o0jbe74yg8cv"]
 
 [ext_resource type="Texture2D" uid="uid://fcb2e531dcii" path="res://Assets/Palm Tree Island/Sprites/Background/Additional Sky.png" id="1_jjp1w"]
+[ext_resource type="Script" uid="uid://xu86rjv2s04s" path="res://Scripts/Backdrop.gd" id="2_i4mx6"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=697910698]
-layer = -10
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1590148039]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="AdditionalSky" type="Sprite2D" unique_id=1760807679]
+position = Vector2(576, 328)
 texture = ExtResource("1_jjp1w")
-expand_mode = 1
-stretch_mode = 6
+script = ExtResource("2_i4mx6")
