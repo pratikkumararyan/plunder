@@ -3,6 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cqcsegx1aj7ft" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Gold Coin/01.png" id="1_dtg06"]
 [ext_resource type="Script" uid="uid://bl531jeqykc6s" path="res://Scripts/coinCounter.gd" id="1_hn7l8"]
 [ext_resource type="Script" uid="uid://f7y686ihm2f4" path="res://Scripts/textRender.gd" id="2_hn7l8"]
+[ext_resource type="Texture2D" uid="uid://ckk2jsb3k5om7" path="res://Assets/Wood and Paper UI/Sprites/Life Bars/Big Bars/1.png" id="4_s3jbq"]
+[ext_resource type="Texture2D" uid="uid://p0clhyq4wdec" path="res://Assets/Wood and Paper UI/Sprites/Life Bars/Big Bars/3.png" id="5_g8s2e"]
+[ext_resource type="Texture2D" uid="uid://b7btw6tuijk7k" path="res://Assets/Wood and Paper UI/Sprites/Life Bars/Big Bars/4.png" id="6_t385i"]
+[ext_resource type="Texture2D" uid="uid://ctvx5wp0eil1g" path="res://Assets/Wood and Paper UI/Sprites/Life Bars/Colors/1.png" id="7_t385i"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1118143052]
 
@@ -18,30 +22,64 @@ scale = Vector2(3, 3)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="spriteWrapper" type="Control" parent="UIanchor" unique_id=1146289931]
+[node name="CoinCounter" type="Control" parent="UIanchor" unique_id=1739223030]
 custom_minimum_size = Vector2(5, 5)
 anchors_preset = 0
-offset_left = 6.0
-offset_top = -2.666668
-offset_right = 46.0
-offset_bottom = 37.333332
+offset_left = 0.33333302
+offset_top = -15.999996
+offset_right = 40.333332
+offset_bottom = 24.000004
 script = ExtResource("1_hn7l8")
 
-[node name="coinIcon" type="Sprite2D" parent="UIanchor/spriteWrapper" unique_id=484737040]
-position = Vector2(-4, -22)
-scale = Vector2(2, 2)
+[node name="coinIcon" type="Sprite2D" parent="UIanchor/CoinCounter" unique_id=1219024856]
+position = Vector2(0.666667, -15.333332)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_dtg06")
 centered = false
 
-[node name="counter" type="HFlowContainer" parent="UIanchor/spriteWrapper" unique_id=40790367]
+[node name="counter" type="HFlowContainer" parent="UIanchor/CoinCounter" unique_id=1547613656]
 z_index = 2
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.6666666
-anchor_top = -0.23333338
-anchor_right = 2.3083334
-anchor_bottom = 0.15833345
+anchor_left = 0.64166665
+anchor_top = -0.20833337
+anchor_right = 2.4416668
+anchor_bottom = 0.18333344
 theme_override_constants/h_separation = 2
 script = ExtResource("2_hn7l8")
-text = ""
+text = "x10000"
 metadata/_edit_use_anchors_ = true
+
+[node name="Health" type="Control" parent="UIanchor" unique_id=1146289931]
+custom_minimum_size = Vector2(5, 5)
+anchors_preset = 0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 49.0
+offset_bottom = 47.0
+
+[node name="healthBarFront" type="Sprite2D" parent="UIanchor/Health" unique_id=2105389808]
+position = Vector2(-4, -22)
+texture = ExtResource("4_s3jbq")
+centered = false
+
+[node name="healthBarMid" type="Sprite2D" parent="UIanchor/Health" unique_id=462773540]
+position = Vector2(28, -22)
+texture = ExtResource("5_g8s2e")
+centered = false
+
+[node name="healthBarBack" type="Sprite2D" parent="UIanchor/Health" unique_id=690372287]
+position = Vector2(60, -22)
+texture = ExtResource("6_t385i")
+centered = false
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="UIanchor/Health" unique_id=1203040125]
+layout_mode = 0
+offset_left = 13.0
+offset_top = -8.333334
+offset_right = 88.0
+offset_bottom = -6.333334
+offset_transform_enabled = true
+value = 100.0
+nine_patch_stretch = true
+texture_progress = ExtResource("7_t385i")
