@@ -15,7 +15,7 @@ position = Vector2(511, 13)
 position = Vector2(361, 557)
 
 [node name="Crab" parent="." unique_id=614032878 instance=ExtResource("3_3dryh")]
-position = Vector2(438, -781)
+position = Vector2(566, -779)
 metadata/Pos1 = Vector2(1037, 605)
 metadata/Pos2 = Vector2(1335, 605)
 

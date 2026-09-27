@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bks610kpdurhx"]
+
+[ext_resource type="Script" uid="uid://c10421522t52a" path="res://Scripts/Coin.gd" id="1_nrajh"]
+[ext_resource type="Texture2D" uid="uid://d2c7ctmdlu4bs" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Blue Potion/01.png" id="2_onw0v"]
+[ext_resource type="Texture2D" uid="uid://w6uhg5mi8d15" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Blue Potion/02.png" id="3_xmutu"]
+[ext_resource type="Texture2D" uid="uid://dt6vmxaja5ah" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Blue Potion/03.png" id="4_d5p8s"]
+[ext_resource type="Texture2D" uid="uid://s5le1xti7ur4" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Blue Potion/04.png" id="5_2t2pl"]
+[ext_resource type="Texture2D" uid="uid://dqb642k7qsdbn" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Coin Effect/01.png" id="6_d5p8s"]
+[ext_resource type="Texture2D" uid="uid://6lufusk3rm5f" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Blue Potion/05.png" id="6_uvhuo"]
+[ext_resource type="Texture2D" uid="uid://dh00ariix6lvw" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Coin Effect/02.png" id="7_2t2pl"]
+[ext_resource type="Texture2D" uid="uid://cs5lxkkaood5f" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Blue Potion/06.png" id="7_atdgd"]
+[ext_resource type="Texture2D" uid="uid://c8rp7b03sqpxk" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Blue Potion/07.png" id="8_shqcl"]
+[ext_resource type="Texture2D" uid="uid://b2s0pb6olddys" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Coin Effect/03.png" id="8_uvhuo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_onw0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xmutu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d5p8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2t2pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uvhuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_atdgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_shqcl")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_d5p8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2t2pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uvhuo")
+}],
+"loop": 0,
+"name": &"effect",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atdgd"]
+size = Vector2(14, 20)
+
+[node name="Area2D" type="Area2D" unique_id=1590488707]
+script = ExtResource("1_nrajh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=411381625]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_s7wsd")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=507212504]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_atdgd")
+
+[node name="Timer" type="Timer" parent="." unique_id=1222933584]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
