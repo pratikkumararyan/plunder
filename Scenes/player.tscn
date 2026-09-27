@@ -177,8 +177,7 @@ shape = SubResource("RectangleShape2D_1vivr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=410299147]
 sprite_frames = SubResource("SpriteFrames_1vivr")
-frame = 2
-frame_progress = 0.23921458
+animation = &"fall"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=316700486]
 

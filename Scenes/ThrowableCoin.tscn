@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cleb4u60w66dx"]
 
-[ext_resource type="Script" uid="uid://dhjamhwl0aufg" path="res://Scenes/throwable_coin.gd" id="1_ok7ad"]
+[ext_resource type="Script" uid="uid://dhjamhwl0aufg" path="res://Scripts/throwable_coin.gd" id="1_ok7ad"]
 [ext_resource type="Texture2D" uid="uid://cqcsegx1aj7ft" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Gold Coin/01.png" id="2_6usfk"]
 [ext_resource type="Texture2D" uid="uid://c1r040ck85r1j" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Gold Coin/02.png" id="3_vj20s"]
 [ext_resource type="Texture2D" uid="uid://csj2ehsvlyn42" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Gold Coin/03.png" id="4_tuac8"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dh00ariix6lvw" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Coin Effect/02.png" id="7_8wy76"]
 [ext_resource type="Texture2D" uid="uid://b2s0pb6olddys" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Coin Effect/03.png" id="8_808my"]
 [ext_resource type="PackedScene" uid="uid://baqh1bucn5sb6" path="res://Assets/Effects/coin_break_particle_effect.tscn" id="9_6usfk"]
+
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
 animations = [{

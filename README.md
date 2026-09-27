@@ -3,3 +3,4 @@
 ---
 ## Controls
 * **W-A-S** for jump and left or right respectively
+* **Mouse Hold and release** for aiming and shooting coins
