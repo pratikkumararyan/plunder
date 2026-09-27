@@ -397,16 +397,18 @@ position = Vector2(-37, -84)
 rotation = 0.2617994
 
 [node name="waterTop" type="AnimatedSprite2D" parent="." unique_id=2004243090]
-position = Vector2(-463.7577, 653.5)
-scale = Vector2(7.652383, 1.0312483)
+z_index = -2
+position = Vector2(471.96393, 653.5)
+scale = Vector2(27.146584, 1.0312483)
 sprite_frames = SubResource("SpriteFrames_s7rlf")
 autoplay = "default"
 frame = 3
 frame_progress = 0.91485626
 
 [node name="waterBottom" type="Sprite2D" parent="." unique_id=843781063]
-position = Vector2(-464.50006, 1002)
-scale = Vector2(7.6562505, 20.812498)
+z_index = -2
+position = Vector2(471.49985, 1002)
+scale = Vector2(27.15625, 20.812498)
 texture = ExtResource("16_s2aaq")
 
 [node name="spawnShip" type="AnimatedSprite2D" parent="." unique_id=1202042763]
