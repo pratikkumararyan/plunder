@@ -23,6 +23,13 @@ pos2 = Vector2(773, -774)
 innerRange = 30.0
 outerRange = 40.0
 
+[node name="Crab2" parent="." unique_id=1404423261 instance=ExtResource("3_3dryh")]
+position = Vector2(1872, -1417)
+pos1 = Vector2(1932, -1419)
+pos2 = Vector2(1872, -1417)
+innerRange = 30.0
+outerRange = 40.0
+
 [node name="background" parent="." unique_id=1760807679 instance=ExtResource("4_3dryh")]
 visible = false
 z_index = -20
