@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cundhsxfkwpcx"]
+
+[ext_resource type="Texture2D" uid="uid://cil1rpppe84hv" path="res://Assets/Wood and Paper UI/Sprites/Prefabs/9.png" id="1_jcdth"]
+[ext_resource type="Script" uid="uid://f7y686ihm2f4" path="res://Scripts/textRender.gd" id="2_3anfm"]
+[ext_resource type="Script" uid="uid://dkuia2y6m0h6b" path="res://Scenes/TryAgainButton.gd" id="3_nj0ii"]
+
+[node name="DEATHSCREEN" type="CanvasLayer" unique_id=676536138]
+visible = false
+
+[node name="Background" type="TextureRect" parent="." unique_id=1942371715]
+offset_left = 255.0
+offset_top = 11.0
+offset_right = 858.0
+offset_bottom = 614.0
+texture = ExtResource("1_jcdth")
+
+[node name="Title" type="HFlowContainer" parent="Background" unique_id=452868846]
+layout_mode = 0
+offset_left = 98.00001
+offset_top = 210.0
+offset_right = 206.0
+offset_bottom = 222.66667
+scale = Vector2(4, 4)
+script = ExtResource("2_3anfm")
+text = "You DIED"
+
+[node name="Button2" type="Button" parent="Background" unique_id=1134507123]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 283.0
+offset_right = 476.0
+offset_bottom = 328.0
+script = ExtResource("3_nj0ii")
+metadata/_edit_group_ = true
+
+[node name="Button" type="HFlowContainer" parent="Background/Button2" unique_id=1247945938]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 120.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+script = ExtResource("2_3anfm")
+text = "Try again?"
+
+[connection signal="pressed" from="Background/Button2" to="Background/Title" method="_on_button_2_pressed"]

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://clk4ye50a5nt1" path="res://Scenes/platforms.tscn" id="3_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://o0jbe74yg8cv" path="res://Scenes/backdrop.tscn" id="4_3dryh"]
 [ext_resource type="PackedScene" uid="uid://cccbfsd0k88l" path="res://Scenes/HUD.tscn" id="5_wowpa"]
+[ext_resource type="PackedScene" uid="uid://cundhsxfkwpcx" path="res://Scenes/deathscreen.tscn" id="6_i6g32"]
 
 [node name="Node2D" type="Node2D" unique_id=260088929]
 
@@ -12,7 +13,7 @@
 position = Vector2(511, 13)
 
 [node name="Player" parent="." unique_id=754002116 instance=ExtResource("2_qxrlw")]
-position = Vector2(1507, -570)
+position = Vector2(1318, -1157)
 
 [node name="Crab" parent="." unique_id=614032878 instance=ExtResource("3_3dryh")]
 position = Vector2(655, -774)
@@ -27,4 +28,6 @@ z_index = -20
 position = Vector2(-23, -37)
 scale = Vector2(552.7188, 290.78125)
 
-[node name="canvasLayer" parent="." unique_id=1118143052 instance=ExtResource("5_wowpa")]
+[node name="HUD" parent="." unique_id=1118143052 instance=ExtResource("5_wowpa")]
+
+[node name="DEATHSCREEN" parent="." unique_id=676536138 instance=ExtResource("6_i6g32")]

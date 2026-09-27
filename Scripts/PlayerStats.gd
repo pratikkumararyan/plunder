@@ -1,4 +1,4 @@
 extends Node
 
-var totalCoins = 99
+var totalCoins = -4
 var health = 100

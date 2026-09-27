@@ -64,3 +64,7 @@ func _get_image_path(char: String) -> String:
 		return lettersFolder.path_join(str(int(char) + 26) + ".png")
 	else:
 		return ""
+
+
+func _on_button_2_pressed() -> void:
+	pass # Replace with function body.

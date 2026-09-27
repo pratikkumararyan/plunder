@@ -8,6 +8,8 @@ var money = 0
 var health = 100
 const gravity = 980
 
+var dead := false
+
 var defaultShootRange = 1
 var currentShootRange = defaultShootRange
 
@@ -22,8 +24,21 @@ const THROWABLE_COIN = preload("uid://cleb4u60w66dx")
 @onready var shoot_direction: Marker2D = $ShootDirection
 @onready var shoot_cooldown: Timer = $ShootCooldown
 @onready var trajectory: Line2D = $Trajectory
+@onready var deathscreen: CanvasLayer = $"../../DEATHSCREEN"
+
+func _ready() -> void:
+	if dead:
+		dead = false
+		deathscreen.visible = false
 
 func _physics_process(delta: float) -> void:
+	if dead:
+		deathscreen.visible = true
+		return
+	
+	if PlayerStats.health <= 0:
+		dead = true
+	
 	var was_falling = velocity.y > 0
 
 	if not is_on_floor():
