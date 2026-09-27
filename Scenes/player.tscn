@@ -167,7 +167,7 @@ animations = [{
 
 [node name="Player" type="Node2D" unique_id=754002116 groups=["player"]]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1597795505]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1597795505 groups=["player"]]
 scale = Vector2(2, 2)
 script = ExtResource("1_ypfnu")
 

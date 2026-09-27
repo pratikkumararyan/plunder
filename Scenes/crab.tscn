@@ -201,8 +201,16 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xagnb"]
+radius = 100.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o01uv"]
+radius = 200.0
+
 [node name="Crab" type="CharacterBody2D" unique_id=614032878]
 scale = Vector2(2, 2)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_mfyoh")
 metadata/Pos1 = Vector2(0, 0)
 metadata/Pos2 = Vector2(0, 0)
@@ -215,4 +223,22 @@ shape = SubResource("RectangleShape2D_rxqea")
 sprite_frames = SubResource("SpriteFrames_ch8ly")
 animation = &"run"
 autoplay = "default"
-frame_progress = 0.7998755
+frame_progress = 0.92303437
+
+[node name="innerRange" type="Area2D" parent="." unique_id=1004068429]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="innerRange" unique_id=1430664506]
+shape = SubResource("CircleShape2D_xagnb")
+
+[node name="outerRange" type="Area2D" parent="." unique_id=1275411912]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="outerRange" unique_id=739586550]
+shape = SubResource("CircleShape2D_o01uv")
+
+[connection signal="body_entered" from="innerRange" to="." method="_on_inner_range_body_entered"]
+[connection signal="body_exited" from="innerRange" to="." method="_on_inner_range_body_exited"]
+[connection signal="body_exited" from="outerRange" to="." method="_on_outer_range_body_exited"]
