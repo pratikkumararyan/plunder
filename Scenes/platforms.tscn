@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dtksl0y6e2ed7" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Water/Water/Top/2.png" id="18_3koa4"]
 [ext_resource type="Texture2D" uid="uid://dvvibd8dhibad" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Water/Water/Top/3.png" id="19_ekls4"]
 [ext_resource type="Texture2D" uid="uid://bxjdoq27o3kmk" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Water/Water/Top/4.png" id="20_eh1v3"]
+[ext_resource type="Script" uid="uid://d3gwwh3qwjxup" path="res://Scenes/WaterHeightIncrease.gd" id="20_mp7vf"]
 [ext_resource type="Texture2D" uid="uid://dpcgy5r5x5xtx" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/1.png" id="21_06pnm"]
 [ext_resource type="Texture2D" uid="uid://dsjkg321gq0en" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/2.png" id="22_l4b8h"]
 [ext_resource type="Texture2D" uid="uid://bvn2q4temqt7h" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Hit/1.png" id="23_pddb5"]
@@ -34,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://dexc3qo6uq38j" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Destroyed/1.png" id="33_q3wjg"]
 [ext_resource type="Texture2D" uid="uid://c4h84xcg46c5j" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Destroyed/2.png" id="34_t88x0"]
 [ext_resource type="Texture2D" uid="uid://cbhl42begt6uq" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Destroyed/3.png" id="35_3g6h4"]
+[ext_resource type="Script" uid="uid://cc0jmpe6yntsh" path="res://Scenes/waterAcceleratorZone.gd" id="35_pddb5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtyfn"]
 texture = ExtResource("1_o20dk")
@@ -176,6 +178,9 @@ animations = [{
 "name": &"default",
 "speed": 10.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xagnb"]
+size = Vector2(225, 54)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s7rlf"]
 animations = [{
@@ -368,7 +373,7 @@ rotation = 0.2617994
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="VerticalPlatform" parent="." unique_id=640949387 instance=ExtResource("12_j1x5n")]
-position = Vector2(1232, 716)
+position = Vector2(1232, 600)
 offset = Vector2(0, -1250)
 duration = 10.0
 
@@ -396,7 +401,14 @@ rotation = 0.2617994
 position = Vector2(-37, -84)
 rotation = 0.2617994
 
+[node name="GoArea" type="Area2D" parent="VerticalPlatform" unique_id=1654325007]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VerticalPlatform/GoArea" unique_id=936089156]
+position = Vector2(47.5, -91)
+shape = SubResource("RectangleShape2D_xagnb")
+
 [node name="waterTop" type="AnimatedSprite2D" parent="." unique_id=2004243090]
+visible = false
 z_index = -2
 position = Vector2(471.96393, 653.5)
 scale = Vector2(27.146584, 1.0312483)
@@ -404,12 +416,19 @@ sprite_frames = SubResource("SpriteFrames_s7rlf")
 autoplay = "default"
 frame = 3
 frame_progress = 0.91485626
+metadata/_edit_group_ = true
 
 [node name="waterBottom" type="Sprite2D" parent="." unique_id=843781063]
 z_index = -2
 position = Vector2(471.49985, 1002)
 scale = Vector2(27.15625, 20.812498)
 texture = ExtResource("16_s2aaq")
+script = ExtResource("20_mp7vf")
+metadata/_edit_group_ = true
+
+[node name="delay" type="Timer" parent="waterBottom" unique_id=173644079]
+wait_time = 0.2
+one_shot = true
 
 [node name="spawnShip" type="AnimatedSprite2D" parent="." unique_id=1202042763]
 z_index = 5
@@ -442,6 +461,18 @@ shape = SubResource("RectangleShape2D_1vivr")
 wait_time = 0.4
 one_shot = true
 
+[node name="AccelerateWaterZone" type="Area2D" parent="." unique_id=512634235]
+position = Vector2(124, 587)
+script = ExtResource("35_pddb5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AccelerateWaterZone" unique_id=677105337]
+position = Vector2(1162, -231)
+shape = SubResource("RectangleShape2D_1vivr")
+
+[node name="Timer" type="Timer" parent="AccelerateWaterZone" unique_id=619873796]
+wait_time = 0.4
+one_shot = true
+
 [node name="Spike" parent="." unique_id=795721184 instance=ExtResource("15_jsv3t")]
 position = Vector2(336, -1059)
 
@@ -457,6 +488,10 @@ position = Vector2(593, -1187)
 [node name="Spike5" parent="." unique_id=710405819 instance=ExtResource("15_jsv3t")]
 position = Vector2(976, -1289)
 
+[connection signal="body_entered" from="VerticalPlatform/GoArea" to="VerticalPlatform" method="_on_go_area_body_entered"]
 [connection signal="body_entered" from="DestroyShipZone" to="QuitNow" method="_on_destroy_ship_zone_body_entered"]
 [connection signal="body_entered" from="DestroyShipZone" to="DestroyShipZone" method="_on_body_entered"]
 [connection signal="timeout" from="DestroyShipZone/Timer" to="DestroyShipZone" method="_on_timer_timeout"]
+[connection signal="body_entered" from="AccelerateWaterZone" to="QuitNow" method="_on_destroy_ship_zone_body_entered"]
+[connection signal="body_entered" from="AccelerateWaterZone" to="AccelerateWaterZone" method="_on_body_entered"]
+[connection signal="timeout" from="AccelerateWaterZone/Timer" to="AccelerateWaterZone" method="_on_timer_timeout"]

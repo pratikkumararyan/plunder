@@ -13,7 +13,8 @@
 position = Vector2(511, 13)
 
 [node name="Player" parent="." unique_id=754002116 instance=ExtResource("2_qxrlw")]
-position = Vector2(1318, -1157)
+z_index = -6
+position = Vector2(351, 539)
 
 [node name="Crab" parent="." unique_id=614032878 instance=ExtResource("3_3dryh")]
 position = Vector2(655, -774)
