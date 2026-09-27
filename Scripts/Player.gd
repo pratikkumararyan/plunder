@@ -11,7 +11,7 @@ const gravity = 980
 var defaultShootRange = 1
 var currentShootRange = defaultShootRange
 
-var shot: bool = false
+#var shot: bool = false
 
 var last_direction: Vector2 = Vector2.LEFT
 var was_on_floor = false
@@ -33,19 +33,17 @@ func _physics_process(delta: float) -> void:
 		velocity.y = jump_velocity
 		play_animation("jump", last_direction)
 		
-	if Input.is_action_pressed("Shoot") and !shot and (PlayerStats.totalCoins > 0):
+	if Input.is_action_pressed("Shoot") and shoot_cooldown.is_stopped() and PlayerStats.totalCoins > 0:
 		currentShootRange = min(currentShootRange + 2.0 * delta, 5.0)
 		update_trajectory()
 		trajectory.visible = true
-		
-	if Input.is_action_just_released("Shoot") and !shot and (PlayerStats.totalCoins > 0):
-		trajectory.visible = false
 
-		shot = true
-		
+	if Input.is_action_just_released("Shoot") and shoot_cooldown.is_stopped() and PlayerStats.totalCoins > 0:
+		trajectory.visible = false
 		shoot_cooldown.start()
+
 		PlayerStats.totalCoins -= 1
-		
+
 		var coin = THROWABLE_COIN.instantiate()
 		get_tree().current_scene.add_child(coin)
 
@@ -54,7 +52,7 @@ func _physics_process(delta: float) -> void:
 			last_direction.x * 300 * currentShootRange,
 			-200 * currentShootRange
 		)
-		
+
 		currentShootRange = defaultShootRange
 	
 	process_movement(delta)
@@ -86,13 +84,11 @@ func process_movement(delta: float) -> void:
 	if is_on_floor():
 		process_animation(last_direction)
 
-
 func process_animation(direction: Vector2) -> void:
 	if velocity.x != 0:
 		play_animation("run", direction)
 	else:
 		play_animation("default", direction)
-
 
 func play_animation(prefix: String, dir: Vector2) -> void:
 	if dir.x != 0:
@@ -137,6 +133,3 @@ func update_trajectory() -> void:
 
 		trajectory.add_point(trajectory.to_local(point))
 		previous_point = point
-
-func _on_shoot_cooldown_timeout() -> void:
-	shot = false

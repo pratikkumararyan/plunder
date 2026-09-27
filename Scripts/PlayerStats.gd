@@ -1,3 +1,3 @@
 extends Node
 
-var totalCoins = 0
+var totalCoins = 100
