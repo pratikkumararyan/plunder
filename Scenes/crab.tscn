@@ -57,7 +57,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_60cjn")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"attack",
 "speed": 10.0
 }, {
@@ -221,9 +221,10 @@ shape = SubResource("RectangleShape2D_rxqea")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=665429901]
 sprite_frames = SubResource("SpriteFrames_ch8ly")
-animation = &"run"
+animation = &"attack"
 autoplay = "default"
-frame_progress = 0.92303437
+frame = 3
+frame_progress = 1.0
 
 [node name="innerRange" type="Area2D" parent="." unique_id=1004068429]
 collision_layer = 3
@@ -239,6 +240,10 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="outerRange" unique_id=739586550]
 shape = SubResource("CircleShape2D_o01uv")
 
+[node name="attackCooldown" type="Timer" parent="." unique_id=358208195]
+one_shot = true
+
 [connection signal="body_entered" from="innerRange" to="." method="_on_inner_range_body_entered"]
 [connection signal="body_exited" from="innerRange" to="." method="_on_inner_range_body_exited"]
 [connection signal="body_exited" from="outerRange" to="." method="_on_outer_range_body_exited"]
+[connection signal="timeout" from="attackCooldown" to="." method="_on_attack_cooldown_timeout"]
