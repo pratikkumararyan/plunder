@@ -33,4 +33,3 @@ func _render_text() -> void:
 			textureRect.texture = load(imgPath)
 			textureRect.stretch_mode = TextureRect.STRETCH_KEEP
 			add_child(textureRect)
-			

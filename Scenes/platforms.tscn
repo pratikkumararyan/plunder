@@ -23,11 +23,19 @@
 [ext_resource type="Texture2D" uid="uid://bxjdoq27o3kmk" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Water/Water/Top/4.png" id="20_eh1v3"]
 [ext_resource type="Texture2D" uid="uid://dpcgy5r5x5xtx" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/1.png" id="21_06pnm"]
 [ext_resource type="Texture2D" uid="uid://dsjkg321gq0en" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/2.png" id="22_l4b8h"]
+[ext_resource type="Texture2D" uid="uid://bvn2q4temqt7h" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Hit/1.png" id="23_pddb5"]
 [ext_resource type="Texture2D" uid="uid://ccedpcjbfdhr" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/3.png" id="23_pfio1"]
+[ext_resource type="Texture2D" uid="uid://bucfxs7h2a0da" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Hit/2.png" id="24_h04g6"]
 [ext_resource type="Texture2D" uid="uid://yn1umfa82b2h" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/4.png" id="24_ikxhb"]
 [ext_resource type="Texture2D" uid="uid://dn0aye8v6cltx" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/5.png" id="25_bvxn1"]
+[ext_resource type="Texture2D" uid="uid://3npqmnwclhnd" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Hit/3.png" id="25_n1vyb"]
 [ext_resource type="Texture2D" uid="uid://cm1f51ukeu6pk" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/6.png" id="26_1beg8"]
+[ext_resource type="Texture2D" uid="uid://h8jifydo7pmb" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Hit/4.png" id="26_qskl0"]
 [ext_resource type="PackedScene" uid="uid://cumym8txgk2e" path="res://Scenes/coin.tscn" id="28_pfio1"]
+[ext_resource type="Script" uid="uid://bygb4kao1yfkn" path="res://Scripts/destroyShip.gd" id="29_ikxhb"]
+[ext_resource type="Texture2D" uid="uid://dexc3qo6uq38j" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Destroyed/1.png" id="33_q3wjg"]
+[ext_resource type="Texture2D" uid="uid://c4h84xcg46c5j" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Destroyed/2.png" id="34_t88x0"]
+[ext_resource type="Texture2D" uid="uid://cbhl42begt6uq" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Destroyed/3.png" id="35_3g6h4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtyfn"]
 texture = ExtResource("1_o20dk")
@@ -195,6 +203,23 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("23_pddb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_h04g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_n1vyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qskl0")
+}],
+"loop": 0,
+"name": &"damage",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("21_06pnm")
 }, {
 "duration": 1.0,
@@ -215,6 +240,20 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_q3wjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_t88x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_3g6h4")
+}],
+"loop": 0,
+"name": &"destroyed",
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s7rlf"]
@@ -222,6 +261,9 @@ size = Vector2(61.5, 17.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cvp5"]
 size = Vector2(11, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
+size = Vector2(119, 157)
 
 [node name="Map" type="Node2D" unique_id=1052754536]
 metadata/_edit_vertical_guides_ = [-237.0]
@@ -351,9 +393,8 @@ z_index = 5
 position = Vector2(-147, 618)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0cvp5")
+animation = &"destroyed"
 autoplay = "default"
-frame = 5
-frame_progress = 0.9950002
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="spawnShip" unique_id=192550286]
 
@@ -364,3 +405,20 @@ shape = SubResource("RectangleShape2D_s7rlf")
 [node name="BlockadeToPreventJUMPOUT" type="CollisionShape2D" parent="spawnShip/CharacterBody2D" unique_id=1691009568]
 position = Vector2(-32.5, -39)
 shape = SubResource("RectangleShape2D_0cvp5")
+
+[node name="DestroyShipZone" type="Area2D" parent="." unique_id=775558479 node_paths=PackedStringArray("spawnShip")]
+position = Vector2(124, 587)
+script = ExtResource("29_ikxhb")
+spawnShip = NodePath("../spawnShip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DestroyShipZone" unique_id=310036539]
+position = Vector2(-82.5, -51.5)
+shape = SubResource("RectangleShape2D_1vivr")
+
+[node name="Timer" type="Timer" parent="DestroyShipZone" unique_id=526327904]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="body_entered" from="DestroyShipZone" to="QuitNow" method="_on_destroy_ship_zone_body_entered"]
+[connection signal="body_entered" from="DestroyShipZone" to="DestroyShipZone" method="_on_body_entered"]
+[connection signal="timeout" from="DestroyShipZone/Timer" to="DestroyShipZone" method="_on_timer_timeout"]

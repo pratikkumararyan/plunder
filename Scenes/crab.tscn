@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d2shp65bb7h0t"]
 
-[ext_resource type="Script" uid="uid://coj8nokyi38ji" path="res://Scenes/Crab.gd" id="1_mfyoh"]
+[ext_resource type="Script" uid="uid://coj8nokyi38ji" path="res://Scripts/Crab.gd" id="1_mfyoh"]
 [ext_resource type="Texture2D" uid="uid://b6iy8pnbolrr0" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 01.png" id="1_ovh4o"]
 [ext_resource type="Texture2D" uid="uid://ne3vu06dbwg" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 02.png" id="2_lc3im"]
 [ext_resource type="Texture2D" uid="uid://baqge1xt2csds" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 03.png" id="3_afh00"]
@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://mhmmepiemyvk" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/02-Run/Run 04.png" id="35_ksgjy"]
 [ext_resource type="Texture2D" uid="uid://0myl3b3e377n" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/02-Run/Run 05.png" id="36_l2jd4"]
 [ext_resource type="Texture2D" uid="uid://bd0lq5rne22hm" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/02-Run/Run 06.png" id="37_qqx8r"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxqea"]
 size = Vector2(20, 13)

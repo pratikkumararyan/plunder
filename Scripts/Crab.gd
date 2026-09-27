@@ -58,6 +58,7 @@ func Attack() -> void:
 	canAttack = false
 	velocity.x = 0
 	animated_sprite_2d.play("attack")
+	player.health -= 5
 	attack_cooldown.start()
 
 func _on_inner_range_body_entered(body: Node2D) -> void:
