@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dn7ogb3qug3bl"]
 
 [ext_resource type="Texture2D" uid="uid://khjefv06sdv" path="res://Assets/ThirdParty/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="1_83xs0"]
-[ext_resource type="Script" uid="uid://cym87ipb80t7p" path="res://Scripts/Player.gd" id="1_ypfnu"]
+[ext_resource type="Script" uid="uid://cym87ipb80t7p" path="res://Scripts/player.gd" id="1_ypfnu"]
 [ext_resource type="Texture2D" uid="uid://bqva6pa6c7366" path="res://Assets/ThirdParty/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 02.png" id="2_ypfnu"]
 [ext_resource type="Texture2D" uid="uid://j08afvpag2np" path="res://Assets/ThirdParty/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" id="3_xuaoq"]
 [ext_resource type="Texture2D" uid="uid://dn6r05o5jvlhc" path="res://Assets/ThirdParty/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" id="4_wohnl"]
@@ -30,7 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://b5qkna4oa0mqm" path="res://Assets/ThirdParty/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 04.png" id="27_pukcj"]
 [ext_resource type="Texture2D" uid="uid://bxdr2q11ws2kd" path="res://Assets/ThirdParty/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 05.png" id="28_1htnp"]
 [ext_resource type="Texture2D" uid="uid://b0iuoliuftvlg" path="res://Assets/ThirdParty/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 06.png" id="29_m376e"]
-[ext_resource type="PackedScene" uid="uid://qi7ljfagrgog" path="res://Scenes/hud.tscn" id="31_xuaoq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
 size = Vector2(15, 14)
@@ -180,12 +179,7 @@ sprite_frames = SubResource("SpriteFrames_1vivr")
 animation = &"fall"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=316700486]
-
-[node name="HUD" parent="CharacterBody2D/Camera2D" unique_id=105706060 instance=ExtResource("31_xuaoq")]
-offset_left = -287.0
-offset_top = -161.0
-offset_right = -287.0
-offset_bottom = -161.0
+limit_bottom = 900
 
 [node name="ShootDirection" type="Marker2D" parent="CharacterBody2D" unique_id=1930168356]
 position = Vector2(9.5, 1.5)

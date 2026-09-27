@@ -27,7 +27,11 @@ func _render_text() -> void:
 			imgPath = lettersFolder.path_join("48.png")
 		elif char == '!':
 			imgPath = lettersFolder.path_join("46.png")
-			
+		elif char == '0':
+			imgPath = lettersFolder.path_join("36.png")
+		else:
+			imgPath = lettersFolder.path_join(str(int(char) + 26) + ".png") #ifykyk [basically uses the big text folder]
+
 		if ResourceLoader.exists(imgPath):
 			var textureRect = TextureRect.new()
 			textureRect.texture = load(imgPath)
