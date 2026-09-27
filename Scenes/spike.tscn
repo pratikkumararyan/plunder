@@ -6,13 +6,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cvp5"]
 size = Vector2(16, 12)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1227769037]
+[node name="Area2D" type="Area2D" unique_id=795721184]
 script = ExtResource("1_1hotg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=673652865]
+[node name="Spike" type="Sprite2D" parent="." unique_id=1807856822]
+position = Vector2(0, -7)
+texture = ExtResource("1_cdj5a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1725797990]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_0cvp5")
 
-[node name="Spike" type="Sprite2D" parent="." unique_id=583809934]
-position = Vector2(0, -7)
-texture = ExtResource("1_cdj5a")
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

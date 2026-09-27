@@ -26,6 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://yn1umfa82b2h" path="res://Assets/Merchant Ship/Sprites/Ship/Ship/Idle/4.png" id="24_ikxhb"]
 [ext_resource type="Texture2D" uid="uid://dn0aye8v6cltx" path="res://Assets/Merchant Ship/Sprites/Ship/Ship/Idle/5.png" id="25_bvxn1"]
 [ext_resource type="Texture2D" uid="uid://cm1f51ukeu6pk" path="res://Assets/Merchant Ship/Sprites/Ship/Ship/Idle/6.png" id="26_1beg8"]
+[ext_resource type="PackedScene" uid="uid://d2shp65bb7h0t" path="res://Scenes/crab.tscn" id="27_l4b8h"]
+[ext_resource type="PackedScene" uid="uid://cumym8txgk2e" path="res://Scenes/coin.tscn" id="28_pfio1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtyfn"]
 texture = ExtResource("1_o20dk")
@@ -291,3 +293,9 @@ shape = SubResource("RectangleShape2D_s7rlf")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="spawnShip/CharacterBody2D" unique_id=1691009568]
 position = Vector2(-32.5, -16.5)
 shape = SubResource("RectangleShape2D_0cvp5")
+
+[node name="Crab1" parent="." unique_id=606062989 instance=ExtResource("27_l4b8h")]
+position = Vector2(-37, -788)
+
+[node name="coin1" parent="." unique_id=1590488707 instance=ExtResource("28_pfio1")]
+position = Vector2(82, 595)

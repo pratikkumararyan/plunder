@@ -4,6 +4,7 @@ var speed = 200.0
 var jump_velocity = -400.0
 var acceleration = 1500.0
 var friction = 1200.0
+var money = 0
 const gravity = 980
 
 var last_direction: Vector2 = Vector2.LEFT

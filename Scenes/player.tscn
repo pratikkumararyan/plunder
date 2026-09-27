@@ -164,14 +164,16 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1927365999]
+[node name="Node2D" type="Node2D" unique_id=754002116]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1597795505]
 scale = Vector2(2, 2)
 script = ExtResource("1_ypfnu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1381666343]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=908930446]
 position = Vector2(0.5, 2)
 shape = SubResource("RectangleShape2D_1vivr")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2135885059]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=410299147]
 sprite_frames = SubResource("SpriteFrames_1vivr")
 animation = &"die_hit"
