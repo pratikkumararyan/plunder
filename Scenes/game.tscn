@@ -5,18 +5,8 @@
 
 [node name="Node2D" type="Node2D" unique_id=260088929]
 
-[node name="Player" parent="." unique_id=1927365999 instance=ExtResource("2_qxrlw")]
-z_index = 1
-position = Vector2(359, 596)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1835412889]
-position = Vector2(-2.5, -2.5)
-rotation = 3.1415927
-scale = Vector2(2369.1082, -4501.789)
-limit_left = -9999931
-limit_top = -9999935
-limit_right = 10000069
-limit_bottom = 715
-
 [node name="Map" parent="." unique_id=1052754536 instance=ExtResource("3_wrm1d")]
 position = Vector2(511, 13)
+
+[node name="Player" parent="." unique_id=754002116 instance=ExtResource("2_qxrlw")]
+position = Vector2(361, 557)

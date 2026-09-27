@@ -168,7 +168,7 @@ animations = [{
 size = Vector2(61.5, 17.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cvp5"]
-size = Vector2(11, 20)
+size = Vector2(11, 65)
 
 [node name="Map" type="Node2D" unique_id=1052754536]
 metadata/_edit_vertical_guides_ = [-237.0]
@@ -257,6 +257,24 @@ position = Vector2(1232, 716)
 offset = Vector2(0, -1250)
 duration = 10.0
 
+[node name="Coin1" parent="VerticalPlatform" unique_id=1590488707 instance=ExtResource("28_pfio1")]
+position = Vector2(148, -87)
+
+[node name="Coin2" parent="VerticalPlatform" unique_id=1818566247 instance=ExtResource("28_pfio1")]
+position = Vector2(113, -87)
+
+[node name="Coin3" parent="VerticalPlatform" unique_id=1842693257 instance=ExtResource("28_pfio1")]
+position = Vector2(77, -86)
+
+[node name="Coin4" parent="VerticalPlatform" unique_id=1604542531 instance=ExtResource("28_pfio1")]
+position = Vector2(42, -85)
+
+[node name="Coin5" parent="VerticalPlatform" unique_id=1024286251 instance=ExtResource("28_pfio1")]
+position = Vector2(4, -85)
+
+[node name="Coin6" parent="VerticalPlatform" unique_id=945653721 instance=ExtResource("28_pfio1")]
+position = Vector2(-37, -84)
+
 [node name="Spike" parent="." unique_id=1227769037 instance=ExtResource("15_jsv3t")]
 position = Vector2(208, -771)
 
@@ -290,12 +308,9 @@ frame_progress = 0.9950002
 position = Vector2(-7, 1.5)
 shape = SubResource("RectangleShape2D_s7rlf")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="spawnShip/CharacterBody2D" unique_id=1691009568]
-position = Vector2(-32.5, -16.5)
+[node name="BlockadeToPreventJUMPOUT" type="CollisionShape2D" parent="spawnShip/CharacterBody2D" unique_id=1691009568]
+position = Vector2(-32.5, -39)
 shape = SubResource("RectangleShape2D_0cvp5")
 
 [node name="Crab1" parent="." unique_id=606062989 instance=ExtResource("27_l4b8h")]
 position = Vector2(-37, -788)
-
-[node name="coin1" parent="." unique_id=1590488707 instance=ExtResource("28_pfio1")]
-position = Vector2(82, 595)
