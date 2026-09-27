@@ -33,12 +33,12 @@ func _physics_process(delta: float) -> void:
 		velocity.y = jump_velocity
 		play_animation("jump", last_direction)
 		
-	if Input.is_action_pressed("Shoot") and !shot and (money > 0):
+	if Input.is_action_pressed("Shoot") and !shot and (PlayerStats.totalCoins > 0):
 		currentShootRange = min(currentShootRange + 2.0 * delta, 5.0)
 		update_trajectory()
 		trajectory.visible = true
 		
-	if Input.is_action_just_released("Shoot") and !shot and (money > 0):
+	if Input.is_action_just_released("Shoot") and !shot and (PlayerStats.totalCoins > 0):
 		trajectory.visible = false
 
 		shot = true
