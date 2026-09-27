@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cqcsegx1aj7ft" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Gold Coin/01.png" id="1_dtg06"]
 [ext_resource type="Script" uid="uid://bl531jeqykc6s" path="res://Scripts/coinCounter.gd" id="1_hn7l8"]
 [ext_resource type="Script" uid="uid://f7y686ihm2f4" path="res://Scripts/textRender.gd" id="2_hn7l8"]
+[ext_resource type="Script" uid="uid://bgefici7vno2d" path="res://Scenes/UI_healthbar.gd" id="4_nfm57"]
 [ext_resource type="Texture2D" uid="uid://ckk2jsb3k5om7" path="res://Assets/Wood and Paper UI/Sprites/Life Bars/Big Bars/1.png" id="4_s3jbq"]
 [ext_resource type="Texture2D" uid="uid://p0clhyq4wdec" path="res://Assets/Wood and Paper UI/Sprites/Life Bars/Big Bars/3.png" id="5_g8s2e"]
 [ext_resource type="Texture2D" uid="uid://b7btw6tuijk7k" path="res://Assets/Wood and Paper UI/Sprites/Life Bars/Big Bars/4.png" id="6_t385i"]
@@ -57,6 +58,7 @@ offset_left = 9.0
 offset_top = 7.0
 offset_right = 49.0
 offset_bottom = 47.0
+script = ExtResource("4_nfm57")
 
 [node name="healthBarFront" type="Sprite2D" parent="UIanchor/Health" unique_id=2105389808]
 position = Vector2(-4, -22)
