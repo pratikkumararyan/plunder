@@ -39,7 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://0myl3b3e377n" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/02-Run/Run 05.png" id="36_l2jd4"]
 [ext_resource type="Texture2D" uid="uid://bd0lq5rne22hm" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/02-Run/Run 06.png" id="37_qqx8r"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxqea"]
 size = Vector2(20, 13)
 
@@ -203,10 +202,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xagnb"]
-radius = 100.0
+radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o01uv"]
-radius = 200.0
+radius = 70.0
 
 [node name="Crab" type="CharacterBody2D" unique_id=614032878]
 scale = Vector2(2, 2)
