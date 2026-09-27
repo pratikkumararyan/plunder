@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://b2s0pb6olddys" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Coin Effect/03.png" id="8_808my"]
 [ext_resource type="PackedScene" uid="uid://baqh1bucn5sb6" path="res://Assets/Effects/coin_break_particle_effect.tscn" id="9_6usfk"]
 
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
 animations = [{
 "frames": [{

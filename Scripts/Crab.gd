@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
+var health = 30
 const SPEED = 100.0
 const GRAVITY = 980.0
 const FOLLOW_DISTANCE = 70.0
+const ATTACK_DAMAGE = 20.0
 
 @export var pos1: Vector2
 @export var pos2: Vector2
@@ -14,6 +16,7 @@ var target: Vector2
 var going_to_pos2 := true
 var foundPlayer := false
 var canAttack := true
+var dead := false
 
 @onready var attack_cooldown: Timer = $attackCooldown
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -24,6 +27,9 @@ func _ready() -> void:
 	$outerRange/CollisionShape2D.shape.radius = outerRange
 
 func _physics_process(delta: float) -> void:
+	if dead:
+		return
+		
 	if foundPlayer:
 		target = player.global_position
 
@@ -64,8 +70,27 @@ func _physics_process(delta: float) -> void:
 func Attack() -> void:
 	canAttack = false
 	velocity.x = 0
+	PlayerStats.health -= ATTACK_DAMAGE
 	animated_sprite_2d.play("attack")
 	attack_cooldown.start()
+	
+func TakeDamage(amount: int) -> void:
+	if dead:
+		return
+
+	health -= amount
+	animated_sprite_2d.play("hit")
+	print("damage taken")
+
+	if health <= 0:
+		Die()
+	
+func Die() -> void:
+	dead = true
+	canAttack = false
+	velocity = Vector2.ZERO
+	$CollisionShape2D.queue_free()
+	animated_sprite_2d.play("dead_ground")
 
 func _on_inner_range_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

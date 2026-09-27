@@ -26,17 +26,17 @@ func _render_text() -> void:
 
 		var imgPath: String = _get_image_path(char)
 
-		if imgPath == "":
-			print("No mapping for character: '", char, "'")
-			continue
-
-		print("Trying: ", imgPath)
-		print("Exists: ", ResourceLoader.exists(imgPath))
+		#if imgPath == "":
+			#print("No mapping for character: '", char, "'")
+			#continue
+#
+		#print("Trying: ", imgPath)
+		#print("Exists: ", ResourceLoader.exists(imgPath))
 
 		var texture = load(imgPath)
 
 		if texture == null:
-			print("LOAD FAILED: ", imgPath)
+			#print("LOAD FAILED: ", imgPath)
 			continue
 
 		var textureRect = TextureRect.new()
@@ -46,7 +46,7 @@ func _render_text() -> void:
 		addedCount += 1
 
 
-	print("Rendered ", addedCount, " character(s) out of ", text.length())
+	#print("Rendered ", addedCount, " character(s) out of ", text.length())
 
 func _get_image_path(char: String) -> String:
 	var asciiCode = char.unicode_at(0)

@@ -74,7 +74,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_5psy3")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"dead_ground",
 "speed": 10.0
 }, {
@@ -91,7 +91,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("12_d1agj")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"dead_hit",
 "speed": 10.0
 }, {
@@ -123,7 +123,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("21_l3skt")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"default",
 "speed": 10.0
 }, {
@@ -131,7 +131,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("22_01pqm")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"fall",
 "speed": 10.0
 }, {
@@ -142,7 +142,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("24_a1od4")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"ground",
 "speed": 10.0
 }, {
@@ -159,7 +159,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("28_ualt0")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"hit",
 "speed": 10.0
 }, {
@@ -173,7 +173,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("31_gu2qn")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"jump",
 "speed": 10.0
 }, {
@@ -196,7 +196,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("37_qqx8r")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"run",
 "speed": 10.0
 }]
@@ -207,7 +207,7 @@ radius = 50.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_o01uv"]
 radius = 70.0
 
-[node name="Crab" type="CharacterBody2D" unique_id=614032878]
+[node name="Crab" type="CharacterBody2D" unique_id=614032878 groups=["enemy"]]
 scale = Vector2(2, 2)
 collision_layer = 3
 collision_mask = 3
@@ -215,32 +215,32 @@ script = ExtResource("1_mfyoh")
 metadata/Pos1 = Vector2(0, 0)
 metadata/Pos2 = Vector2(0, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=401427077]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=401427077 groups=["enemy"]]
 position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_rxqea")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=665429901]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=665429901 groups=["enemy"]]
 sprite_frames = SubResource("SpriteFrames_ch8ly")
-animation = &"attack"
+animation = &"hit"
 autoplay = "default"
 frame = 3
 frame_progress = 1.0
 
-[node name="innerRange" type="Area2D" parent="." unique_id=1004068429]
+[node name="innerRange" type="Area2D" parent="." unique_id=1004068429 groups=["enemy"]]
 collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="innerRange" unique_id=1430664506]
 shape = SubResource("CircleShape2D_xagnb")
 
-[node name="outerRange" type="Area2D" parent="." unique_id=1275411912]
+[node name="outerRange" type="Area2D" parent="." unique_id=1275411912 groups=["enemy"]]
 collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="outerRange" unique_id=739586550]
 shape = SubResource("CircleShape2D_o01uv")
 
-[node name="attackCooldown" type="Timer" parent="." unique_id=358208195]
+[node name="attackCooldown" type="Timer" parent="." unique_id=358208195 groups=["enemy"]]
 one_shot = true
 
 [connection signal="body_entered" from="innerRange" to="." method="_on_inner_range_body_entered"]
