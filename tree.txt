@@ -1,0 +1,2749 @@
+.
+├── addons
+│   └── godot_super-wakatime
+│       ├── api_key_prompt.tscn
+│       ├── counter.tscn
+│       ├── godot_super-wakatime.gd
+│       ├── godot_super-wakatime.gd.uid
+│       ├── LICENSE
+│       ├── plugin.cfg
+│       ├── README.md
+│       ├── utils.gd
+│       └── utils.gd.uid
+├── Assets
+│   ├── Effects
+│   │   └── coin_break_particle_effect.tscn
+│   ├── spike.png
+│   ├── spike.png.import
+│   ├── ThirdParty
+│   │   ├── Captain Clown Nose
+│   │   │   ├── Aseprite
+│   │   │   │   ├── Captain Clown Nose.aseprite
+│   │   │   │   ├── Dialogue.aseprite
+│   │   │   │   └── Dust Particles.aseprite
+│   │   │   └── Sprites
+│   │   │       ├── Captain Clown Nose
+│   │   │       │   ├── Captain Clown Nose without Sword
+│   │   │       │   │   ├── 01-Idle
+│   │   │       │   │   │   ├── Idle 01.png
+│   │   │       │   │   │   ├── Idle 01.png.import
+│   │   │       │   │   │   ├── Idle 02.png
+│   │   │       │   │   │   ├── Idle 02.png.import
+│   │   │       │   │   │   ├── Idle 03.png
+│   │   │       │   │   │   ├── Idle 03.png.import
+│   │   │       │   │   │   ├── Idle 04.png
+│   │   │       │   │   │   ├── Idle 04.png.import
+│   │   │       │   │   │   ├── Idle 05.png
+│   │   │       │   │   │   └── Idle 05.png.import
+│   │   │       │   │   ├── 02-Run
+│   │   │       │   │   │   ├── Run 01.png
+│   │   │       │   │   │   ├── Run 01.png.import
+│   │   │       │   │   │   ├── Run 02.png
+│   │   │       │   │   │   ├── Run 02.png.import
+│   │   │       │   │   │   ├── Run 03.png
+│   │   │       │   │   │   ├── Run 03.png.import
+│   │   │       │   │   │   ├── Run 04.png
+│   │   │       │   │   │   ├── Run 04.png.import
+│   │   │       │   │   │   ├── Run 05.png
+│   │   │       │   │   │   ├── Run 05.png.import
+│   │   │       │   │   │   ├── Run 06.png
+│   │   │       │   │   │   └── Run 06.png.import
+│   │   │       │   │   ├── 03-Jump
+│   │   │       │   │   │   ├── Jump 01.png
+│   │   │       │   │   │   ├── Jump 01.png.import
+│   │   │       │   │   │   ├── Jump 02.png
+│   │   │       │   │   │   ├── Jump 02.png.import
+│   │   │       │   │   │   ├── Jump 03.png
+│   │   │       │   │   │   └── Jump 03.png.import
+│   │   │       │   │   ├── 04-Fall
+│   │   │       │   │   │   ├── Fall 01.png
+│   │   │       │   │   │   └── Fall 01.png.import
+│   │   │       │   │   ├── 05-Ground
+│   │   │       │   │   │   ├── Ground 01.png
+│   │   │       │   │   │   ├── Ground 01.png.import
+│   │   │       │   │   │   ├── Ground 02.png
+│   │   │       │   │   │   └── Ground 02.png.import
+│   │   │       │   │   ├── 06-Hit
+│   │   │       │   │   │   ├── Hit 01.png
+│   │   │       │   │   │   ├── Hit 01.png.import
+│   │   │       │   │   │   ├── Hit 02.png
+│   │   │       │   │   │   ├── Hit 02.png.import
+│   │   │       │   │   │   ├── Hit 03.png
+│   │   │       │   │   │   ├── Hit 03.png.import
+│   │   │       │   │   │   ├── Hit 04.png
+│   │   │       │   │   │   └── Hit 04.png.import
+│   │   │       │   │   ├── 07-Dead Hit
+│   │   │       │   │   │   ├── Dead Hit 01.png
+│   │   │       │   │   │   ├── Dead Hit 01.png.import
+│   │   │       │   │   │   ├── Dead Hit 02.png
+│   │   │       │   │   │   ├── Dead Hit 02.png.import
+│   │   │       │   │   │   ├── Dead Hit 03.png
+│   │   │       │   │   │   ├── Dead Hit 03.png.import
+│   │   │       │   │   │   ├── Dead Hit 04.png
+│   │   │       │   │   │   └── Dead Hit 04.png.import
+│   │   │       │   │   └── 08-Dead Ground
+│   │   │       │   │       ├── Dead Ground 01.png
+│   │   │       │   │       ├── Dead Ground 01.png.import
+│   │   │       │   │       ├── Dead Ground 02.png
+│   │   │       │   │       ├── Dead Ground 02.png.import
+│   │   │       │   │       ├── Dead Ground 03.png
+│   │   │       │   │       ├── Dead Ground 03.png.import
+│   │   │       │   │       ├── Dead Ground 04.png
+│   │   │       │   │       └── Dead Ground 04.png.import
+│   │   │       │   ├── Captain Clown Nose with Sword
+│   │   │       │   │   ├── 09-Idle Sword
+│   │   │       │   │   │   ├── Idle Sword 01.png
+│   │   │       │   │   │   ├── Idle Sword 01.png.import
+│   │   │       │   │   │   ├── Idle Sword 02.png
+│   │   │       │   │   │   ├── Idle Sword 02.png.import
+│   │   │       │   │   │   ├── Idle Sword 03.png
+│   │   │       │   │   │   ├── Idle Sword 03.png.import
+│   │   │       │   │   │   ├── Idle Sword 04.png
+│   │   │       │   │   │   ├── Idle Sword 04.png.import
+│   │   │       │   │   │   ├── Idle Sword 05.png
+│   │   │       │   │   │   └── Idle Sword 05.png.import
+│   │   │       │   │   ├── 10-Run Sword
+│   │   │       │   │   │   ├── Run Sword 01.png
+│   │   │       │   │   │   ├── Run Sword 01.png.import
+│   │   │       │   │   │   ├── Run Sword 02.png
+│   │   │       │   │   │   ├── Run Sword 02.png.import
+│   │   │       │   │   │   ├── Run Sword 03.png
+│   │   │       │   │   │   ├── Run Sword 03.png.import
+│   │   │       │   │   │   ├── Run Sword 04.png
+│   │   │       │   │   │   ├── Run Sword 04.png.import
+│   │   │       │   │   │   ├── Run Sword 05.png
+│   │   │       │   │   │   ├── Run Sword 05.png.import
+│   │   │       │   │   │   ├── Run Sword 06.png
+│   │   │       │   │   │   └── Run Sword 06.png.import
+│   │   │       │   │   ├── 11-Jump Sword
+│   │   │       │   │   │   ├── Jump Sword 01.png
+│   │   │       │   │   │   ├── Jump Sword 01.png.import
+│   │   │       │   │   │   ├── Jump Sword 02.png
+│   │   │       │   │   │   ├── Jump Sword 02.png.import
+│   │   │       │   │   │   ├── Jump Sword 03.png
+│   │   │       │   │   │   └── Jump Sword 03.png.import
+│   │   │       │   │   ├── 12-Fall Sword
+│   │   │       │   │   │   ├── Fall Sword 01.png
+│   │   │       │   │   │   └── Fall Sword 01.png.import
+│   │   │       │   │   ├── 13-Ground Sword
+│   │   │       │   │   │   ├── Ground Sword 01.png
+│   │   │       │   │   │   ├── Ground Sword 01.png.import
+│   │   │       │   │   │   ├── Ground Sword 02.png
+│   │   │       │   │   │   └── Ground Sword 02.png.import
+│   │   │       │   │   ├── 14-Hit Sword
+│   │   │       │   │   │   ├── Hit Sword 01.png
+│   │   │       │   │   │   ├── Hit Sword 01.png.import
+│   │   │       │   │   │   ├── Hit Sword 02.png
+│   │   │       │   │   │   ├── Hit Sword 02.png.import
+│   │   │       │   │   │   ├── Hit Sword 03.png
+│   │   │       │   │   │   ├── Hit Sword 03.png.import
+│   │   │       │   │   │   ├── Hit Sword 04.png
+│   │   │       │   │   │   └── Hit Sword 04.png.import
+│   │   │       │   │   ├── 15-Attack 1
+│   │   │       │   │   │   ├── Attack 1 01.png
+│   │   │       │   │   │   ├── Attack 1 01.png.import
+│   │   │       │   │   │   ├── Attack 1 02.png
+│   │   │       │   │   │   ├── Attack 1 02.png.import
+│   │   │       │   │   │   ├── Attack 1 03.png
+│   │   │       │   │   │   └── Attack 1 03.png.import
+│   │   │       │   │   ├── 16-Attack 2
+│   │   │       │   │   │   ├── Attack 2 01.png
+│   │   │       │   │   │   ├── Attack 2 01.png.import
+│   │   │       │   │   │   ├── Attack 2 02.png
+│   │   │       │   │   │   ├── Attack 2 02.png.import
+│   │   │       │   │   │   ├── Attack 2 03.png
+│   │   │       │   │   │   └── Attack 2 03.png.import
+│   │   │       │   │   ├── 17-Attack 3
+│   │   │       │   │   │   ├── Attack 3 01.png
+│   │   │       │   │   │   ├── Attack 3 01.png.import
+│   │   │       │   │   │   ├── Attack 3 02.png
+│   │   │       │   │   │   ├── Attack 3 02.png.import
+│   │   │       │   │   │   ├── Attack 3 03.png
+│   │   │       │   │   │   └── Attack 3 03.png.import
+│   │   │       │   │   ├── 18-Air Attack 1
+│   │   │       │   │   │   ├── Air Attack 1 01.png
+│   │   │       │   │   │   ├── Air Attack 1 01.png.import
+│   │   │       │   │   │   ├── Air Attack 1 02.png
+│   │   │       │   │   │   ├── Air Attack 1 02.png.import
+│   │   │       │   │   │   ├── Air Attack 1 03.png
+│   │   │       │   │   │   └── Air Attack 1 03.png.import
+│   │   │       │   │   ├── 19-Air Attack 2
+│   │   │       │   │   │   ├── Air Attack 2 01.png
+│   │   │       │   │   │   ├── Air Attack 2 01.png.import
+│   │   │       │   │   │   ├── Air Attack 2 02.png
+│   │   │       │   │   │   ├── Air Attack 2 02.png.import
+│   │   │       │   │   │   ├── Air Attack 2 03.png
+│   │   │       │   │   │   └── Air Attack 2 03.png.import
+│   │   │       │   │   └── 20-Throw Sword
+│   │   │       │   │       ├── Throw Sword 01.png
+│   │   │       │   │       ├── Throw Sword 01.png.import
+│   │   │       │   │       ├── Throw Sword 02.png
+│   │   │       │   │       ├── Throw Sword 02.png.import
+│   │   │       │   │       ├── Throw Sword 03.png
+│   │   │       │   │       └── Throw Sword 03.png.import
+│   │   │       │   ├── Sword
+│   │   │       │   │   ├── 21-Sword Idle
+│   │   │       │   │   │   ├── Sword Idle 01.png
+│   │   │       │   │   │   ├── Sword Idle 01.png.import
+│   │   │       │   │   │   ├── Sword Idle 02.png
+│   │   │       │   │   │   ├── Sword Idle 02.png.import
+│   │   │       │   │   │   ├── Sword Idle 03.png
+│   │   │       │   │   │   ├── Sword Idle 03.png.import
+│   │   │       │   │   │   ├── Sword Idle 04.png
+│   │   │       │   │   │   ├── Sword Idle 04.png.import
+│   │   │       │   │   │   ├── Sword Idle 05.png
+│   │   │       │   │   │   ├── Sword Idle 05.png.import
+│   │   │       │   │   │   ├── Sword Idle 06.png
+│   │   │       │   │   │   ├── Sword Idle 06.png.import
+│   │   │       │   │   │   ├── Sword Idle 07.png
+│   │   │       │   │   │   ├── Sword Idle 07.png.import
+│   │   │       │   │   │   ├── Sword Idle 08.png
+│   │   │       │   │   │   └── Sword Idle 08.png.import
+│   │   │       │   │   ├── 22-Sword Spinning
+│   │   │       │   │   │   ├── Sword Spinning 01.png
+│   │   │       │   │   │   ├── Sword Spinning 01.png.import
+│   │   │       │   │   │   ├── Sword Spinning 02.png
+│   │   │       │   │   │   ├── Sword Spinning 02.png.import
+│   │   │       │   │   │   ├── Sword Spinning 03.png
+│   │   │       │   │   │   ├── Sword Spinning 03.png.import
+│   │   │       │   │   │   ├── Sword Spinning 04.png
+│   │   │       │   │   │   └── Sword Spinning 04.png.import
+│   │   │       │   │   └── 23-Sword Embedded
+│   │   │       │   │       ├── Sword Embedded 01.png
+│   │   │       │   │       ├── Sword Embedded 01.png.import
+│   │   │       │   │       ├── Sword Embedded 02.png
+│   │   │       │   │       ├── Sword Embedded 02.png.import
+│   │   │       │   │       ├── Sword Embedded 03.png
+│   │   │       │   │       ├── Sword Embedded 03.png.import
+│   │   │       │   │       ├── Sword Embedded 04.png
+│   │   │       │   │       └── Sword Embedded 04.png.import
+│   │   │       │   └── Sword Effects
+│   │   │       │       ├── 24-Attack 1
+│   │   │       │       │   ├── Attack 1 01.png
+│   │   │       │       │   ├── Attack 1 01.png.import
+│   │   │       │       │   ├── Attack 1 02.png
+│   │   │       │       │   ├── Attack 1 02.png.import
+│   │   │       │       │   ├── Attack 1 03.png
+│   │   │       │       │   └── Attack 1 03.png.import
+│   │   │       │       ├── 25-Attack 2
+│   │   │       │       │   ├── Attack 2 01.png
+│   │   │       │       │   ├── Attack 2 01.png.import
+│   │   │       │       │   ├── Attack 2 02.png
+│   │   │       │       │   ├── Attack 2 02.png.import
+│   │   │       │       │   ├── Attack 2 03.png
+│   │   │       │       │   └── Attack 2 03.png.import
+│   │   │       │       ├── 26-Attack 3
+│   │   │       │       │   ├── Attack 3 01.png
+│   │   │       │       │   ├── Attack 3 01.png.import
+│   │   │       │       │   ├── Attack 3 02.png
+│   │   │       │       │   ├── Attack 3 02.png.import
+│   │   │       │       │   ├── Attack 3 03.png
+│   │   │       │       │   └── Attack 3 03.png.import
+│   │   │       │       ├── 27-Air Attack 1
+│   │   │       │       │   ├── Air Attack 1 01.png
+│   │   │       │       │   ├── Air Attack 1 01.png.import
+│   │   │       │       │   ├── Air Attack 1 02.png
+│   │   │       │       │   └── Air Attack 1 02.png.import
+│   │   │       │       └── 28-Air Attack 2
+│   │   │       │           ├── Air Attack 2 01.png
+│   │   │       │           ├── Air Attack 2 01.png.import
+│   │   │       │           ├── Air Attack 2 02.png
+│   │   │       │           └── Air Attack 2 02.png.import
+│   │   │       ├── Dialogue
+│   │   │       │   ├── Dead
+│   │   │       │   │   ├── Dead In 01.png
+│   │   │       │   │   ├── Dead In 01.png.import
+│   │   │       │   │   ├── Dead In 02.png
+│   │   │       │   │   ├── Dead In 02.png.import
+│   │   │       │   │   ├── Dead In 03.png
+│   │   │       │   │   ├── Dead In 03.png.import
+│   │   │       │   │   ├── Dead Out 01.png
+│   │   │       │   │   ├── Dead Out 01.png.import
+│   │   │       │   │   ├── Dead Out 02.png
+│   │   │       │   │   └── Dead Out 02.png.import
+│   │   │       │   ├── Exclamation
+│   │   │       │   │   ├── Exclamation In 01.png
+│   │   │       │   │   ├── Exclamation In 01.png.import
+│   │   │       │   │   ├── Exclamation In 02.png
+│   │   │       │   │   ├── Exclamation In 02.png.import
+│   │   │       │   │   ├── Exclamation In 03.png
+│   │   │       │   │   ├── Exclamation In 03.png.import
+│   │   │       │   │   ├── Exclamation Out 01.png
+│   │   │       │   │   ├── Exclamation Out 01.png.import
+│   │   │       │   │   ├── Exclamation Out 02.png
+│   │   │       │   │   └── Exclamation Out 02.png.import
+│   │   │       │   └── Interrogation
+│   │   │       │       ├── Interrogation In 01.png
+│   │   │       │       ├── Interrogation In 01.png.import
+│   │   │       │       ├── Interrogation In 02.png
+│   │   │       │       ├── Interrogation In 02.png.import
+│   │   │       │       ├── Interrogation In 03.png
+│   │   │       │       ├── Interrogation In 03.png.import
+│   │   │       │       ├── Interrogation Out 01.png
+│   │   │       │       ├── Interrogation Out 01.png.import
+│   │   │       │       ├── Interrogation Out 02.png
+│   │   │       │       └── Interrogation Out 02.png.import
+│   │   │       └── Dust Particles
+│   │   │           ├── Fall 01.png
+│   │   │           ├── Fall 01.png.import
+│   │   │           ├── Fall 02.png
+│   │   │           ├── Fall 02.png.import
+│   │   │           ├── Fall 03.png
+│   │   │           ├── Fall 03.png.import
+│   │   │           ├── Fall 04.png
+│   │   │           ├── Fall 04.png.import
+│   │   │           ├── Fall 05.png
+│   │   │           ├── Fall 05.png.import
+│   │   │           ├── Jump 01.png
+│   │   │           ├── Jump 01.png.import
+│   │   │           ├── Jump 02.png
+│   │   │           ├── Jump 02.png.import
+│   │   │           ├── Jump 03.png
+│   │   │           ├── Jump 03.png.import
+│   │   │           ├── Jump 04.png
+│   │   │           ├── Jump 04.png.import
+│   │   │           ├── Jump 05.png
+│   │   │           ├── Jump 05.png.import
+│   │   │           ├── Jump 06.png
+│   │   │           ├── Jump 06.png.import
+│   │   │           ├── Run 01.png
+│   │   │           ├── Run 01.png.import
+│   │   │           ├── Run 02.png
+│   │   │           ├── Run 02.png.import
+│   │   │           ├── Run 03.png
+│   │   │           ├── Run 03.png.import
+│   │   │           ├── Run 04.png
+│   │   │           ├── Run 04.png.import
+│   │   │           ├── Run 05.png
+│   │   │           └── Run 05.png.import
+│   │   ├── Merchant Ship
+│   │   │   ├── Aseprite
+│   │   │   │   └── Merchant Ship.aseprite
+│   │   │   └── Sprites
+│   │   │       ├── Barrel
+│   │   │       │   ├── Destroyed
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   ├── 4.png.import
+│   │   │       │   │   ├── 5.png
+│   │   │       │   │   └── 5.png.import
+│   │   │       │   ├── Hit
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   └── 4.png.import
+│   │   │       │   └── Idle
+│   │   │       │       ├── 1.png
+│   │   │       │       └── 1.png.import
+│   │   │       ├── Box
+│   │   │       │   ├── Destroyed
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   ├── 4.png.import
+│   │   │       │   │   ├── 5.png
+│   │   │       │   │   └── 5.png.import
+│   │   │       │   ├── Hit
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   └── 4.png.import
+│   │   │       │   └── Idle
+│   │   │       │       ├── 1.png
+│   │   │       │       └── 1.png.import
+│   │   │       ├── Chest
+│   │   │       │   ├── Idle
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   └── 1.png.import
+│   │   │       │   ├── Padlock
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   └── 1.png.import
+│   │   │       │   └── Unlocked
+│   │   │       │       ├── 1.png
+│   │   │       │       ├── 1.png.import
+│   │   │       │       ├── 2.png
+│   │   │       │       ├── 2.png.import
+│   │   │       │       ├── 3.png
+│   │   │       │       ├── 3.png.import
+│   │   │       │       ├── 4.png
+│   │   │       │       ├── 4.png.import
+│   │   │       │       ├── 5.png
+│   │   │       │       ├── 5.png.import
+│   │   │       │       ├── 6.png
+│   │   │       │       ├── 6.png.import
+│   │   │       │       ├── 7.png
+│   │   │       │       ├── 7.png.import
+│   │   │       │       ├── 8.png
+│   │   │       │       └── 8.png.import
+│   │   │       ├── Chest Key
+│   │   │       │   ├── Effect
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   └── 4.png.import
+│   │   │       │   └── Idle
+│   │   │       │       ├── 1.png
+│   │   │       │       ├── 1.png.import
+│   │   │       │       ├── 2.png
+│   │   │       │       ├── 2.png.import
+│   │   │       │       ├── 3.png
+│   │   │       │       ├── 3.png.import
+│   │   │       │       ├── 4.png
+│   │   │       │       ├── 4.png.import
+│   │   │       │       ├── 5.png
+│   │   │       │       ├── 5.png.import
+│   │   │       │       ├── 6.png
+│   │   │       │       ├── 6.png.import
+│   │   │       │       ├── 7.png
+│   │   │       │       ├── 7.png.import
+│   │   │       │       ├── 8.png
+│   │   │       │       └── 8.png.import
+│   │   │       ├── Ship
+│   │   │       │   ├── Anchor
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   └── 2.png.import
+│   │   │       │   ├── Destroyed
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   └── 3.png.import
+│   │   │       │   ├── Sail
+│   │   │       │   │   ├── No Wind
+│   │   │       │   │   │   ├── 1.png
+│   │   │       │   │   │   ├── 1.png.import
+│   │   │       │   │   │   ├── 2.png
+│   │   │       │   │   │   ├── 2.png.import
+│   │   │       │   │   │   ├── 3.png
+│   │   │       │   │   │   ├── 3.png.import
+│   │   │       │   │   │   ├── 4.png
+│   │   │       │   │   │   ├── 4.png.import
+│   │   │       │   │   │   ├── 5.png
+│   │   │       │   │   │   ├── 5.png.import
+│   │   │       │   │   │   ├── 6.png
+│   │   │       │   │   │   ├── 6.png.import
+│   │   │       │   │   │   ├── 7.png
+│   │   │       │   │   │   ├── 7.png.import
+│   │   │       │   │   │   ├── 8.png
+│   │   │       │   │   │   └── 8.png.import
+│   │   │       │   │   ├── Transition to No Wind
+│   │   │       │   │   │   ├── 1.png
+│   │   │       │   │   │   ├── 1.png.import
+│   │   │       │   │   │   ├── 2.png
+│   │   │       │   │   │   ├── 2.png.import
+│   │   │       │   │   │   ├── 3.png
+│   │   │       │   │   │   └── 3.png.import
+│   │   │       │   │   ├── Transition to Wind
+│   │   │       │   │   │   ├── 1.png
+│   │   │       │   │   │   ├── 1.png.import
+│   │   │       │   │   │   ├── 2.png
+│   │   │       │   │   │   ├── 2.png.import
+│   │   │       │   │   │   ├── 3.png
+│   │   │       │   │   │   └── 3.png.import
+│   │   │       │   │   └── Wind
+│   │   │       │   │       ├── 1.png
+│   │   │       │   │       ├── 1.png.import
+│   │   │       │   │       ├── 2.png
+│   │   │       │   │       ├── 2.png.import
+│   │   │       │   │       ├── 3.png
+│   │   │       │   │       ├── 3.png.import
+│   │   │       │   │       ├── 4.png
+│   │   │       │   │       └── 4.png.import
+│   │   │       │   └── Ship
+│   │   │       │       ├── Hit
+│   │   │       │       │   ├── 1.png
+│   │   │       │       │   ├── 1.png.import
+│   │   │       │       │   ├── 2.png
+│   │   │       │       │   ├── 2.png.import
+│   │   │       │       │   ├── 3.png
+│   │   │       │       │   ├── 3.png.import
+│   │   │       │       │   ├── 4.png
+│   │   │       │       │   └── 4.png.import
+│   │   │       │       └── Idle
+│   │   │       │           ├── 1.png
+│   │   │       │           ├── 1.png.import
+│   │   │       │           ├── 2.png
+│   │   │       │           ├── 2.png.import
+│   │   │       │           ├── 3.png
+│   │   │       │           ├── 3.png.import
+│   │   │       │           ├── 4.png
+│   │   │       │           ├── 4.png.import
+│   │   │       │           ├── 5.png
+│   │   │       │           ├── 5.png.import
+│   │   │       │           ├── 6.png
+│   │   │       │           └── 6.png.import
+│   │   │       └── Water
+│   │   │           ├── Reflexes 1
+│   │   │           │   ├── 1.png
+│   │   │           │   ├── 1.png.import
+│   │   │           │   ├── 2.png
+│   │   │           │   ├── 2.png.import
+│   │   │           │   ├── 3.png
+│   │   │           │   ├── 3.png.import
+│   │   │           │   ├── 4.png
+│   │   │           │   ├── 4.png.import
+│   │   │           │   ├── 5.png
+│   │   │           │   ├── 5.png.import
+│   │   │           │   ├── 6.png
+│   │   │           │   └── 6.png.import
+│   │   │           ├── Reflexes 2
+│   │   │           │   ├── 1.png
+│   │   │           │   ├── 1.png.import
+│   │   │           │   ├── 2.png
+│   │   │           │   ├── 2.png.import
+│   │   │           │   ├── 3.png
+│   │   │           │   ├── 3.png.import
+│   │   │           │   ├── 4.png
+│   │   │           │   ├── 4.png.import
+│   │   │           │   ├── 5.png
+│   │   │           │   ├── 5.png.import
+│   │   │           │   ├── 6.png
+│   │   │           │   └── 6.png.import
+│   │   │           ├── Water
+│   │   │           │   ├── Bottom
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   └── 1.png.import
+│   │   │           │   └── Top
+│   │   │           │       ├── 1.png
+│   │   │           │       ├── 1.png.import
+│   │   │           │       ├── 2.png
+│   │   │           │       ├── 2.png.import
+│   │   │           │       ├── 3.png
+│   │   │           │       ├── 3.png.import
+│   │   │           │       ├── 4.png
+│   │   │           │       └── 4.png.import
+│   │   │           ├── Water Splash 1
+│   │   │           │   ├── 1.png
+│   │   │           │   ├── 1.png.import
+│   │   │           │   ├── 2.png
+│   │   │           │   ├── 2.png.import
+│   │   │           │   ├── 3.png
+│   │   │           │   ├── 3.png.import
+│   │   │           │   ├── 4.png
+│   │   │           │   ├── 4.png.import
+│   │   │           │   ├── 5.png
+│   │   │           │   └── 5.png.import
+│   │   │           └── Water Splash 2
+│   │   │               ├── 1.png
+│   │   │               ├── 1.png.import
+│   │   │               ├── 2.png
+│   │   │               ├── 2.png.import
+│   │   │               ├── 3.png
+│   │   │               ├── 3.png.import
+│   │   │               ├── 4.png
+│   │   │               └── 4.png.import
+│   │   ├── Palm Tree Island
+│   │   │   ├── Aseprite
+│   │   │   │   ├── Chest.aseprite
+│   │   │   │   ├── Flag.aseprite
+│   │   │   │   ├── Palm Tree.aseprite
+│   │   │   │   ├── Palm Tree Island (ArtBoard).aseprite
+│   │   │   │   ├── Ship Helm.aseprite
+│   │   │   │   └── Water Reflect.aseprite
+│   │   │   └── Sprites
+│   │   │       ├── Background
+│   │   │       │   ├── Additional Sky.png
+│   │   │       │   ├── Additional Sky.png.import
+│   │   │       │   ├── Additional Water.png
+│   │   │       │   ├── Additional Water.png.import
+│   │   │       │   ├── BG Image.png
+│   │   │       │   ├── BG Image.png.import
+│   │   │       │   ├── Big Clouds.png
+│   │   │       │   ├── Big Clouds.png.import
+│   │   │       │   ├── Small Cloud 1.png
+│   │   │       │   ├── Small Cloud 1.png.import
+│   │   │       │   ├── Small Cloud 2.png
+│   │   │       │   ├── Small Cloud 2.png.import
+│   │   │       │   ├── Small Cloud 3.png
+│   │   │       │   ├── Small Cloud 3.png.import
+│   │   │       │   ├── Water Reflect Big 01.png
+│   │   │       │   ├── Water Reflect Big 01.png.import
+│   │   │       │   ├── Water Reflect Big 02.png
+│   │   │       │   ├── Water Reflect Big 02.png.import
+│   │   │       │   ├── Water Reflect Big 03.png
+│   │   │       │   ├── Water Reflect Big 03.png.import
+│   │   │       │   ├── Water Reflect Big 04.png
+│   │   │       │   ├── Water Reflect Big 04.png.import
+│   │   │       │   ├── Water Reflect Medium 01.png
+│   │   │       │   ├── Water Reflect Medium 01.png.import
+│   │   │       │   ├── Water Reflect Medium 02.png
+│   │   │       │   ├── Water Reflect Medium 02.png.import
+│   │   │       │   ├── Water Reflect Medium 03.png
+│   │   │       │   ├── Water Reflect Medium 03.png.import
+│   │   │       │   ├── Water Reflect Medium 04.png
+│   │   │       │   ├── Water Reflect Medium 04.png.import
+│   │   │       │   ├── Water Reflect Small 01.png
+│   │   │       │   ├── Water Reflect Small 01.png.import
+│   │   │       │   ├── Water Reflect Small 02.png
+│   │   │       │   ├── Water Reflect Small 02.png.import
+│   │   │       │   ├── Water Reflect Small 03.png
+│   │   │       │   ├── Water Reflect Small 03.png.import
+│   │   │       │   ├── Water Reflect Small 04.png
+│   │   │       │   └── Water Reflect Small 04.png.import
+│   │   │       ├── Back Palm Trees
+│   │   │       │   ├── Back Palm Tree Left 01.png
+│   │   │       │   ├── Back Palm Tree Left 01.png.import
+│   │   │       │   ├── Back Palm Tree Left 02.png
+│   │   │       │   ├── Back Palm Tree Left 02.png.import
+│   │   │       │   ├── Back Palm Tree Left 03.png
+│   │   │       │   ├── Back Palm Tree Left 03.png.import
+│   │   │       │   ├── Back Palm Tree Left 04.png
+│   │   │       │   ├── Back Palm Tree Left 04.png.import
+│   │   │       │   ├── Back Palm Tree Regular 01.png
+│   │   │       │   ├── Back Palm Tree Regular 01.png.import
+│   │   │       │   ├── Back Palm Tree Regular 02.png
+│   │   │       │   ├── Back Palm Tree Regular 02.png.import
+│   │   │       │   ├── Back Palm Tree Regular 03.png
+│   │   │       │   ├── Back Palm Tree Regular 03.png.import
+│   │   │       │   ├── Back Palm Tree Regular 04.png
+│   │   │       │   ├── Back Palm Tree Regular 04.png.import
+│   │   │       │   ├── Back Palm Tree Right 01.png
+│   │   │       │   ├── Back Palm Tree Right 01.png.import
+│   │   │       │   ├── Back Palm Tree Right 02.png
+│   │   │       │   ├── Back Palm Tree Right 02.png.import
+│   │   │       │   ├── Back Palm Tree Right 03.png
+│   │   │       │   ├── Back Palm Tree Right 03.png.import
+│   │   │       │   ├── Back Palm Tree Right 04.png
+│   │   │       │   └── Back Palm Tree Right 04.png.import
+│   │   │       ├── Front Palm Trees
+│   │   │       │   ├── Front Palm Bottom and Grass (32x32).png
+│   │   │       │   ├── Front Palm Bottom and Grass (32x32).png.import
+│   │   │       │   ├── Front Palm Tree Top 01.png
+│   │   │       │   ├── Front Palm Tree Top 01.png.import
+│   │   │       │   ├── Front Palm Tree Top 02.png
+│   │   │       │   ├── Front Palm Tree Top 02.png.import
+│   │   │       │   ├── Front Palm Tree Top 03.png
+│   │   │       │   ├── Front Palm Tree Top 03.png.import
+│   │   │       │   ├── Front Palm Tree Top 04.png
+│   │   │       │   └── Front Palm Tree Top 04.png.import
+│   │   │       ├── Objects
+│   │   │       │   ├── Chest
+│   │   │       │   │   ├── Chest Close 01.png
+│   │   │       │   │   ├── Chest Close 01.png.import
+│   │   │       │   │   ├── Chest Close 02.png
+│   │   │       │   │   ├── Chest Close 02.png.import
+│   │   │       │   │   ├── Chest Close 03.png
+│   │   │       │   │   ├── Chest Close 03.png.import
+│   │   │       │   │   ├── Chest Close 04.png
+│   │   │       │   │   ├── Chest Close 04.png.import
+│   │   │       │   │   ├── Chest Close 05.png
+│   │   │       │   │   ├── Chest Close 05.png.import
+│   │   │       │   │   ├── Chest Close 06.png
+│   │   │       │   │   ├── Chest Close 06.png.import
+│   │   │       │   │   ├── Chest Close 07.png
+│   │   │       │   │   ├── Chest Close 07.png.import
+│   │   │       │   │   ├── Chest Close 08.png
+│   │   │       │   │   ├── Chest Close 08.png.import
+│   │   │       │   │   ├── Chest Close 09.png
+│   │   │       │   │   ├── Chest Close 09.png.import
+│   │   │       │   │   ├── Chest Close 10.png
+│   │   │       │   │   ├── Chest Close 10.png.import
+│   │   │       │   │   ├── Chest Open 01.png
+│   │   │       │   │   ├── Chest Open 01.png.import
+│   │   │       │   │   ├── Chest Open 02.png
+│   │   │       │   │   ├── Chest Open 02.png.import
+│   │   │       │   │   ├── Chest Open 03.png
+│   │   │       │   │   ├── Chest Open 03.png.import
+│   │   │       │   │   ├── Chest Open 04.png
+│   │   │       │   │   ├── Chest Open 04.png.import
+│   │   │       │   │   ├── Chest Open 05.png
+│   │   │       │   │   ├── Chest Open 05.png.import
+│   │   │       │   │   ├── Chest Open 06.png
+│   │   │       │   │   ├── Chest Open 06.png.import
+│   │   │       │   │   ├── Chest Open 07.png
+│   │   │       │   │   ├── Chest Open 07.png.import
+│   │   │       │   │   ├── Chest Open 08.png
+│   │   │       │   │   ├── Chest Open 08.png.import
+│   │   │       │   │   ├── Chest Open 09.png
+│   │   │       │   │   ├── Chest Open 09.png.import
+│   │   │       │   │   ├── Chest Open 10.png
+│   │   │       │   │   └── Chest Open 10.png.import
+│   │   │       │   ├── Flag
+│   │   │       │   │   ├── Flag 01.png
+│   │   │       │   │   ├── Flag 01.png.import
+│   │   │       │   │   ├── Flag 02.png
+│   │   │       │   │   ├── Flag 02.png.import
+│   │   │       │   │   ├── Flag 03.png
+│   │   │       │   │   ├── Flag 03.png.import
+│   │   │       │   │   ├── Flag 04.png
+│   │   │       │   │   ├── Flag 04.png.import
+│   │   │       │   │   ├── Flag 05.png
+│   │   │       │   │   ├── Flag 05.png.import
+│   │   │       │   │   ├── Flag 06.png
+│   │   │       │   │   ├── Flag 06.png.import
+│   │   │       │   │   ├── Flag 07.png
+│   │   │       │   │   ├── Flag 07.png.import
+│   │   │       │   │   ├── Flag 08.png
+│   │   │       │   │   ├── Flag 08.png.import
+│   │   │       │   │   ├── Flag 09.png
+│   │   │       │   │   ├── Flag 09.png.import
+│   │   │       │   │   ├── Platform.png
+│   │   │       │   │   └── Platform.png.import
+│   │   │       │   ├── Ship Helm
+│   │   │       │   │   ├── Ship Helm Idle 01.png
+│   │   │       │   │   ├── Ship Helm Idle 01.png.import
+│   │   │       │   │   ├── Ship Helm Idle 02.png
+│   │   │       │   │   ├── Ship Helm Idle 02.png.import
+│   │   │       │   │   ├── Ship Helm Idle 03.png
+│   │   │       │   │   ├── Ship Helm Idle 03.png.import
+│   │   │       │   │   ├── Ship Helm Idle 04.png
+│   │   │       │   │   ├── Ship Helm Idle 04.png.import
+│   │   │       │   │   ├── Ship Helm Idle 05.png
+│   │   │       │   │   ├── Ship Helm Idle 05.png.import
+│   │   │       │   │   ├── Ship Helm Idle 06.png
+│   │   │       │   │   ├── Ship Helm Idle 06.png.import
+│   │   │       │   │   ├── Ship Helm Turn 01.png
+│   │   │       │   │   ├── Ship Helm Turn 01.png.import
+│   │   │       │   │   ├── Ship Helm Turn 02.png
+│   │   │       │   │   ├── Ship Helm Turn 02.png.import
+│   │   │       │   │   ├── Ship Helm Turn 03.png
+│   │   │       │   │   ├── Ship Helm Turn 03.png.import
+│   │   │       │   │   ├── Ship Helm Turn 04.png
+│   │   │       │   │   └── Ship Helm Turn 04.png.import
+│   │   │       │   └── Spikes
+│   │   │       │       ├── Spikes.png
+│   │   │       │       └── Spikes.png.import
+│   │   │       └── Terrain
+│   │   │           ├── Terrain (32x32).png
+│   │   │           └── Terrain (32x32).png.import
+│   │   ├── Pirate Ship
+│   │   │   ├── Aseprite
+│   │   │   │   ├── Decorations.aseprite
+│   │   │   │   └── TileSets.aseprite
+│   │   │   └── Sprites
+│   │   │       ├── Decorations
+│   │   │       │   ├── Barrels and Bottles
+│   │   │       │   │   ├── 01.png
+│   │   │       │   │   ├── 01.png.import
+│   │   │       │   │   ├── 02.png
+│   │   │       │   │   ├── 02.png.import
+│   │   │       │   │   ├── 03.png
+│   │   │       │   │   ├── 03.png.import
+│   │   │       │   │   ├── 04.png
+│   │   │       │   │   ├── 04.png.import
+│   │   │       │   │   ├── 05.png
+│   │   │       │   │   ├── 05.png.import
+│   │   │       │   │   ├── 06.png
+│   │   │       │   │   └── 06.png.import
+│   │   │       │   ├── Candle
+│   │   │       │   │   ├── Candle
+│   │   │       │   │   │   ├── 01.png
+│   │   │       │   │   │   ├── 01.png.import
+│   │   │       │   │   │   ├── 02.png
+│   │   │       │   │   │   ├── 02.png.import
+│   │   │       │   │   │   ├── 03.png
+│   │   │       │   │   │   ├── 03.png.import
+│   │   │       │   │   │   ├── 04.png
+│   │   │       │   │   │   ├── 04.png.import
+│   │   │       │   │   │   ├── 05.png
+│   │   │       │   │   │   ├── 05.png.import
+│   │   │       │   │   │   ├── 06.png
+│   │   │       │   │   │   └── 06.png.import
+│   │   │       │   │   └── Candle Light
+│   │   │       │   │       ├── 01.png
+│   │   │       │   │       ├── 01.png.import
+│   │   │       │   │       ├── 02.png
+│   │   │       │   │       ├── 02.png.import
+│   │   │       │   │       ├── 03.png
+│   │   │       │   │       ├── 03.png.import
+│   │   │       │   │       ├── 04.png
+│   │   │       │   │       └── 04.png.import
+│   │   │       │   ├── Chains
+│   │   │       │   │   ├── Big
+│   │   │       │   │   │   ├── 01.png
+│   │   │       │   │   │   ├── 01.png.import
+│   │   │       │   │   │   ├── 02.png
+│   │   │       │   │   │   ├── 02.png.import
+│   │   │       │   │   │   ├── 03.png
+│   │   │       │   │   │   ├── 03.png.import
+│   │   │       │   │   │   ├── 04.png
+│   │   │       │   │   │   ├── 04.png.import
+│   │   │       │   │   │   ├── 05.png
+│   │   │       │   │   │   ├── 05.png.import
+│   │   │       │   │   │   ├── 06.png
+│   │   │       │   │   │   ├── 06.png.import
+│   │   │       │   │   │   ├── 07.png
+│   │   │       │   │   │   ├── 07.png.import
+│   │   │       │   │   │   ├── 08.png
+│   │   │       │   │   │   └── 08.png.import
+│   │   │       │   │   └── Small
+│   │   │       │   │       ├── 01.png
+│   │   │       │   │       ├── 01.png.import
+│   │   │       │   │       ├── 02.png
+│   │   │       │   │       ├── 02.png.import
+│   │   │       │   │       ├── 03.png
+│   │   │       │   │       ├── 03.png.import
+│   │   │       │   │       ├── 04.png
+│   │   │       │   │       ├── 04.png.import
+│   │   │       │   │       ├── 05.png
+│   │   │       │   │       ├── 05.png.import
+│   │   │       │   │       ├── 06.png
+│   │   │       │   │       ├── 06.png.import
+│   │   │       │   │       ├── 07.png
+│   │   │       │   │       ├── 07.png.import
+│   │   │       │   │       ├── 08.png
+│   │   │       │   │       └── 08.png.import
+│   │   │       │   ├── Door
+│   │   │       │   │   ├── Closing
+│   │   │       │   │   │   ├── 01.png
+│   │   │       │   │   │   ├── 01.png.import
+│   │   │       │   │   │   ├── 02.png
+│   │   │       │   │   │   ├── 02.png.import
+│   │   │       │   │   │   ├── 03.png
+│   │   │       │   │   │   ├── 03.png.import
+│   │   │       │   │   │   ├── 04.png
+│   │   │       │   │   │   ├── 04.png.import
+│   │   │       │   │   │   ├── 05.png
+│   │   │       │   │   │   └── 05.png.import
+│   │   │       │   │   └── Opening
+│   │   │       │   │       ├── 01.png
+│   │   │       │   │       ├── 01.png.import
+│   │   │       │   │       ├── 02.png
+│   │   │       │   │       ├── 02.png.import
+│   │   │       │   │       ├── 03.png
+│   │   │       │   │       ├── 03.png.import
+│   │   │       │   │       ├── 04.png
+│   │   │       │   │       ├── 04.png.import
+│   │   │       │   │       ├── 05.png
+│   │   │       │   │       └── 05.png.import
+│   │   │       │   └── Window
+│   │   │       │       ├── Window
+│   │   │       │       │   ├── 01.png
+│   │   │       │       │   ├── 01.png.import
+│   │   │       │       │   ├── 02.png
+│   │   │       │       │   ├── 02.png.import
+│   │   │       │       │   ├── 03.png
+│   │   │       │       │   ├── 03.png.import
+│   │   │       │       │   ├── 04.png
+│   │   │       │       │   ├── 04.png.import
+│   │   │       │       │   ├── 05.png
+│   │   │       │       │   ├── 05.png.import
+│   │   │       │       │   ├── 06.png
+│   │   │       │       │   ├── 06.png.import
+│   │   │       │       │   ├── 07.png
+│   │   │       │       │   ├── 07.png.import
+│   │   │       │       │   ├── 08.png
+│   │   │       │       │   ├── 08.png.import
+│   │   │       │       │   ├── 09.png
+│   │   │       │       │   ├── 09.png.import
+│   │   │       │       │   ├── 10.png
+│   │   │       │       │   ├── 10.png.import
+│   │   │       │       │   ├── 11.png
+│   │   │       │       │   ├── 11.png.import
+│   │   │       │       │   ├── 12.png
+│   │   │       │       │   ├── 12.png.import
+│   │   │       │       │   ├── 13.png
+│   │   │       │       │   ├── 13.png.import
+│   │   │       │       │   ├── 14.png
+│   │   │       │       │   ├── 14.png.import
+│   │   │       │       │   ├── 15.png
+│   │   │       │       │   ├── 15.png.import
+│   │   │       │       │   ├── 16.png
+│   │   │       │       │   ├── 16.png.import
+│   │   │       │       │   ├── 17.png
+│   │   │       │       │   ├── 17.png.import
+│   │   │       │       │   ├── 18.png
+│   │   │       │       │   ├── 18.png.import
+│   │   │       │       │   ├── 19.png
+│   │   │       │       │   ├── 19.png.import
+│   │   │       │       │   ├── 20.png
+│   │   │       │       │   ├── 20.png.import
+│   │   │       │       │   ├── 21.png
+│   │   │       │       │   ├── 21.png.import
+│   │   │       │       │   ├── 22.png
+│   │   │       │       │   ├── 22.png.import
+│   │   │       │       │   ├── 23.png
+│   │   │       │       │   ├── 23.png.import
+│   │   │       │       │   ├── 24.png
+│   │   │       │       │   ├── 24.png.import
+│   │   │       │       │   ├── 25.png
+│   │   │       │       │   ├── 25.png.import
+│   │   │       │       │   ├── 26.png
+│   │   │       │       │   ├── 26.png.import
+│   │   │       │       │   ├── 27.png
+│   │   │       │       │   ├── 27.png.import
+│   │   │       │       │   ├── 28.png
+│   │   │       │       │   ├── 28.png.import
+│   │   │       │       │   ├── 29.png
+│   │   │       │       │   ├── 29.png.import
+│   │   │       │       │   ├── 30.png
+│   │   │       │       │   ├── 30.png.import
+│   │   │       │       │   ├── 31.png
+│   │   │       │       │   ├── 31.png.import
+│   │   │       │       │   ├── 32.png
+│   │   │       │       │   ├── 32.png.import
+│   │   │       │       │   ├── 33.png
+│   │   │       │       │   ├── 33.png.import
+│   │   │       │       │   ├── 34.png
+│   │   │       │       │   ├── 34.png.import
+│   │   │       │       │   ├── 35.png
+│   │   │       │       │   ├── 35.png.import
+│   │   │       │       │   ├── 36.png
+│   │   │       │       │   ├── 36.png.import
+│   │   │       │       │   ├── 37.png
+│   │   │       │       │   ├── 37.png.import
+│   │   │       │       │   ├── 38.png
+│   │   │       │       │   ├── 38.png.import
+│   │   │       │       │   ├── 39.png
+│   │   │       │       │   ├── 39.png.import
+│   │   │       │       │   ├── 40.png
+│   │   │       │       │   ├── 40.png.import
+│   │   │       │       │   ├── 41.png
+│   │   │       │       │   ├── 41.png.import
+│   │   │       │       │   ├── 42.png
+│   │   │       │       │   ├── 42.png.import
+│   │   │       │       │   ├── 43.png
+│   │   │       │       │   ├── 43.png.import
+│   │   │       │       │   ├── 44.png
+│   │   │       │       │   ├── 44.png.import
+│   │   │       │       │   ├── 45.png
+│   │   │       │       │   ├── 45.png.import
+│   │   │       │       │   ├── 46.png
+│   │   │       │       │   ├── 46.png.import
+│   │   │       │       │   ├── 47.png
+│   │   │       │       │   ├── 47.png.import
+│   │   │       │       │   ├── 48.png
+│   │   │       │       │   ├── 48.png.import
+│   │   │       │       │   ├── 49.png
+│   │   │       │       │   ├── 49.png.import
+│   │   │       │       │   ├── 50.png
+│   │   │       │       │   ├── 50.png.import
+│   │   │       │       │   ├── 51.png
+│   │   │       │       │   ├── 51.png.import
+│   │   │       │       │   ├── 52.png
+│   │   │       │       │   ├── 52.png.import
+│   │   │       │       │   ├── 53.png
+│   │   │       │       │   ├── 53.png.import
+│   │   │       │       │   ├── 54.png
+│   │   │       │       │   ├── 54.png.import
+│   │   │       │       │   ├── 55.png
+│   │   │       │       │   ├── 55.png.import
+│   │   │       │       │   ├── 56.png
+│   │   │       │       │   ├── 56.png.import
+│   │   │       │       │   ├── 57.png
+│   │   │       │       │   ├── 57.png.import
+│   │   │       │       │   ├── 58.png
+│   │   │       │       │   ├── 58.png.import
+│   │   │       │       │   ├── 59.png
+│   │   │       │       │   ├── 59.png.import
+│   │   │       │       │   ├── 60.png
+│   │   │       │       │   ├── 60.png.import
+│   │   │       │       │   ├── 61.png
+│   │   │       │       │   ├── 61.png.import
+│   │   │       │       │   ├── 62.png
+│   │   │       │       │   ├── 62.png.import
+│   │   │       │       │   ├── 63.png
+│   │   │       │       │   ├── 63.png.import
+│   │   │       │       │   ├── 64.png
+│   │   │       │       │   ├── 64.png.import
+│   │   │       │       │   ├── 65.png
+│   │   │       │       │   ├── 65.png.import
+│   │   │       │       │   ├── 66.png
+│   │   │       │       │   ├── 66.png.import
+│   │   │       │       │   ├── 67.png
+│   │   │       │       │   ├── 67.png.import
+│   │   │       │       │   ├── 68.png
+│   │   │       │       │   ├── 68.png.import
+│   │   │       │       │   ├── 69.png
+│   │   │       │       │   ├── 69.png.import
+│   │   │       │       │   ├── 70.png
+│   │   │       │       │   ├── 70.png.import
+│   │   │       │       │   ├── 71.png
+│   │   │       │       │   ├── 71.png.import
+│   │   │       │       │   ├── 72.png
+│   │   │       │       │   ├── 72.png.import
+│   │   │       │       │   ├── 73.png
+│   │   │       │       │   ├── 73.png.import
+│   │   │       │       │   ├── 74.png
+│   │   │       │       │   └── 74.png.import
+│   │   │       │       └── Window Light
+│   │   │       │           ├── 01.png
+│   │   │       │           └── 01.png.import
+│   │   │       └── Tilesets
+│   │   │           ├── Platforms (32x32).png
+│   │   │           ├── Platforms (32x32).png.import
+│   │   │           ├── Terrain and Back Wall (32x32).png
+│   │   │           └── Terrain and Back Wall (32x32).png.import
+│   │   ├── Pirate Treasure
+│   │   │   ├── Aseprite
+│   │   │   │   └── Pirate Treasure.aseprite
+│   │   │   └── Sprites
+│   │   │       ├── Big Map
+│   │   │       │   ├── Folding
+│   │   │       │   │   ├── 01.png
+│   │   │       │   │   ├── 01.png.import
+│   │   │       │   │   ├── 02.png
+│   │   │       │   │   ├── 02.png.import
+│   │   │       │   │   ├── 03.png
+│   │   │       │   │   ├── 03.png.import
+│   │   │       │   │   ├── 04.png
+│   │   │       │   │   └── 04.png.import
+│   │   │       │   ├── Idle
+│   │   │       │   │   ├── 01.png
+│   │   │       │   │   ├── 01.png.import
+│   │   │       │   │   ├── 02.png
+│   │   │       │   │   ├── 02.png.import
+│   │   │       │   │   ├── 03.png
+│   │   │       │   │   ├── 03.png.import
+│   │   │       │   │   ├── 04.png
+│   │   │       │   │   ├── 04.png.import
+│   │   │       │   │   ├── 05.png
+│   │   │       │   │   ├── 05.png.import
+│   │   │       │   │   ├── 06.png
+│   │   │       │   │   ├── 06.png.import
+│   │   │       │   │   ├── 07.png
+│   │   │       │   │   ├── 07.png.import
+│   │   │       │   │   ├── 08.png
+│   │   │       │   │   ├── 08.png.import
+│   │   │       │   │   ├── 09.png
+│   │   │       │   │   ├── 09.png.import
+│   │   │       │   │   ├── 10.png
+│   │   │       │   │   ├── 10.png.import
+│   │   │       │   │   ├── 11.png
+│   │   │       │   │   └── 11.png.import
+│   │   │       │   └── Unfolding
+│   │   │       │       ├── 01.png
+│   │   │       │       ├── 01.png.import
+│   │   │       │       ├── 02.png
+│   │   │       │       ├── 02.png.import
+│   │   │       │       ├── 03.png
+│   │   │       │       ├── 03.png.import
+│   │   │       │       ├── 04.png
+│   │   │       │       ├── 04.png.import
+│   │   │       │       ├── 05.png
+│   │   │       │       └── 05.png.import
+│   │   │       ├── Blue Diamond
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   ├── 03.png.import
+│   │   │       │   ├── 04.png
+│   │   │       │   └── 04.png.import
+│   │   │       ├── Blue Potion
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   ├── 03.png.import
+│   │   │       │   ├── 04.png
+│   │   │       │   ├── 04.png.import
+│   │   │       │   ├── 05.png
+│   │   │       │   ├── 05.png.import
+│   │   │       │   ├── 06.png
+│   │   │       │   ├── 06.png.import
+│   │   │       │   ├── 07.png
+│   │   │       │   └── 07.png.import
+│   │   │       ├── Coin Effect
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   └── 03.png.import
+│   │   │       ├── Diamond Effect
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   ├── 03.png.import
+│   │   │       │   ├── 04.png
+│   │   │       │   └── 04.png.import
+│   │   │       ├── Gold Coin
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   ├── 03.png.import
+│   │   │       │   ├── 04.png
+│   │   │       │   └── 04.png.import
+│   │   │       ├── Golden Skull
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   ├── 03.png.import
+│   │   │       │   ├── 04.png
+│   │   │       │   ├── 04.png.import
+│   │   │       │   ├── 05.png
+│   │   │       │   ├── 05.png.import
+│   │   │       │   ├── 06.png
+│   │   │       │   ├── 06.png.import
+│   │   │       │   ├── 07.png
+│   │   │       │   ├── 07.png.import
+│   │   │       │   ├── 08.png
+│   │   │       │   └── 08.png.import
+│   │   │       ├── Green Bottle
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   ├── 03.png.import
+│   │   │       │   ├── 04.png
+│   │   │       │   ├── 04.png.import
+│   │   │       │   ├── 05.png
+│   │   │       │   ├── 05.png.import
+│   │   │       │   ├── 06.png
+│   │   │       │   ├── 06.png.import
+│   │   │       │   ├── 07.png
+│   │   │       │   └── 07.png.import
+│   │   │       ├── Green Diamond
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   ├── 03.png.import
+│   │   │       │   ├── 04.png
+│   │   │       │   └── 04.png.import
+│   │   │       ├── Map Effect
+│   │   │       │   ├── In
+│   │   │       │   │   ├── 01.png
+│   │   │       │   │   ├── 01.png.import
+│   │   │       │   │   ├── 02.png
+│   │   │       │   │   ├── 02.png.import
+│   │   │       │   │   ├── 03.png
+│   │   │       │   │   └── 03.png.import
+│   │   │       │   └── Out
+│   │   │       │       ├── 01.png
+│   │   │       │       ├── 01.png.import
+│   │   │       │       ├── 02.png
+│   │   │       │       ├── 02.png.import
+│   │   │       │       ├── 03.png
+│   │   │       │       └── 03.png.import
+│   │   │       ├── Potion Effect
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   ├── 03.png.import
+│   │   │       │   ├── 04.png
+│   │   │       │   └── 04.png.import
+│   │   │       ├── Red Diamond
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   ├── 03.png.import
+│   │   │       │   ├── 04.png
+│   │   │       │   └── 04.png.import
+│   │   │       ├── Red Potion
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   ├── 03.png.import
+│   │   │       │   ├── 04.png
+│   │   │       │   ├── 04.png.import
+│   │   │       │   ├── 05.png
+│   │   │       │   ├── 05.png.import
+│   │   │       │   ├── 06.png
+│   │   │       │   ├── 06.png.import
+│   │   │       │   ├── 07.png
+│   │   │       │   └── 07.png.import
+│   │   │       ├── Silver Coin
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   ├── 03.png.import
+│   │   │       │   ├── 04.png
+│   │   │       │   └── 04.png.import
+│   │   │       ├── Skull Effect
+│   │   │       │   ├── 01.png
+│   │   │       │   ├── 01.png.import
+│   │   │       │   ├── 02.png
+│   │   │       │   ├── 02.png.import
+│   │   │       │   ├── 03.png
+│   │   │       │   ├── 03.png.import
+│   │   │       │   ├── 04.png
+│   │   │       │   ├── 04.png.import
+│   │   │       │   ├── 05.png
+│   │   │       │   └── 05.png.import
+│   │   │       └── Small Maps
+│   │   │           ├── Small Map 1
+│   │   │           │   ├── 01.png
+│   │   │           │   ├── 01.png.import
+│   │   │           │   ├── 02.png
+│   │   │           │   ├── 02.png.import
+│   │   │           │   ├── 03.png
+│   │   │           │   ├── 03.png.import
+│   │   │           │   ├── 04.png
+│   │   │           │   ├── 04.png.import
+│   │   │           │   ├── 05.png
+│   │   │           │   ├── 05.png.import
+│   │   │           │   ├── 06.png
+│   │   │           │   ├── 06.png.import
+│   │   │           │   ├── 07.png
+│   │   │           │   ├── 07.png.import
+│   │   │           │   ├── 08.png
+│   │   │           │   └── 08.png.import
+│   │   │           ├── Small Map 2
+│   │   │           │   ├── 01.png
+│   │   │           │   ├── 01.png.import
+│   │   │           │   ├── 02.png
+│   │   │           │   ├── 02.png.import
+│   │   │           │   ├── 03.png
+│   │   │           │   ├── 03.png.import
+│   │   │           │   ├── 04.png
+│   │   │           │   ├── 04.png.import
+│   │   │           │   ├── 05.png
+│   │   │           │   ├── 05.png.import
+│   │   │           │   ├── 06.png
+│   │   │           │   ├── 06.png.import
+│   │   │           │   ├── 07.png
+│   │   │           │   ├── 07.png.import
+│   │   │           │   ├── 08.png
+│   │   │           │   └── 08.png.import
+│   │   │           ├── Small Map 3
+│   │   │           │   ├── 01.png
+│   │   │           │   ├── 01.png.import
+│   │   │           │   ├── 02.png
+│   │   │           │   ├── 02.png.import
+│   │   │           │   ├── 03.png
+│   │   │           │   ├── 03.png.import
+│   │   │           │   ├── 04.png
+│   │   │           │   ├── 04.png.import
+│   │   │           │   ├── 05.png
+│   │   │           │   ├── 05.png.import
+│   │   │           │   ├── 06.png
+│   │   │           │   ├── 06.png.import
+│   │   │           │   ├── 07.png
+│   │   │           │   ├── 07.png.import
+│   │   │           │   ├── 08.png
+│   │   │           │   └── 08.png.import
+│   │   │           └── Small Map 4
+│   │   │               ├── 01.png
+│   │   │               ├── 01.png.import
+│   │   │               ├── 02.png
+│   │   │               ├── 02.png.import
+│   │   │               ├── 03.png
+│   │   │               ├── 03.png.import
+│   │   │               ├── 04.png
+│   │   │               ├── 04.png.import
+│   │   │               ├── 05.png
+│   │   │               ├── 05.png.import
+│   │   │               ├── 06.png
+│   │   │               ├── 06.png.import
+│   │   │               ├── 07.png
+│   │   │               ├── 07.png.import
+│   │   │               ├── 08.png
+│   │   │               └── 08.png.import
+│   │   ├── Shooter Traps
+│   │   │   ├── Aseprite
+│   │   │   │   └── Shooter Traps.aseprite
+│   │   │   └── Sprites
+│   │   │       ├── Cannon
+│   │   │       │   ├── Cannon Ball Destroyed
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   └── 3.png.import
+│   │   │       │   ├── Cannon Ball Explosion
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   ├── 4.png.import
+│   │   │       │   │   ├── 5.png
+│   │   │       │   │   ├── 5.png.import
+│   │   │       │   │   ├── 6.png
+│   │   │       │   │   ├── 6.png.import
+│   │   │       │   │   ├── 7.png
+│   │   │       │   │   └── 7.png.import
+│   │   │       │   ├── Cannon Ball Idle
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   └── 1.png.import
+│   │   │       │   ├── Cannon Destroyed
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   └── 4.png.import
+│   │   │       │   ├── Cannon Fire
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   ├── 4.png.import
+│   │   │       │   │   ├── 5.png
+│   │   │       │   │   ├── 5.png.import
+│   │   │       │   │   ├── 6.png
+│   │   │       │   │   └── 6.png.import
+│   │   │       │   ├── Cannon Fire Effect
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   ├── 4.png.import
+│   │   │       │   │   ├── 5.png
+│   │   │       │   │   ├── 5.png.import
+│   │   │       │   │   ├── 6.png
+│   │   │       │   │   └── 6.png.import
+│   │   │       │   ├── Cannon Hit
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   └── 4.png.import
+│   │   │       │   └── Cannon Idle
+│   │   │       │       ├── 1.png
+│   │   │       │       └── 1.png.import
+│   │   │       ├── Seashell
+│   │   │       │   ├── Pearl Destroyed
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   └── 3.png.import
+│   │   │       │   ├── Pearl Idle
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   └── 1.png.import
+│   │   │       │   ├── Seashell Bite
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   ├── 4.png.import
+│   │   │       │   │   ├── 5.png
+│   │   │       │   │   ├── 5.png.import
+│   │   │       │   │   ├── 6.png
+│   │   │       │   │   └── 6.png.import
+│   │   │       │   ├── Seashell Destroyed
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   ├── 4.png.import
+│   │   │       │   │   ├── 5.png
+│   │   │       │   │   └── 5.png.import
+│   │   │       │   ├── Seashell Fire
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   ├── 4.png.import
+│   │   │       │   │   ├── 5.png
+│   │   │       │   │   ├── 5.png.import
+│   │   │       │   │   ├── 6.png
+│   │   │       │   │   └── 6.png.import
+│   │   │       │   ├── Seashell Hit
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   ├── 1.png.import
+│   │   │       │   │   ├── 2.png
+│   │   │       │   │   ├── 2.png.import
+│   │   │       │   │   ├── 3.png
+│   │   │       │   │   ├── 3.png.import
+│   │   │       │   │   ├── 4.png
+│   │   │       │   │   └── 4.png.import
+│   │   │       │   ├── Seashell Idle
+│   │   │       │   │   ├── 1.png
+│   │   │       │   │   └── 1.png.import
+│   │   │       │   └── Seashell Opening
+│   │   │       │       ├── 1.png
+│   │   │       │       ├── 1.png.import
+│   │   │       │       ├── 2.png
+│   │   │       │       ├── 2.png.import
+│   │   │       │       ├── 3.png
+│   │   │       │       ├── 3.png.import
+│   │   │       │       ├── 4.png
+│   │   │       │       ├── 4.png.import
+│   │   │       │       ├── 5.png
+│   │   │       │       └── 5.png.import
+│   │   │       └── Totems
+│   │   │           ├── Head 1
+│   │   │           │   ├── Attack 1
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   ├── 4.png.import
+│   │   │           │   │   ├── 5.png
+│   │   │           │   │   ├── 5.png.import
+│   │   │           │   │   ├── 6.png
+│   │   │           │   │   └── 6.png.import
+│   │   │           │   ├── Attack 2
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   ├── 4.png.import
+│   │   │           │   │   ├── 5.png
+│   │   │           │   │   ├── 5.png.import
+│   │   │           │   │   ├── 6.png
+│   │   │           │   │   └── 6.png.import
+│   │   │           │   ├── Destroyed
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   ├── 4.png.import
+│   │   │           │   │   ├── 5.png
+│   │   │           │   │   ├── 5.png.import
+│   │   │           │   │   ├── 6.png
+│   │   │           │   │   └── 6.png.import
+│   │   │           │   ├── Hit 1
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   └── 4.png.import
+│   │   │           │   ├── Hit 2
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   └── 4.png.import
+│   │   │           │   ├── Idle 1
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   └── 1.png.import
+│   │   │           │   └── Idle 2
+│   │   │           │       ├── 1.png
+│   │   │           │       └── 1.png.import
+│   │   │           ├── Head 2
+│   │   │           │   ├── Attack 1
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   ├── 4.png.import
+│   │   │           │   │   ├── 5.png
+│   │   │           │   │   ├── 5.png.import
+│   │   │           │   │   ├── 6.png
+│   │   │           │   │   └── 6.png.import
+│   │   │           │   ├── Attack 2
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   ├── 4.png.import
+│   │   │           │   │   ├── 5.png
+│   │   │           │   │   ├── 5.png.import
+│   │   │           │   │   ├── 6.png
+│   │   │           │   │   └── 6.png.import
+│   │   │           │   ├── Destroyed
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   ├── 4.png.import
+│   │   │           │   │   ├── 5.png
+│   │   │           │   │   ├── 5.png.import
+│   │   │           │   │   ├── 6.png
+│   │   │           │   │   └── 6.png.import
+│   │   │           │   ├── Hit 1
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   └── 4.png.import
+│   │   │           │   ├── Hit 2
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   └── 4.png.import
+│   │   │           │   ├── Idle 1
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   └── 1.png.import
+│   │   │           │   └── Idle 2
+│   │   │           │       ├── 1.png
+│   │   │           │       └── 1.png.import
+│   │   │           ├── Head 3
+│   │   │           │   ├── Attack 1
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   ├── 4.png.import
+│   │   │           │   │   ├── 5.png
+│   │   │           │   │   ├── 5.png.import
+│   │   │           │   │   ├── 6.png
+│   │   │           │   │   └── 6.png.import
+│   │   │           │   ├── Attack 2
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   ├── 4.png.import
+│   │   │           │   │   ├── 5.png
+│   │   │           │   │   ├── 5.png.import
+│   │   │           │   │   ├── 6.png
+│   │   │           │   │   └── 6.png.import
+│   │   │           │   ├── Destroyed
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   ├── 4.png.import
+│   │   │           │   │   ├── 5.png
+│   │   │           │   │   ├── 5.png.import
+│   │   │           │   │   ├── 6.png
+│   │   │           │   │   └── 6.png.import
+│   │   │           │   ├── Hit 1
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   └── 4.png.import
+│   │   │           │   ├── Hit 2
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   ├── 1.png.import
+│   │   │           │   │   ├── 2.png
+│   │   │           │   │   ├── 2.png.import
+│   │   │           │   │   ├── 3.png
+│   │   │           │   │   ├── 3.png.import
+│   │   │           │   │   ├── 4.png
+│   │   │           │   │   └── 4.png.import
+│   │   │           │   ├── Idle 1
+│   │   │           │   │   ├── 1.png
+│   │   │           │   │   └── 1.png.import
+│   │   │           │   └── Idle 2
+│   │   │           │       ├── 1.png
+│   │   │           │       └── 1.png.import
+│   │   │           └── Wood Spike
+│   │   │               ├── Destroyed
+│   │   │               │   ├── 1.png
+│   │   │               │   ├── 1.png.import
+│   │   │               │   ├── 2.png
+│   │   │               │   ├── 2.png.import
+│   │   │               │   ├── 3.png
+│   │   │               │   └── 3.png.import
+│   │   │               └── Idle
+│   │   │                   ├── 1.png
+│   │   │                   └── 1.png.import
+│   │   └── The Crusty Crew
+│   │       ├── Aseprite
+│   │       │   ├── Crabby.aseprite
+│   │       │   ├── Dialogue.aseprite
+│   │       │   ├── Dust Particles.aseprite
+│   │       │   ├── Fierce Tooth.aseprite
+│   │       │   └── Pink Start.aseprite
+│   │       └── Sprites
+│   │           ├── Crabby
+│   │           │   ├── 01-Idle
+│   │           │   │   ├── Idle 01.png
+│   │           │   │   ├── Idle 01.png.import
+│   │           │   │   ├── Idle 02.png
+│   │           │   │   ├── Idle 02.png.import
+│   │           │   │   ├── Idle 03.png
+│   │           │   │   ├── Idle 03.png.import
+│   │           │   │   ├── Idle 04.png
+│   │           │   │   ├── Idle 04.png.import
+│   │           │   │   ├── Idle 05.png
+│   │           │   │   ├── Idle 05.png.import
+│   │           │   │   ├── Idle 06.png
+│   │           │   │   ├── Idle 06.png.import
+│   │           │   │   ├── Idle 07.png
+│   │           │   │   ├── Idle 07.png.import
+│   │           │   │   ├── Idle 08.png
+│   │           │   │   ├── Idle 08.png.import
+│   │           │   │   ├── Idle 09.png
+│   │           │   │   └── Idle 09.png.import
+│   │           │   ├── 02-Run
+│   │           │   │   ├── Run 01.png
+│   │           │   │   ├── Run 01.png.import
+│   │           │   │   ├── Run 02.png
+│   │           │   │   ├── Run 02.png.import
+│   │           │   │   ├── Run 03.png
+│   │           │   │   ├── Run 03.png.import
+│   │           │   │   ├── Run 04.png
+│   │           │   │   ├── Run 04.png.import
+│   │           │   │   ├── Run 05.png
+│   │           │   │   ├── Run 05.png.import
+│   │           │   │   ├── Run 06.png
+│   │           │   │   └── Run 06.png.import
+│   │           │   ├── 03-Jump
+│   │           │   │   ├── Jump 01.png
+│   │           │   │   ├── Jump 01.png.import
+│   │           │   │   ├── Jump 02.png
+│   │           │   │   ├── Jump 02.png.import
+│   │           │   │   ├── Jump 03.png
+│   │           │   │   └── Jump 03.png.import
+│   │           │   ├── 04-Fall
+│   │           │   │   ├── Fall 01.png
+│   │           │   │   └── Fall 01.png.import
+│   │           │   ├── 05-Ground
+│   │           │   │   ├── Ground 01.png
+│   │           │   │   ├── Ground 01.png.import
+│   │           │   │   ├── Ground 02.png
+│   │           │   │   └── Ground 02.png.import
+│   │           │   ├── 06-Anticipation
+│   │           │   │   ├── Anticipation 01.png
+│   │           │   │   ├── Anticipation 01.png.import
+│   │           │   │   ├── Anticipation 02.png
+│   │           │   │   ├── Anticipation 02.png.import
+│   │           │   │   ├── Anticipation 03.png
+│   │           │   │   └── Anticipation 03.png.import
+│   │           │   ├── 07-Attack
+│   │           │   │   ├── Attack 01.png
+│   │           │   │   ├── Attack 01.png.import
+│   │           │   │   ├── Attack 02.png
+│   │           │   │   ├── Attack 02.png.import
+│   │           │   │   ├── Attack 03.png
+│   │           │   │   ├── Attack 03.png.import
+│   │           │   │   ├── Attack 04.png
+│   │           │   │   └── Attack 04.png.import
+│   │           │   ├── 08-Hit
+│   │           │   │   ├── Hit 01.png
+│   │           │   │   ├── Hit 01.png.import
+│   │           │   │   ├── Hit 02.png
+│   │           │   │   ├── Hit 02.png.import
+│   │           │   │   ├── Hit 03.png
+│   │           │   │   ├── Hit 03.png.import
+│   │           │   │   ├── Hit 04.png
+│   │           │   │   └── Hit 04.png.import
+│   │           │   ├── 09-Dead Hit
+│   │           │   │   ├── Dead Hit 01.png
+│   │           │   │   ├── Dead Hit 01.png.import
+│   │           │   │   ├── Dead Hit 02.png
+│   │           │   │   ├── Dead Hit 02.png.import
+│   │           │   │   ├── Dead Hit 03.png
+│   │           │   │   ├── Dead Hit 03.png.import
+│   │           │   │   ├── Dead Hit 04.png
+│   │           │   │   └── Dead Hit 04.png.import
+│   │           │   ├── 10-Dead Ground
+│   │           │   │   ├── Dead Ground 01.png
+│   │           │   │   ├── Dead Ground 01.png.import
+│   │           │   │   ├── Dead Ground 02.png
+│   │           │   │   ├── Dead Ground 02.png.import
+│   │           │   │   ├── Dead Ground 03.png
+│   │           │   │   ├── Dead Ground 03.png.import
+│   │           │   │   ├── Dead Ground 04.png
+│   │           │   │   └── Dead Ground 04.png.import
+│   │           │   └── 11-Attack Effect
+│   │           │       ├── Attack Effect 01.png
+│   │           │       ├── Attack Effect 01.png.import
+│   │           │       ├── Attack Effect 02.png
+│   │           │       ├── Attack Effect 02.png.import
+│   │           │       ├── Attack Effect 03.png
+│   │           │       └── Attack Effect 03.png.import
+│   │           ├── Dialogue
+│   │           │   ├── Dead
+│   │           │   │   ├── Dead In 01.png
+│   │           │   │   ├── Dead In 01.png.import
+│   │           │   │   ├── Dead In 02.png
+│   │           │   │   ├── Dead In 02.png.import
+│   │           │   │   ├── Dead In 03.png
+│   │           │   │   ├── Dead In 03.png.import
+│   │           │   │   ├── Dead Out 01.png
+│   │           │   │   ├── Dead Out 01.png.import
+│   │           │   │   ├── Dead Out 02.png
+│   │           │   │   └── Dead Out 02.png.import
+│   │           │   ├── Exclamation
+│   │           │   │   ├── Exclamation In 01.png
+│   │           │   │   ├── Exclamation In 01.png.import
+│   │           │   │   ├── Exclamation In 02.png
+│   │           │   │   ├── Exclamation In 02.png.import
+│   │           │   │   ├── Exclamation In 03.png
+│   │           │   │   ├── Exclamation In 03.png.import
+│   │           │   │   ├── Exclamation Out 01.png
+│   │           │   │   ├── Exclamation Out 01.png.import
+│   │           │   │   ├── Exclamation Out 02.png
+│   │           │   │   └── Exclamation Out 02.png.import
+│   │           │   └── Interrogation
+│   │           │       ├── Interrogation In 01.png
+│   │           │       ├── Interrogation In 01.png.import
+│   │           │       ├── Interrogation In 02.png
+│   │           │       ├── Interrogation In 02.png.import
+│   │           │       ├── Interrogation In 03.png
+│   │           │       ├── Interrogation In 03.png.import
+│   │           │       ├── Interrogation Out 01.png
+│   │           │       ├── Interrogation Out 01.png.import
+│   │           │       ├── Interrogation Out 02.png
+│   │           │       └── Interrogation Out 02.png.import
+│   │           ├── Dust Particles
+│   │           │   ├── Fall 01.png
+│   │           │   ├── Fall 01.png.import
+│   │           │   ├── Fall 02.png
+│   │           │   ├── Fall 02.png.import
+│   │           │   ├── Fall 03.png
+│   │           │   ├── Fall 03.png.import
+│   │           │   ├── Fall 04.png
+│   │           │   ├── Fall 04.png.import
+│   │           │   ├── Fall 05.png
+│   │           │   ├── Fall 05.png.import
+│   │           │   ├── Jump 01.png
+│   │           │   ├── Jump 01.png.import
+│   │           │   ├── Jump 02.png
+│   │           │   ├── Jump 02.png.import
+│   │           │   ├── Jump 03.png
+│   │           │   ├── Jump 03.png.import
+│   │           │   ├── Jump 04.png
+│   │           │   ├── Jump 04.png.import
+│   │           │   ├── Jump 05.png
+│   │           │   ├── Jump 05.png.import
+│   │           │   ├── Jump 06.png
+│   │           │   ├── Jump 06.png.import
+│   │           │   ├── Run 01.png
+│   │           │   ├── Run 01.png.import
+│   │           │   ├── Run 02.png
+│   │           │   ├── Run 02.png.import
+│   │           │   ├── Run 03.png
+│   │           │   ├── Run 03.png.import
+│   │           │   ├── Run 04.png
+│   │           │   ├── Run 04.png.import
+│   │           │   ├── Run 05.png
+│   │           │   └── Run 05.png.import
+│   │           ├── Fierce Tooth
+│   │           │   ├── 01-Idle
+│   │           │   │   ├── Idle 01.png
+│   │           │   │   ├── Idle 01.png.import
+│   │           │   │   ├── Idle 02.png
+│   │           │   │   ├── Idle 02.png.import
+│   │           │   │   ├── Idle 03.png
+│   │           │   │   ├── Idle 03.png.import
+│   │           │   │   ├── Idle 04.png
+│   │           │   │   ├── Idle 04.png.import
+│   │           │   │   ├── Idle 05.png
+│   │           │   │   ├── Idle 05.png.import
+│   │           │   │   ├── Idle 06.png
+│   │           │   │   ├── Idle 06.png.import
+│   │           │   │   ├── Idle 07.png
+│   │           │   │   ├── Idle 07.png.import
+│   │           │   │   ├── Idle 08.png
+│   │           │   │   └── Idle 08.png.import
+│   │           │   ├── 02-Run
+│   │           │   │   ├── Run 01.png
+│   │           │   │   ├── Run 01.png.import
+│   │           │   │   ├── Run 02.png
+│   │           │   │   ├── Run 02.png.import
+│   │           │   │   ├── Run 03.png
+│   │           │   │   ├── Run 03.png.import
+│   │           │   │   ├── Run 04.png
+│   │           │   │   ├── Run 04.png.import
+│   │           │   │   ├── Run 05.png
+│   │           │   │   ├── Run 05.png.import
+│   │           │   │   ├── Run 06.png
+│   │           │   │   └── Run 06.png.import
+│   │           │   ├── 03-Jump
+│   │           │   │   ├── Jump 01.png
+│   │           │   │   ├── Jump 01.png.import
+│   │           │   │   ├── Jump 02.png
+│   │           │   │   ├── Jump 02.png.import
+│   │           │   │   ├── Jump 03.png
+│   │           │   │   └── Jump 03.png.import
+│   │           │   ├── 04-Fall
+│   │           │   │   ├── Fall 01.png
+│   │           │   │   └── Fall 01.png.import
+│   │           │   ├── 05-Ground
+│   │           │   │   ├── Ground 01.png
+│   │           │   │   ├── Ground 01.png.import
+│   │           │   │   ├── Ground 02.png
+│   │           │   │   └── Ground 02.png.import
+│   │           │   ├── 06-Anticipation
+│   │           │   │   ├── Anticipation 01.png
+│   │           │   │   ├── Anticipation 01.png.import
+│   │           │   │   ├── Anticipation 02.png
+│   │           │   │   ├── Anticipation 02.png.import
+│   │           │   │   ├── Anticipation 03.png
+│   │           │   │   └── Anticipation 03.png.import
+│   │           │   ├── 07-Attack
+│   │           │   │   ├── Attack 01.png
+│   │           │   │   ├── Attack 01.png.import
+│   │           │   │   ├── Attack 02.png
+│   │           │   │   ├── Attack 02.png.import
+│   │           │   │   ├── Attack 03.png
+│   │           │   │   ├── Attack 03.png.import
+│   │           │   │   ├── Attack 04.png
+│   │           │   │   ├── Attack 04.png.import
+│   │           │   │   ├── Attack 05.png
+│   │           │   │   └── Attack 05.png.import
+│   │           │   ├── 08-Hit
+│   │           │   │   ├── Hit 01.png
+│   │           │   │   ├── Hit 01.png.import
+│   │           │   │   ├── Hit 02.png
+│   │           │   │   ├── Hit 02.png.import
+│   │           │   │   ├── Hit 03.png
+│   │           │   │   ├── Hit 03.png.import
+│   │           │   │   ├── Hit 04.png
+│   │           │   │   └── Hit 04.png.import
+│   │           │   ├── 09-Dead Hit
+│   │           │   │   ├── Dead Hit 01.png
+│   │           │   │   ├── Dead Hit 01.png.import
+│   │           │   │   ├── Dead Hit 02.png
+│   │           │   │   ├── Dead Hit 02.png.import
+│   │           │   │   ├── Dead Hit 03.png
+│   │           │   │   ├── Dead Hit 03.png.import
+│   │           │   │   ├── Dead Hit 04.png
+│   │           │   │   └── Dead Hit 04.png.import
+│   │           │   ├── 10-Dead Ground
+│   │           │   │   ├── Dead Ground 01.png
+│   │           │   │   ├── Dead Ground 01.png.import
+│   │           │   │   ├── Dead Ground 02.png
+│   │           │   │   ├── Dead Ground 02.png.import
+│   │           │   │   ├── Dead Ground 03.png
+│   │           │   │   ├── Dead Ground 03.png.import
+│   │           │   │   ├── Dead Ground 04.png
+│   │           │   │   └── Dead Ground 04.png.import
+│   │           │   └── 11-Attack Effect
+│   │           │       ├── Attack Effect 01.png
+│   │           │       ├── Attack Effect 01.png.import
+│   │           │       ├── Attack Effect 02.png
+│   │           │       ├── Attack Effect 02.png.import
+│   │           │       ├── Attack Effect 03.png
+│   │           │       └── Attack Effect 03.png.import
+│   │           └── Pink Star
+│   │               ├── 01-Idle
+│   │               │   ├── Idle 01.png
+│   │               │   ├── Idle 01.png.import
+│   │               │   ├── Idle 02.png
+│   │               │   ├── Idle 02.png.import
+│   │               │   ├── Idle 03.png
+│   │               │   ├── Idle 03.png.import
+│   │               │   ├── Idle 04.png
+│   │               │   ├── Idle 04.png.import
+│   │               │   ├── Idle 05.png
+│   │               │   ├── Idle 05.png.import
+│   │               │   ├── Idle 06.png
+│   │               │   ├── Idle 06.png.import
+│   │               │   ├── Idle 07.png
+│   │               │   ├── Idle 07.png.import
+│   │               │   ├── Idle 08.png
+│   │               │   └── Idle 08.png.import
+│   │               ├── 02-Run
+│   │               │   ├── Run 01.png
+│   │               │   ├── Run 01.png.import
+│   │               │   ├── Run 02.png
+│   │               │   ├── Run 02.png.import
+│   │               │   ├── Run 03.png
+│   │               │   ├── Run 03.png.import
+│   │               │   ├── Run 04.png
+│   │               │   ├── Run 04.png.import
+│   │               │   ├── Run 05.png
+│   │               │   ├── Run 05.png.import
+│   │               │   ├── Run 06.png
+│   │               │   └── Run 06.png.import
+│   │               ├── 03-Jump
+│   │               │   ├── Jump 01.png
+│   │               │   ├── Jump 01.png.import
+│   │               │   ├── Jump 02.png
+│   │               │   ├── Jump 02.png.import
+│   │               │   ├── Jump 03.png
+│   │               │   └── Jump 03.png.import
+│   │               ├── 04-Fall
+│   │               │   ├── Fall 01.png
+│   │               │   └── Fall 01.png.import
+│   │               ├── 05-Ground
+│   │               │   ├── Ground 01.png
+│   │               │   ├── Ground 01.png.import
+│   │               │   ├── Ground 02.png
+│   │               │   └── Ground 02.png.import
+│   │               ├── 06-Anticipation
+│   │               │   ├── Anticipation 01.png
+│   │               │   ├── Anticipation 01.png.import
+│   │               │   ├── Anticipation 02.png
+│   │               │   ├── Anticipation 02.png.import
+│   │               │   ├── Anticipation 03.png
+│   │               │   └── Anticipation 03.png.import
+│   │               ├── 07-Attack
+│   │               │   ├── Attack 01.png
+│   │               │   ├── Attack 01.png.import
+│   │               │   ├── Attack 02.png
+│   │               │   ├── Attack 02.png.import
+│   │               │   ├── Attack 03.png
+│   │               │   ├── Attack 03.png.import
+│   │               │   ├── Attack 04.png
+│   │               │   └── Attack 04.png.import
+│   │               ├── 08-Hit
+│   │               │   ├── Hit 01.png
+│   │               │   ├── Hit 01.png.import
+│   │               │   ├── Hit 02.png
+│   │               │   ├── Hit 02.png.import
+│   │               │   ├── Hit 03.png
+│   │               │   ├── Hit 03.png.import
+│   │               │   ├── Hit 04.png
+│   │               │   └── Hit 04.png.import
+│   │               ├── 09-Dead Hit
+│   │               │   ├── Dead Hit 01.png
+│   │               │   ├── Dead Hit 01.png.import
+│   │               │   ├── Dead Hit 02.png
+│   │               │   ├── Dead Hit 02.png.import
+│   │               │   ├── Dead Hit 03.png
+│   │               │   ├── Dead Hit 03.png.import
+│   │               │   ├── Dead Hit 04.png
+│   │               │   └── Dead Hit 04.png.import
+│   │               ├── 10-Dead Ground
+│   │               │   ├── Dead Ground 01.png
+│   │               │   ├── Dead Ground 01.png.import
+│   │               │   ├── Dead Ground 02.png
+│   │               │   ├── Dead Ground 02.png.import
+│   │               │   ├── Dead Ground 03.png
+│   │               │   ├── Dead Ground 03.png.import
+│   │               │   ├── Dead Ground 04.png
+│   │               │   └── Dead Ground 04.png.import
+│   │               └── 11-Attack Effect
+│   │                   ├── Attack Effect 01.png
+│   │                   ├── Attack Effect 01.png.import
+│   │                   ├── Attack Effect 02.png
+│   │                   ├── Attack Effect 02.png.import
+│   │                   ├── Attack Effect 03.png
+│   │                   ├── Attack Effect 03.png.import
+│   │                   ├── Attack Effect 04.png
+│   │                   └── Attack Effect 04.png.import
+│   ├── tileset.png
+│   ├── tileset.png.import
+│   └── Wood and Paper UI
+│       ├── Aseprite
+│       │   ├── Button Cooldown.aseprite
+│       │   └── Wood and Paper.aseprite
+│       └── Sprites
+│           ├── Big Banner
+│           │   ├── 10.png
+│           │   ├── 10.png.import
+│           │   ├── 11.png
+│           │   ├── 11.png.import
+│           │   ├── 12.png
+│           │   ├── 12.png.import
+│           │   ├── 13.png
+│           │   ├── 13.png.import
+│           │   ├── 14.png
+│           │   ├── 14.png.import
+│           │   ├── 15.png
+│           │   ├── 15.png.import
+│           │   ├── 16.png
+│           │   ├── 16.png.import
+│           │   ├── 17.png
+│           │   ├── 17.png.import
+│           │   ├── 18.png
+│           │   ├── 18.png.import
+│           │   ├── 19.png
+│           │   ├── 19.png.import
+│           │   ├── 1.png
+│           │   ├── 1.png.import
+│           │   ├── 20.png
+│           │   ├── 20.png.import
+│           │   ├── 21.png
+│           │   ├── 21.png.import
+│           │   ├── 22.png
+│           │   ├── 22.png.import
+│           │   ├── 23.png
+│           │   ├── 23.png.import
+│           │   ├── 24.png
+│           │   ├── 24.png.import
+│           │   ├── 25.png
+│           │   ├── 25.png.import
+│           │   ├── 26.png
+│           │   ├── 26.png.import
+│           │   ├── 27.png
+│           │   ├── 27.png.import
+│           │   ├── 28.png
+│           │   ├── 28.png.import
+│           │   ├── 29.png
+│           │   ├── 29.png.import
+│           │   ├── 2.png
+│           │   ├── 2.png.import
+│           │   ├── 30.png
+│           │   ├── 30.png.import
+│           │   ├── 31.png
+│           │   ├── 31.png.import
+│           │   ├── 32.png
+│           │   ├── 32.png.import
+│           │   ├── 33.png
+│           │   ├── 33.png.import
+│           │   ├── 3.png
+│           │   ├── 3.png.import
+│           │   ├── 4.png
+│           │   ├── 4.png.import
+│           │   ├── 5.png
+│           │   ├── 5.png.import
+│           │   ├── 6.png
+│           │   ├── 6.png.import
+│           │   ├── 7.png
+│           │   ├── 7.png.import
+│           │   ├── 8.png
+│           │   ├── 8.png.import
+│           │   ├── 9.png
+│           │   ├── 9.png.import
+│           │   ├── Big Banner (guide).png
+│           │   └── Big Banner (guide).png.import
+│           ├── Big Text
+│           │   ├── 10.png
+│           │   ├── 10.png.import
+│           │   ├── 11.png
+│           │   ├── 11.png.import
+│           │   ├── 12.png
+│           │   ├── 12.png.import
+│           │   ├── 13.png
+│           │   ├── 13.png.import
+│           │   ├── 14.png
+│           │   ├── 14.png.import
+│           │   ├── 15.png
+│           │   ├── 15.png.import
+│           │   ├── 16.png
+│           │   ├── 16.png.import
+│           │   ├── 17.png
+│           │   ├── 17.png.import
+│           │   ├── 18.png
+│           │   ├── 18.png.import
+│           │   ├── 19.png
+│           │   ├── 19.png.import
+│           │   ├── 1.png
+│           │   ├── 1.png.import
+│           │   ├── 20.png
+│           │   ├── 20.png.import
+│           │   ├── 21.png
+│           │   ├── 21.png.import
+│           │   ├── 22.png
+│           │   ├── 22.png.import
+│           │   ├── 23.png
+│           │   ├── 23.png.import
+│           │   ├── 24.png
+│           │   ├── 24.png.import
+│           │   ├── 25.png
+│           │   ├── 25.png.import
+│           │   ├── 26.png
+│           │   ├── 26.png.import
+│           │   ├── 27.png
+│           │   ├── 27.png.import
+│           │   ├── 28.png
+│           │   ├── 28.png.import
+│           │   ├── 29.png
+│           │   ├── 29.png.import
+│           │   ├── 2.png
+│           │   ├── 2.png.import
+│           │   ├── 30.png
+│           │   ├── 30.png.import
+│           │   ├── 31.png
+│           │   ├── 31.png.import
+│           │   ├── 32.png
+│           │   ├── 32.png.import
+│           │   ├── 33.png
+│           │   ├── 33.png.import
+│           │   ├── 34.png
+│           │   ├── 34.png.import
+│           │   ├── 35.png
+│           │   ├── 35.png.import
+│           │   ├── 36.png
+│           │   ├── 36.png.import
+│           │   ├── 3.png
+│           │   ├── 3.png.import
+│           │   ├── 4.png
+│           │   ├── 4.png.import
+│           │   ├── 5.png
+│           │   ├── 5.png.import
+│           │   ├── 6.png
+│           │   ├── 6.png.import
+│           │   ├── 7.png
+│           │   ├── 7.png.import
+│           │   ├── 8.png
+│           │   ├── 8.png.import
+│           │   ├── 9.png
+│           │   └── 9.png.import
+│           ├── Green Board
+│           │   ├── 10.png
+│           │   ├── 10.png.import
+│           │   ├── 11.png
+│           │   ├── 11.png.import
+│           │   ├── 12.png
+│           │   ├── 12.png.import
+│           │   ├── 13.png
+│           │   ├── 13.png.import
+│           │   ├── 14.png
+│           │   ├── 14.png.import
+│           │   ├── 15.png
+│           │   ├── 15.png.import
+│           │   ├── 16.png
+│           │   ├── 16.png.import
+│           │   ├── 1.png
+│           │   ├── 1.png.import
+│           │   ├── 2.png
+│           │   ├── 2.png.import
+│           │   ├── 3.png
+│           │   ├── 3.png.import
+│           │   ├── 4.png
+│           │   ├── 4.png.import
+│           │   ├── 5.png
+│           │   ├── 5.png.import
+│           │   ├── 6.png
+│           │   ├── 6.png.import
+│           │   ├── 7.png
+│           │   ├── 7.png.import
+│           │   ├── 8.png
+│           │   ├── 8.png.import
+│           │   ├── 9.png
+│           │   ├── 9.png.import
+│           │   ├── Green Board (guide).png
+│           │   └── Green Board (guide).png.import
+│           ├── Green Button
+│           │   ├── 10.png
+│           │   ├── 10.png.import
+│           │   ├── 11.png
+│           │   ├── 11.png.import
+│           │   ├── 12.png
+│           │   ├── 12.png.import
+│           │   ├── 13.png
+│           │   ├── 13.png.import
+│           │   ├── 14.png
+│           │   ├── 14.png.import
+│           │   ├── 15.png
+│           │   ├── 15.png.import
+│           │   ├── 16.png
+│           │   ├── 16.png.import
+│           │   ├── 1.png
+│           │   ├── 1.png.import
+│           │   ├── 2.png
+│           │   ├── 2.png.import
+│           │   ├── 3.png
+│           │   ├── 3.png.import
+│           │   ├── 4.png
+│           │   ├── 4.png.import
+│           │   ├── 5.png
+│           │   ├── 5.png.import
+│           │   ├── 6.png
+│           │   ├── 6.png.import
+│           │   ├── 7.png
+│           │   ├── 7.png.import
+│           │   ├── 8.png
+│           │   ├── 8.png.import
+│           │   ├── 9.png
+│           │   ├── 9.png.import
+│           │   ├── Green Button (guide).png
+│           │   └── Green Button (guide).png.import
+│           ├── Inventory
+│           │   ├── 10.png
+│           │   ├── 10.png.import
+│           │   ├── 11.png
+│           │   ├── 11.png.import
+│           │   ├── 12.png
+│           │   ├── 12.png.import
+│           │   ├── 13.png
+│           │   ├── 13.png.import
+│           │   ├── 14.png
+│           │   ├── 14.png.import
+│           │   ├── 15.png
+│           │   ├── 15.png.import
+│           │   ├── 16.png
+│           │   ├── 16.png.import
+│           │   ├── 1.png
+│           │   ├── 1.png.import
+│           │   ├── 2.png
+│           │   ├── 2.png.import
+│           │   ├── 3.png
+│           │   ├── 3.png.import
+│           │   ├── 4.png
+│           │   ├── 4.png.import
+│           │   ├── 5.png
+│           │   ├── 5.png.import
+│           │   ├── 6.png
+│           │   ├── 6.png.import
+│           │   ├── 7.png
+│           │   ├── 7.png.import
+│           │   ├── 8.png
+│           │   ├── 8.png.import
+│           │   ├── 9.png
+│           │   ├── 9.png.import
+│           │   ├── Inventory (guide).png
+│           │   └── Inventory (guide).png.import
+│           ├── Life Bars
+│           │   ├── Big Bars
+│           │   │   ├── 1.png
+│           │   │   ├── 1.png.import
+│           │   │   ├── 2.png
+│           │   │   ├── 2.png.import
+│           │   │   ├── 3.png
+│           │   │   ├── 3.png.import
+│           │   │   ├── 4.png
+│           │   │   └── 4.png.import
+│           │   ├── Colors
+│           │   │   ├── 1.png
+│           │   │   ├── 1.png.import
+│           │   │   ├── 2.png
+│           │   │   ├── 2.png.import
+│           │   │   ├── 3.png
+│           │   │   ├── 3.png.import
+│           │   │   ├── 4.png
+│           │   │   └── 4.png.import
+│           │   ├── Medium Bars
+│           │   │   ├── 1.png
+│           │   │   ├── 1.png.import
+│           │   │   ├── 2.png
+│           │   │   ├── 2.png.import
+│           │   │   ├── 3.png
+│           │   │   ├── 3.png.import
+│           │   │   ├── 4.png
+│           │   │   ├── 4.png.import
+│           │   │   ├── 5.png
+│           │   │   └── 5.png.import
+│           │   └── Small Bars
+│           │       ├── 1.png
+│           │       ├── 1.png.import
+│           │       ├── 2.png
+│           │       ├── 2.png.import
+│           │       ├── 3.png
+│           │       ├── 3.png.import
+│           │       ├── 4.png
+│           │       ├── 4.png.import
+│           │       ├── 5.png
+│           │       └── 5.png.import
+│           ├── Mobile Buttons
+│           │   ├── Mobile Buttons
+│           │   │   ├── 1.png
+│           │   │   ├── 1.png.import
+│           │   │   ├── 2.png
+│           │   │   ├── 2.png.import
+│           │   │   ├── 3.png
+│           │   │   ├── 3.png.import
+│           │   │   ├── 4.png
+│           │   │   ├── 4.png.import
+│           │   │   ├── 5.png
+│           │   │   ├── 5.png.import
+│           │   │   ├── 6.png
+│           │   │   ├── 6.png.import
+│           │   │   ├── 7.png
+│           │   │   ├── 7.png.import
+│           │   │   ├── 8.png
+│           │   │   └── 8.png.import
+│           │   └── Mobile Buttons Cooldown
+│           │       ├── 10.png
+│           │       ├── 10.png.import
+│           │       ├── 11.png
+│           │       ├── 11.png.import
+│           │       ├── 12.png
+│           │       ├── 12.png.import
+│           │       ├── 1.png
+│           │       ├── 1.png.import
+│           │       ├── 2.png
+│           │       ├── 2.png.import
+│           │       ├── 3.png
+│           │       ├── 3.png.import
+│           │       ├── 4.png
+│           │       ├── 4.png.import
+│           │       ├── 5.png
+│           │       ├── 5.png.import
+│           │       ├── 6.png
+│           │       ├── 6.png.import
+│           │       ├── 7.png
+│           │       ├── 7.png.import
+│           │       ├── 8.png
+│           │       ├── 8.png.import
+│           │       ├── 9.png
+│           │       └── 9.png.import
+│           ├── Orange Paper
+│           │   ├── 10.png
+│           │   ├── 10.png.import
+│           │   ├── 11.png
+│           │   ├── 11.png.import
+│           │   ├── 12.png
+│           │   ├── 12.png.import
+│           │   ├── 13.png
+│           │   ├── 13.png.import
+│           │   ├── 14.png
+│           │   ├── 14.png.import
+│           │   ├── 15.png
+│           │   ├── 15.png.import
+│           │   ├── 16.png
+│           │   ├── 16.png.import
+│           │   ├── 1.png
+│           │   ├── 1.png.import
+│           │   ├── 2.png
+│           │   ├── 2.png.import
+│           │   ├── 3.png
+│           │   ├── 3.png.import
+│           │   ├── 4.png
+│           │   ├── 4.png.import
+│           │   ├── 5.png
+│           │   ├── 5.png.import
+│           │   ├── 6.png
+│           │   ├── 6.png.import
+│           │   ├── 7.png
+│           │   ├── 7.png.import
+│           │   ├── 8.png
+│           │   ├── 8.png.import
+│           │   ├── 9.png
+│           │   ├── 9.png.import
+│           │   ├── Orange Paper (guide).png
+│           │   └── Orange Paper (guide).png.import
+│           ├── Prefabs
+│           │   ├── 10.png
+│           │   ├── 10.png.import
+│           │   ├── 11.png
+│           │   ├── 11.png.import
+│           │   ├── 12.png
+│           │   ├── 12.png.import
+│           │   ├── 1.png
+│           │   ├── 1.png.import
+│           │   ├── 2.png
+│           │   ├── 2.png.import
+│           │   ├── 3.png
+│           │   ├── 3.png.import
+│           │   ├── 4.png
+│           │   ├── 4.png.import
+│           │   ├── 5.png
+│           │   ├── 5.png.import
+│           │   ├── 6.png
+│           │   ├── 6.png.import
+│           │   ├── 7.png
+│           │   ├── 7.png.import
+│           │   ├── 8.png
+│           │   ├── 8.png.import
+│           │   ├── 9.png
+│           │   └── 9.png.import
+│           ├── Sliders
+│           │   ├── 10.png
+│           │   ├── 10.png.import
+│           │   ├── 1.png
+│           │   ├── 1.png.import
+│           │   ├── 2.png
+│           │   ├── 2.png.import
+│           │   ├── 3.png
+│           │   ├── 3.png.import
+│           │   ├── 4.png
+│           │   ├── 4.png.import
+│           │   ├── 5.png
+│           │   ├── 5.png.import
+│           │   ├── 6.png
+│           │   ├── 6.png.import
+│           │   ├── 7.png
+│           │   ├── 7.png.import
+│           │   ├── 8.png
+│           │   ├── 8.png.import
+│           │   ├── 9.png
+│           │   └── 9.png.import
+│           ├── Small Banner
+│           │   ├── 10.png
+│           │   ├── 10.png.import
+│           │   ├── 11.png
+│           │   ├── 11.png.import
+│           │   ├── 12.png
+│           │   ├── 12.png.import
+│           │   ├── 13.png
+│           │   ├── 13.png.import
+│           │   ├── 1.png
+│           │   ├── 1.png.import
+│           │   ├── 2.png
+│           │   ├── 2.png.import
+│           │   ├── 3.png
+│           │   ├── 3.png.import
+│           │   ├── 4.png
+│           │   ├── 4.png.import
+│           │   ├── 5.png
+│           │   ├── 5.png.import
+│           │   ├── 6.png
+│           │   ├── 6.png.import
+│           │   ├── 7.png
+│           │   ├── 7.png.import
+│           │   ├── 8.png
+│           │   ├── 8.png.import
+│           │   ├── 9.png
+│           │   ├── 9.png.import
+│           │   ├── Small Banner (guide).png
+│           │   └── Small Banner (guide).png.import
+│           ├── Small Text
+│           │   ├── Small Icons
+│           │   │   ├── 10.png
+│           │   │   ├── 10.png.import
+│           │   │   ├── 11.png
+│           │   │   ├── 11.png.import
+│           │   │   ├── 12.png
+│           │   │   ├── 12.png.import
+│           │   │   ├── 13.png
+│           │   │   ├── 13.png.import
+│           │   │   ├── 14.png
+│           │   │   ├── 14.png.import
+│           │   │   ├── 15.png
+│           │   │   ├── 15.png.import
+│           │   │   ├── 16.png
+│           │   │   ├── 16.png.import
+│           │   │   ├── 17.png
+│           │   │   ├── 17.png.import
+│           │   │   ├── 18.png
+│           │   │   ├── 18.png.import
+│           │   │   ├── 19.png
+│           │   │   ├── 19.png.import
+│           │   │   ├── 1.png
+│           │   │   ├── 1.png.import
+│           │   │   ├── 20.png
+│           │   │   ├── 20.png.import
+│           │   │   ├── 21.png
+│           │   │   ├── 21.png.import
+│           │   │   ├── 22.png
+│           │   │   ├── 22.png.import
+│           │   │   ├── 23.png
+│           │   │   ├── 23.png.import
+│           │   │   ├── 24.png
+│           │   │   ├── 24.png.import
+│           │   │   ├── 25.png
+│           │   │   ├── 25.png.import
+│           │   │   ├── 2.png
+│           │   │   ├── 2.png.import
+│           │   │   ├── 3.png
+│           │   │   ├── 3.png.import
+│           │   │   ├── 4.png
+│           │   │   ├── 4.png.import
+│           │   │   ├── 5.png
+│           │   │   ├── 5.png.import
+│           │   │   ├── 6.png
+│           │   │   ├── 6.png.import
+│           │   │   ├── 7.png
+│           │   │   ├── 7.png.import
+│           │   │   ├── 8.png
+│           │   │   ├── 8.png.import
+│           │   │   ├── 9.png
+│           │   │   └── 9.png.import
+│           │   ├── Small Text
+│           │   │   ├── 10.png
+│           │   │   ├── 10.png.import
+│           │   │   ├── 11.png
+│           │   │   ├── 11.png.import
+│           │   │   ├── 12.png
+│           │   │   ├── 12.png.import
+│           │   │   ├── 13.png
+│           │   │   ├── 13.png.import
+│           │   │   ├── 14.png
+│           │   │   ├── 14.png.import
+│           │   │   ├── 15.png
+│           │   │   ├── 15.png.import
+│           │   │   ├── 16.png
+│           │   │   ├── 16.png.import
+│           │   │   ├── 17.png
+│           │   │   ├── 17.png.import
+│           │   │   ├── 18.png
+│           │   │   ├── 18.png.import
+│           │   │   ├── 19.png
+│           │   │   ├── 19.png.import
+│           │   │   ├── 1.png
+│           │   │   ├── 1.png.import
+│           │   │   ├── 20.png
+│           │   │   ├── 20.png.import
+│           │   │   ├── 21.png
+│           │   │   ├── 21.png.import
+│           │   │   ├── 22.png
+│           │   │   ├── 22.png.import
+│           │   │   ├── 23.png
+│           │   │   ├── 23.png.import
+│           │   │   ├── 24.png
+│           │   │   ├── 24.png.import
+│           │   │   ├── 25.png
+│           │   │   ├── 25.png.import
+│           │   │   ├── 26.png
+│           │   │   ├── 26.png.import
+│           │   │   ├── 27.png
+│           │   │   ├── 27.png.import
+│           │   │   ├── 28.png
+│           │   │   ├── 28.png.import
+│           │   │   ├── 29.png
+│           │   │   ├── 29.png.import
+│           │   │   ├── 2.png
+│           │   │   ├── 2.png.import
+│           │   │   ├── 30.png
+│           │   │   ├── 30.png.import
+│           │   │   ├── 31.png
+│           │   │   ├── 31.png.import
+│           │   │   ├── 32.png
+│           │   │   ├── 32.png.import
+│           │   │   ├── 33.png
+│           │   │   ├── 33.png.import
+│           │   │   ├── 34.png
+│           │   │   ├── 34.png.import
+│           │   │   ├── 35.png
+│           │   │   ├── 35.png.import
+│           │   │   ├── 36.png
+│           │   │   ├── 36.png.import
+│           │   │   ├── 37.png
+│           │   │   ├── 37.png.import
+│           │   │   ├── 38.png
+│           │   │   ├── 38.png.import
+│           │   │   ├── 39.png
+│           │   │   ├── 39.png.import
+│           │   │   ├── 3.png
+│           │   │   ├── 3.png.import
+│           │   │   ├── 40.png
+│           │   │   ├── 40.png.import
+│           │   │   ├── 41.png
+│           │   │   ├── 41.png.import
+│           │   │   ├── 42.png
+│           │   │   ├── 42.png.import
+│           │   │   ├── 43.png
+│           │   │   ├── 43.png.import
+│           │   │   ├── 44.png
+│           │   │   ├── 44.png.import
+│           │   │   ├── 45.png
+│           │   │   ├── 45.png.import
+│           │   │   ├── 46.png
+│           │   │   ├── 46.png.import
+│           │   │   ├── 47.png
+│           │   │   ├── 47.png.import
+│           │   │   ├── 48.png
+│           │   │   ├── 48.png.import
+│           │   │   ├── 49.png
+│           │   │   ├── 49.png.import
+│           │   │   ├── 4.png
+│           │   │   ├── 4.png.import
+│           │   │   ├── 50.png
+│           │   │   ├── 50.png.import
+│           │   │   ├── 51.png
+│           │   │   ├── 51.png.import
+│           │   │   ├── 52.png
+│           │   │   ├── 52.png.import
+│           │   │   ├── 5.png
+│           │   │   ├── 5.png.import
+│           │   │   ├── 6.png
+│           │   │   ├── 6.png.import
+│           │   │   ├── 7.png
+│           │   │   ├── 7.png.import
+│           │   │   ├── 8.png
+│           │   │   ├── 8.png.import
+│           │   │   ├── 9.png
+│           │   │   └── 9.png.import
+│           │   └── White Bar
+│           │       ├── 1.png
+│           │       ├── 1.png.import
+│           │       ├── 2.png
+│           │       ├── 2.png.import
+│           │       ├── 3.png
+│           │       ├── 3.png.import
+│           │       ├── 4.png
+│           │       └── 4.png.import
+│           ├── Yellow Board
+│           │   ├── 10.png
+│           │   ├── 10.png.import
+│           │   ├── 11.png
+│           │   ├── 11.png.import
+│           │   ├── 12.png
+│           │   ├── 12.png.import
+│           │   ├── 13.png
+│           │   ├── 13.png.import
+│           │   ├── 14.png
+│           │   ├── 14.png.import
+│           │   ├── 15.png
+│           │   ├── 15.png.import
+│           │   ├── 16.png
+│           │   ├── 16.png.import
+│           │   ├── 1.png
+│           │   ├── 1.png.import
+│           │   ├── 2.png
+│           │   ├── 2.png.import
+│           │   ├── 3.png
+│           │   ├── 3.png.import
+│           │   ├── 4.png
+│           │   ├── 4.png.import
+│           │   ├── 5.png
+│           │   ├── 5.png.import
+│           │   ├── 6.png
+│           │   ├── 6.png.import
+│           │   ├── 7.png
+│           │   ├── 7.png.import
+│           │   ├── 8.png
+│           │   ├── 8.png.import
+│           │   ├── 9.png
+│           │   ├── 9.png.import
+│           │   ├── Yellow Board (guide).png
+│           │   └── Yellow Board (guide).png.import
+│           ├── Yellow Button
+│           │   ├── 10.png
+│           │   ├── 10.png.import
+│           │   ├── 11.png
+│           │   ├── 11.png.import
+│           │   ├── 12.png
+│           │   ├── 12.png.import
+│           │   ├── 13.png
+│           │   ├── 13.png.import
+│           │   ├── 14.png
+│           │   ├── 14.png.import
+│           │   ├── 15.png
+│           │   ├── 15.png.import
+│           │   ├── 16.png
+│           │   ├── 16.png.import
+│           │   ├── 1.png
+│           │   ├── 1.png.import
+│           │   ├── 2.png
+│           │   ├── 2.png.import
+│           │   ├── 3.png
+│           │   ├── 3.png.import
+│           │   ├── 4.png
+│           │   ├── 4.png.import
+│           │   ├── 5.png
+│           │   ├── 5.png.import
+│           │   ├── 6.png
+│           │   ├── 6.png.import
+│           │   ├── 7.png
+│           │   ├── 7.png.import
+│           │   ├── 8.png
+│           │   ├── 8.png.import
+│           │   ├── 9.png
+│           │   ├── 9.png.import
+│           │   ├── Yellow Button (guide).png
+│           │   └── Yellow Button (guide).png.import
+│           └── Yellow Paper
+│               ├── 10.png
+│               ├── 10.png.import
+│               ├── 11.png
+│               ├── 11.png.import
+│               ├── 12.png
+│               ├── 12.png.import
+│               ├── 13.png
+│               ├── 13.png.import
+│               ├── 14.png
+│               ├── 14.png.import
+│               ├── 15.png
+│               ├── 15.png.import
+│               ├── 16.png
+│               ├── 16.png.import
+│               ├── 1.png
+│               ├── 1.png.import
+│               ├── 2.png
+│               ├── 2.png.import
+│               ├── 3.png
+│               ├── 3.png.import
+│               ├── 4.png
+│               ├── 4.png.import
+│               ├── 5.png
+│               ├── 5.png.import
+│               ├── 6.png
+│               ├── 6.png.import
+│               ├── 7.png
+│               ├── 7.png.import
+│               ├── 8.png
+│               ├── 8.png.import
+│               ├── 9.png
+│               ├── 9.png.import
+│               ├── Yellow Paper (guide).png
+│               └── Yellow Paper (guide).png.import
+├── icon.svg
+├── icon.svg.import
+├── project.godot
+├── README.md
+├── Scenes
+│   ├── backdrop.tscn
+│   ├── coin.tscn
+│   ├── Crab.gd
+│   ├── Crab.gd.uid
+│   ├── crab.tscn
+│   ├── game.tscn
+│   ├── HUD.tscn
+│   ├── movingPlatform.tscn
+│   ├── platforms.tscn
+│   ├── player.tscn
+│   ├── potion.tscn
+│   ├── spike.tscn
+│   └── ThrowableCoin.tscn
+├── Scripts
+│   ├── Backdrop.gd
+│   ├── Backdrop.gd.uid
+│   ├── coinCounter.gd
+│   ├── coinCounter.gd.uid
+│   ├── Coin.gd
+│   ├── Coin.gd.uid
+│   ├── Crab.gd
+│   ├── Crab.gd.uid
+│   ├── destroyShip.gd
+│   ├── destroyShip.gd.uid
+│   ├── movingPlatform.gd
+│   ├── movingPlatform.gd.uid
+│   ├── Player.gd
+│   ├── Player.gd.uid
+│   ├── PlayerStats.gd
+│   ├── PlayerStats.gd.uid
+│   ├── Spike.gd
+│   ├── Spike.gd.uid
+│   ├── textRender.gd
+│   ├── textRender.gd.uid
+│   ├── throwable_coin.gd
+│   └── throwable_coin.gd.uid
+└── tree.txt
+
+264 directories, 2483 files

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d2shp65bb7h0t" path="res://Scenes/crab.tscn" id="3_3dryh"]
 [ext_resource type="PackedScene" uid="uid://clk4ye50a5nt1" path="res://Scenes/platforms.tscn" id="3_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://o0jbe74yg8cv" path="res://Scenes/backdrop.tscn" id="4_3dryh"]
-[ext_resource type="PackedScene" uid="uid://cccbfsd0k88l" path="res://Scenes/coinCounter.tscn" id="5_wowpa"]
+[ext_resource type="PackedScene" uid="uid://cccbfsd0k88l" path="res://Scenes/HUD.tscn" id="5_wowpa"]
 
 [node name="Node2D" type="Node2D" unique_id=260088929]
 
