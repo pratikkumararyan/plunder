@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dn7ogb3qug3bl"]
 
 [ext_resource type="Texture2D" uid="uid://khjefv06sdv" path="res://Assets/ThirdParty/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="1_83xs0"]
-[ext_resource type="Script" uid="uid://cym87ipb80t7p" path="res://Scripts/player.gd" id="1_ypfnu"]
+[ext_resource type="Script" uid="uid://cym87ipb80t7p" path="res://Scripts/Player.gd" id="1_ypfnu"]
 [ext_resource type="Texture2D" uid="uid://bqva6pa6c7366" path="res://Assets/ThirdParty/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 02.png" id="2_ypfnu"]
 [ext_resource type="Texture2D" uid="uid://j08afvpag2np" path="res://Assets/ThirdParty/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" id="3_xuaoq"]
 [ext_resource type="Texture2D" uid="uid://dn6r05o5jvlhc" path="res://Assets/ThirdParty/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" id="4_wohnl"]

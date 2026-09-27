@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d2shp65bb7h0t"]
 
+[ext_resource type="Script" uid="uid://coj8nokyi38ji" path="res://Scenes/Crab.gd" id="1_mfyoh"]
 [ext_resource type="Texture2D" uid="uid://b6iy8pnbolrr0" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 01.png" id="1_ovh4o"]
 [ext_resource type="Texture2D" uid="uid://ne3vu06dbwg" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 02.png" id="2_lc3im"]
 [ext_resource type="Texture2D" uid="uid://baqge1xt2csds" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/07-Attack/Attack 03.png" id="3_afh00"]
@@ -37,9 +38,6 @@
 [ext_resource type="Texture2D" uid="uid://mhmmepiemyvk" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/02-Run/Run 04.png" id="35_ksgjy"]
 [ext_resource type="Texture2D" uid="uid://0myl3b3e377n" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/02-Run/Run 05.png" id="36_l2jd4"]
 [ext_resource type="Texture2D" uid="uid://bd0lq5rne22hm" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/02-Run/Run 06.png" id="37_qqx8r"]
-[ext_resource type="Texture2D" uid="uid://wtt40m7qlxem" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/06-Anticipation/Anticipation 01.png" id="38_vwa5i"]
-[ext_resource type="Texture2D" uid="uid://dqusr6rwrv18m" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/06-Anticipation/Anticipation 02.png" id="39_ib11q"]
-[ext_resource type="Texture2D" uid="uid://xmd415gcgtd2" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/06-Anticipation/Anticipation 03.png" id="40_q516w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxqea"]
 size = Vector2(20, 13)
@@ -201,32 +199,20 @@ animations = [{
 "loop": 1,
 "name": &"run",
 "speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("38_vwa5i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("39_ib11q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_q516w")
-}],
-"loop": 1,
-"name": &"sus",
-"speed": 10.0
 }]
 
-[node name="Node2D" type="Node2D" unique_id=606062989]
+[node name="Crab" type="CharacterBody2D" unique_id=614032878]
 scale = Vector2(2, 2)
+script = ExtResource("1_mfyoh")
+metadata/Pos1 = Vector2(0, 0)
+metadata/Pos2 = Vector2(0, 0)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=592912895]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=401427077]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=401427077]
 position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_rxqea")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=665429901]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=665429901]
 sprite_frames = SubResource("SpriteFrames_ch8ly")
-animation = &"sus"
+animation = &"run"
 autoplay = "default"
+frame_progress = 0.7998755

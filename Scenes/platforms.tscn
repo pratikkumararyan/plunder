@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://clk4ye50a5nt1"]
 
 [ext_resource type="Texture2D" uid="uid://crax6dxhjj0c3" path="res://Assets/tileset.png" id="1_o20dk"]
+[ext_resource type="Texture2D" uid="uid://cynnvpa0jxh1c" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="2_bvxn1"]
 [ext_resource type="Texture2D" uid="uid://c8i6fwhe1ux4y" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Objects/Flag/Flag 01.png" id="2_flrmx"]
 [ext_resource type="Texture2D" uid="uid://dpfx3mgko4h3j" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Objects/Flag/Flag 02.png" id="3_7eu53"]
 [ext_resource type="Texture2D" uid="uid://dxwu2yxopfq8y" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Objects/Flag/Flag 03.png" id="4_j1x5n"]
@@ -26,7 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://yn1umfa82b2h" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/4.png" id="24_ikxhb"]
 [ext_resource type="Texture2D" uid="uid://dn0aye8v6cltx" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/5.png" id="25_bvxn1"]
 [ext_resource type="Texture2D" uid="uid://cm1f51ukeu6pk" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/6.png" id="26_1beg8"]
-[ext_resource type="PackedScene" uid="uid://d2shp65bb7h0t" path="res://Scenes/crab.tscn" id="27_l4b8h"]
 [ext_resource type="PackedScene" uid="uid://cumym8txgk2e" path="res://Scenes/coin.tscn" id="28_pfio1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtyfn"]
@@ -78,11 +78,63 @@ texture_region_size = Vector2i(32, 32)
 4:5/0 = 0
 5:5/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1beg8"]
+texture = ExtResource("2_bvxn1")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+15:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_1vivr"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 3
 physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_wtyfn")
+sources/13 = SubResource("TileSetAtlasSource_1beg8")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
 animations = [{
@@ -312,6 +364,3 @@ shape = SubResource("RectangleShape2D_s7rlf")
 [node name="BlockadeToPreventJUMPOUT" type="CollisionShape2D" parent="spawnShip/CharacterBody2D" unique_id=1691009568]
 position = Vector2(-32.5, -39)
 shape = SubResource("RectangleShape2D_0cvp5")
-
-[node name="Crab1" parent="." unique_id=606062989 instance=ExtResource("27_l4b8h")]
-position = Vector2(-37, -788)

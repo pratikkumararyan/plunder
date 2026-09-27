@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://mpmmkfm8tonf"]
 
 [ext_resource type="PackedScene" uid="uid://dn7ogb3qug3bl" path="res://Scenes/player.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://d2shp65bb7h0t" path="res://Scenes/crab.tscn" id="3_3dryh"]
 [ext_resource type="PackedScene" uid="uid://clk4ye50a5nt1" path="res://Scenes/platforms.tscn" id="3_wrm1d"]
 
 [node name="Node2D" type="Node2D" unique_id=260088929]
@@ -10,3 +11,8 @@ position = Vector2(511, 13)
 
 [node name="Player" parent="." unique_id=754002116 instance=ExtResource("2_qxrlw")]
 position = Vector2(361, 557)
+
+[node name="Crab" parent="." unique_id=614032878 instance=ExtResource("3_3dryh")]
+position = Vector2(1198, 609)
+metadata/Pos1 = Vector2(1037, 605)
+metadata/Pos2 = Vector2(1335, 605)
