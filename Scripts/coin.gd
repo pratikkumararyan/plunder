@@ -3,9 +3,8 @@ extends Area2D
 @onready var timer = $Timer
 
 func _on_body_entered(body: Node2D) -> void:
-	print(body.money)
-	body.money += 10
-	print(body.money)
+	PlayerStats.totalCoins += 1
+	print(PlayerStats.totalCoins)
 	timer.start()
 	animationPlayer.play("effect")
 

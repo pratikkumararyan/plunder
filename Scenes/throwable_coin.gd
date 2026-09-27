@@ -1,0 +1,12 @@
+extends RigidBody2D
+
+func _on_body_entered(body: Node) -> void:
+	$AnimatedSprite2D.hide()
+	$CollisionShape2D.set_deferred("disabled", true)
+	freeze = true
+
+	var particles = $"Coin Break Particle Effect/CPUParticles2D"
+	particles.emitting = true
+
+	await get_tree().create_timer(particles.lifetime).timeout
+	queue_free()

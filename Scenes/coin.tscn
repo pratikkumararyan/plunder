@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cumym8txgk2e"]
 
 [ext_resource type="Script" uid="uid://c10421522t52a" path="res://Scripts/coin.gd" id="1_2l7mo"]
-[ext_resource type="Texture2D" uid="uid://cqcsegx1aj7ft" path="res://Assets/Pirate Treasure/Sprites/Gold Coin/01.png" id="1_qbp07"]
-[ext_resource type="Texture2D" uid="uid://c1r040ck85r1j" path="res://Assets/Pirate Treasure/Sprites/Gold Coin/02.png" id="2_2l7mo"]
-[ext_resource type="Texture2D" uid="uid://csj2ehsvlyn42" path="res://Assets/Pirate Treasure/Sprites/Gold Coin/03.png" id="3_q30xt"]
-[ext_resource type="Texture2D" uid="uid://3gs54p703a07" path="res://Assets/Pirate Treasure/Sprites/Gold Coin/04.png" id="4_7w2r2"]
-[ext_resource type="Texture2D" uid="uid://dqb642k7qsdbn" path="res://Assets/Pirate Treasure/Sprites/Coin Effect/01.png" id="5_tthw5"]
-[ext_resource type="Texture2D" uid="uid://dh00ariix6lvw" path="res://Assets/Pirate Treasure/Sprites/Coin Effect/02.png" id="6_6pu15"]
-[ext_resource type="Texture2D" uid="uid://b2s0pb6olddys" path="res://Assets/Pirate Treasure/Sprites/Coin Effect/03.png" id="7_vgc30"]
+[ext_resource type="Texture2D" uid="uid://cqcsegx1aj7ft" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Gold Coin/01.png" id="1_qbp07"]
+[ext_resource type="Texture2D" uid="uid://c1r040ck85r1j" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Gold Coin/02.png" id="2_2l7mo"]
+[ext_resource type="Texture2D" uid="uid://csj2ehsvlyn42" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Gold Coin/03.png" id="3_q30xt"]
+[ext_resource type="Texture2D" uid="uid://3gs54p703a07" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Gold Coin/04.png" id="4_7w2r2"]
+[ext_resource type="Texture2D" uid="uid://dqb642k7qsdbn" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Coin Effect/01.png" id="5_tthw5"]
+[ext_resource type="Texture2D" uid="uid://dh00ariix6lvw" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Coin Effect/02.png" id="6_6pu15"]
+[ext_resource type="Texture2D" uid="uid://b2s0pb6olddys" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Coin Effect/03.png" id="7_vgc30"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s7wsd"]
 animations = [{
