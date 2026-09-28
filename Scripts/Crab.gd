@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
-var health = 30
+var health = 10
 const SPEED = 100.0
 const GRAVITY = 980.0
 const FOLLOW_DISTANCE = 70.0
-const ATTACK_DAMAGE = 20.0
 
+@export var ATTACK_DAMAGE = 20.0
 @export var pos1: Vector2
 @export var pos2: Vector2
 @export var innerRange: float = 50.0

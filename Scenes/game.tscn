@@ -21,6 +21,7 @@ position = Vector2(351, 539)
 
 [node name="Crab" parent="." unique_id=614032878 instance=ExtResource("3_3dryh")]
 position = Vector2(655, -774)
+ATTACK_DAMAGE = 30.0
 pos1 = Vector2(557, -774)
 pos2 = Vector2(773, -774)
 innerRange = 30.0
@@ -28,6 +29,7 @@ outerRange = 40.0
 
 [node name="Crab2" parent="." unique_id=1404423261 instance=ExtResource("3_3dryh")]
 position = Vector2(1872, -1417)
+ATTACK_DAMAGE = 30.0
 pos1 = Vector2(1932, -1419)
 pos2 = Vector2(1872, -1417)
 innerRange = 30.0
@@ -49,4 +51,7 @@ visible = false
 [node name="MainMenu" parent="." unique_id=417730948 instance=ExtResource("8_v158k")]
 
 [node name="Star" parent="." unique_id=913911696 instance=ExtResource("9_h4fw4")]
-position = Vector2(1331, -1161)
+position = Vector2(1337, -1162)
+ATTACK_DAMAGE = 4.0
+pos1 = Vector2(1301, -1161)
+pos2 = Vector2(1378, -1161)
