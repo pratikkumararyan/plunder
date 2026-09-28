@@ -18,7 +18,8 @@ only agros when the player walks into the inner range, that will cause the enemy
 the player can escape its agro by leaving the OUTER range, which is significantly larger than the inner range, else, if the player remains in the inner range
 then, inside that inner range: if the user is a set amount of distance far away, the enemy will attack- dealing a set amount of damage but not killing the player.
 
-The game features spikes, A LOT throughout the entire map and these are most dangerous! 
+The game features spikes, A LOT throughout the entire map and these are most dangerous! Spikes kill you instantly.. there are also bottles as a projectile that can beused
+and they deal more damag than the ocins but can only be obtained by random chances when user shoots.
 
 # development
 The game is currently in the works, and is really buggy (and probably will be REALLY buggy for the rest of tirs lifetime). That said, 
