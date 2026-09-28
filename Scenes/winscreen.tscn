@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://f7y686ihm2f4" path="res://Scripts/textRender.gd" id="2_quxxr"]
 [ext_resource type="Script" uid="uid://dkuia2y6m0h6b" path="res://Scripts/TryAgainButton.gd" id="3_1u6cg"]
 [ext_resource type="Texture2D" uid="uid://cqcsegx1aj7ft" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Gold Coin/01.png" id="5_1u6cg"]
+[ext_resource type="Script" uid="uid://dbtj060dkorq" path="res://Scripts/QuitButton.gd" id="5_eih0q"]
 
 [node name="WINSCREEN" type="CanvasLayer" unique_id=676536138]
 script = ExtResource("1_quxxr")
@@ -76,6 +77,25 @@ scale = Vector2(3, 3)
 script = ExtResource("2_quxxr")
 text = "Restart"
 
+[node name="Button3" type="Button" parent="Background" unique_id=969094706]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 230.0
+offset_right = 464.0
+offset_bottom = 275.0
+script = ExtResource("5_eih0q")
+metadata/_edit_group_ = true
+
+[node name="Button" type="HFlowContainer" parent="Background/Button3" unique_id=1558974463]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 108.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+script = ExtResource("2_quxxr")
+text = "exit gem"
+
 [node name="coinIcon" type="Sprite2D" parent="Background" unique_id=129174494]
 position = Vector2(133, 427)
 scale = Vector2(5, 5)
@@ -83,3 +103,4 @@ texture = ExtResource("5_1u6cg")
 centered = false
 
 [connection signal="pressed" from="Background/Button2" to="Background/Title" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Background/Button3" to="Background/Title" method="_on_button_2_pressed"]
