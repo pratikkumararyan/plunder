@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://b3nikxlpf3vuu" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 04.png" id="18_22asu"]
 [ext_resource type="Texture2D" uid="uid://dgfknkgqyynt6" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Right 01.png" id="19_fkdbe"]
 [ext_resource type="Texture2D" uid="uid://bwjfk5eym1lm2" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Left 02.png" id="20_81klo"]
+[ext_resource type="PackedScene" uid="uid://ba2i6xjw5qwvb" path="res://Scenes/bottle.tscn" id="21_exi56"]
 
 [node name="Node2D" type="Node2D" unique_id=260088929]
 
@@ -250,3 +251,60 @@ texture = ExtResource("20_81klo")
 [node name="BackPalmTreeRight02" type="Sprite2D" parent="." unique_id=223457641]
 position = Vector2(1863, -2255)
 texture = ExtResource("19_fkdbe")
+
+[node name="Bottle" parent="." unique_id=1590488707 instance=ExtResource("21_exi56")]
+position = Vector2(1282, 609)
+
+[node name="Bottle2" parent="." unique_id=801605398 instance=ExtResource("21_exi56")]
+position = Vector2(1471, -514)
+
+[node name="Bottle3" parent="." unique_id=1664080246 instance=ExtResource("21_exi56")]
+position = Vector2(1550, -513)
+
+[node name="Bottle4" parent="." unique_id=161670778 instance=ExtResource("21_exi56")]
+position = Vector2(539, -960)
+
+[node name="Bottle5" parent="." unique_id=1146554686 instance=ExtResource("21_exi56")]
+position = Vector2(562, -1155)
+
+[node name="Bottle6" parent="." unique_id=1571108350 instance=ExtResource("21_exi56")]
+position = Vector2(590, -1346)
+
+[node name="Bottle7" parent="." unique_id=1348800675 instance=ExtResource("21_exi56")]
+position = Vector2(878, -1508)
+
+[node name="Bottle8" parent="." unique_id=1620217740 instance=ExtResource("21_exi56")]
+position = Vector2(336, -1572)
+
+[node name="Bottle9" parent="." unique_id=775335866 instance=ExtResource("21_exi56")]
+position = Vector2(106, -1510)
+
+[node name="Bottle10" parent="." unique_id=277146681 instance=ExtResource("21_exi56")]
+position = Vector2(397, -1921)
+
+[node name="Bottle11" parent="." unique_id=1542750348 instance=ExtResource("21_exi56")]
+position = Vector2(432, -2175)
+
+[node name="Bottle12" parent="." unique_id=744424629 instance=ExtResource("21_exi56")]
+position = Vector2(660, -2404)
+
+[node name="Bottle13" parent="." unique_id=491957000 instance=ExtResource("21_exi56")]
+position = Vector2(984, -2276)
+
+[node name="Bottle14" parent="." unique_id=994359902 instance=ExtResource("21_exi56")]
+position = Vector2(1156, -2012)
+
+[node name="Bottle15" parent="." unique_id=1506607665 instance=ExtResource("21_exi56")]
+position = Vector2(1501, -1988)
+
+[node name="Bottle16" parent="." unique_id=381117451 instance=ExtResource("21_exi56")]
+position = Vector2(1428, -1951)
+
+[node name="Bottle17" parent="." unique_id=694371017 instance=ExtResource("21_exi56")]
+position = Vector2(1382, -1891)
+
+[node name="Bottle18" parent="." unique_id=2113751615 instance=ExtResource("21_exi56")]
+position = Vector2(1741, -2112)
+
+[node name="Bottle19" parent="." unique_id=1179294815 instance=ExtResource("21_exi56")]
+position = Vector2(1297, -2302)
