@@ -64,6 +64,7 @@ scale = Vector2(552.7188, 366.26563)
 [node name="HUD" parent="." unique_id=1118143052 instance=ExtResource("5_wowpa")]
 
 [node name="DEATHSCREEN" parent="." unique_id=676536138 instance=ExtResource("6_i6g32")]
+visible = false
 
 [node name="WINSCREEN" parent="." unique_id=1799313748 instance=ExtResource("7_1l0tm")]
 visible = false
