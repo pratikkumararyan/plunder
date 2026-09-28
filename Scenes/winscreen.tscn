@@ -18,30 +18,51 @@ texture = ExtResource("1_mgkw0")
 
 [node name="Title" type="HFlowContainer" parent="Background" unique_id=452868846]
 layout_mode = 0
-offset_left = 120.00001
-offset_top = 208.0
-offset_right = 228.0
-offset_bottom = 220.66667
+offset_left = 128.0
+offset_top = 117.0
+offset_right = 236.0
+offset_bottom = 129.66667
 scale = Vector2(4, 4)
 script = ExtResource("2_quxxr")
 text = "You WON"
 
+[node name="Title2" type="HFlowContainer" parent="Background" unique_id=976691981]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 309.0
+offset_right = 307.5
+offset_bottom = 321.6667
+scale = Vector2(2, 2)
+script = ExtResource("2_quxxr")
+text = "you 
+are so cool"
+
+[node name="Title3" type="HFlowContainer" parent="Background" unique_id=392498903]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 352.0
+offset_right = 305.0
+offset_bottom = 364.6667
+scale = Vector2(2, 2)
+script = ExtResource("2_quxxr")
+text = "unlike the others"
+
 [node name="Stats" type="HFlowContainer" parent="Background" unique_id=629353759]
 layout_mode = 0
-offset_left = 212.0
-offset_top = 352.0
-offset_right = 320.0
-offset_bottom = 364.6667
+offset_left = 221.0
+offset_top = 447.0
+offset_right = 329.0
+offset_bottom = 459.6667
 scale = Vector2(4, 4)
 script = ExtResource("2_quxxr")
 text = "60000"
 
 [node name="Button2" type="Button" parent="Background" unique_id=1134507123]
 layout_mode = 0
-offset_left = 126.0
-offset_top = 283.0
-offset_right = 476.0
-offset_bottom = 328.0
+offset_left = 158.0
+offset_top = 177.0
+offset_right = 451.0
+offset_bottom = 222.0
 script = ExtResource("3_1u6cg")
 metadata/_edit_group_ = true
 
@@ -49,14 +70,14 @@ metadata/_edit_group_ = true
 layout_mode = 0
 offset_left = 3.0
 offset_top = 5.0
-offset_right = 120.0
+offset_right = 102.33334
 offset_bottom = 16.0
 scale = Vector2(3, 3)
 script = ExtResource("2_quxxr")
-text = "Try again?"
+text = "Restart"
 
 [node name="coinIcon" type="Sprite2D" parent="Background" unique_id=129174494]
-position = Vector2(125, 330)
+position = Vector2(133, 427)
 scale = Vector2(5, 5)
 texture = ExtResource("5_1u6cg")
 centered = false
