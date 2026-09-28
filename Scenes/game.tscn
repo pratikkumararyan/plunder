@@ -147,13 +147,13 @@ texture = ExtResource("12_rfjv2")
 
 [node name="SmallCloud4" type="Sprite2D" parent="." unique_id=1476530737]
 z_index = -17
-position = Vector2(889, -2328)
+position = Vector2(1228, -2550)
 scale = Vector2(4, 4)
 texture = ExtResource("12_rfjv2")
 
 [node name="SmallCloud5" type="Sprite2D" parent="." unique_id=1360700484]
 z_index = -17
-position = Vector2(-94, -2516)
+position = Vector2(301, -2772)
 scale = Vector2(4, 4)
 texture = ExtResource("12_rfjv2")
 
@@ -202,6 +202,222 @@ texture = ExtResource("12_rfjv2")
 [node name="SmallCloud2" type="Sprite2D" parent="." unique_id=788013829]
 z_index = -17
 position = Vector2(323, -1319)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud13" type="Sprite2D" parent="." unique_id=770857431]
+z_index = -17
+position = Vector2(-677, 362)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud14" type="Sprite2D" parent="." unique_id=1748444659]
+z_index = -17
+position = Vector2(-605, -622)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud15" type="Sprite2D" parent="." unique_id=948378176]
+z_index = -17
+position = Vector2(-1423, -1164)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud16" type="Sprite2D" parent="." unique_id=898855718]
+z_index = -17
+position = Vector2(-2406, -1352)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud17" type="Sprite2D" parent="." unique_id=1769185333]
+z_index = -17
+position = Vector2(-2792, -718)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud18" type="Sprite2D" parent="." unique_id=479998360]
+z_index = -17
+position = Vector2(-2755, -1596)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud19" type="Sprite2D" parent="." unique_id=112216261]
+z_index = -17
+position = Vector2(-1588, -1996)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud20" type="Sprite2D" parent="." unique_id=2093327975]
+z_index = -17
+position = Vector2(-1446, -1587)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud21" type="Sprite2D" parent="." unique_id=388457237]
+z_index = -17
+position = Vector2(-2820, -2051)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud22" type="Sprite2D" parent="." unique_id=7769809]
+z_index = -17
+position = Vector2(-3969, -1192)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud23" type="Sprite2D" parent="." unique_id=518622303]
+z_index = -17
+position = Vector2(-5430, -1918)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud24" type="Sprite2D" parent="." unique_id=1521077083]
+z_index = -17
+position = Vector2(-1989, -155)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud25" type="Sprite2D" parent="." unique_id=1805710444]
+z_index = -17
+position = Vector2(-2329, -3269)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud26" type="Sprite2D" parent="." unique_id=295583108]
+z_index = -17
+position = Vector2(-2257, -4253)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud27" type="Sprite2D" parent="." unique_id=803098643]
+z_index = -17
+position = Vector2(-3075, -4795)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud28" type="Sprite2D" parent="." unique_id=1234120630]
+z_index = -17
+position = Vector2(-4058, -4983)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud29" type="Sprite2D" parent="." unique_id=1404955772]
+z_index = -17
+position = Vector2(-4444, -4349)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud30" type="Sprite2D" parent="." unique_id=275866754]
+z_index = -17
+position = Vector2(-4407, -5227)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud31" type="Sprite2D" parent="." unique_id=352629801]
+z_index = -17
+position = Vector2(-3240, -5627)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud32" type="Sprite2D" parent="." unique_id=1725657609]
+z_index = -17
+position = Vector2(-3098, -5218)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud33" type="Sprite2D" parent="." unique_id=1686836821]
+z_index = -17
+position = Vector2(-4472, -5682)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud34" type="Sprite2D" parent="." unique_id=2016848052]
+z_index = -17
+position = Vector2(-5621, -4823)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud35" type="Sprite2D" parent="." unique_id=982033478]
+z_index = -17
+position = Vector2(-7082, -5549)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud36" type="Sprite2D" parent="." unique_id=1051870697]
+z_index = -17
+position = Vector2(-3641, -3786)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud37" type="Sprite2D" parent="." unique_id=2111596807]
+z_index = -17
+position = Vector2(2335, -2805)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud38" type="Sprite2D" parent="." unique_id=1232346746]
+z_index = -17
+position = Vector2(2407, -3789)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud39" type="Sprite2D" parent="." unique_id=774195626]
+z_index = -17
+position = Vector2(1589, -4331)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud40" type="Sprite2D" parent="." unique_id=567428266]
+z_index = -17
+position = Vector2(606, -4519)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud41" type="Sprite2D" parent="." unique_id=1487895380]
+z_index = -17
+position = Vector2(220, -3885)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud42" type="Sprite2D" parent="." unique_id=1178045715]
+z_index = -17
+position = Vector2(257, -4763)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud43" type="Sprite2D" parent="." unique_id=275286412]
+z_index = -17
+position = Vector2(1424, -5163)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud44" type="Sprite2D" parent="." unique_id=2104332497]
+z_index = -17
+position = Vector2(1566, -4754)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud45" type="Sprite2D" parent="." unique_id=1607711001]
+z_index = -17
+position = Vector2(192, -5218)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud46" type="Sprite2D" parent="." unique_id=563782683]
+z_index = -17
+position = Vector2(-957, -4359)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud47" type="Sprite2D" parent="." unique_id=734991335]
+z_index = -17
+position = Vector2(-2418, -5085)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud48" type="Sprite2D" parent="." unique_id=2130943703]
+z_index = -17
+position = Vector2(1023, -3322)
 scale = Vector2(4, 4)
 texture = ExtResource("12_rfjv2")
 
