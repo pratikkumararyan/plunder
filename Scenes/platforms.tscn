@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dpkmvt5ty3ji5" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Objects/Flag/Flag 08.png" id="9_j3xtu"]
 [ext_resource type="Texture2D" uid="uid://sceyp8s0kjic" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Objects/Flag/Flag 09.png" id="10_v6d0v"]
 [ext_resource type="Script" uid="uid://f7y686ihm2f4" path="res://Scripts/textRender.gd" id="11_7eu53"]
+[ext_resource type="Script" uid="uid://nn6l65jt8kno" path="res://Scripts/winflag.gd" id="12_h04g6"]
 [ext_resource type="PackedScene" uid="uid://bx50y686onrke" path="res://Scenes/movingPlatform.tscn" id="12_j1x5n"]
 [ext_resource type="PackedScene" uid="uid://d4eik4f06whw2" path="res://Scenes/spike.tscn" id="15_jsv3t"]
 [ext_resource type="Texture2D" uid="uid://dce4r2p64ys1v" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Water/Water/Bottom/1.png" id="16_s2aaq"]
@@ -19,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dtksl0y6e2ed7" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Water/Water/Top/2.png" id="18_3koa4"]
 [ext_resource type="Texture2D" uid="uid://dvvibd8dhibad" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Water/Water/Top/3.png" id="19_ekls4"]
 [ext_resource type="Texture2D" uid="uid://bxjdoq27o3kmk" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Water/Water/Top/4.png" id="20_eh1v3"]
-[ext_resource type="Script" uid="uid://d3gwwh3qwjxup" path="res://Scenes/WaterHeightIncrease.gd" id="20_mp7vf"]
+[ext_resource type="Script" uid="uid://d3gwwh3qwjxup" path="res://Scripts/WaterHeightIncrease.gd" id="20_mp7vf"]
 [ext_resource type="Texture2D" uid="uid://dpcgy5r5x5xtx" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/1.png" id="21_06pnm"]
 [ext_resource type="Texture2D" uid="uid://dsjkg321gq0en" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Idle/2.png" id="22_l4b8h"]
 [ext_resource type="Texture2D" uid="uid://bvn2q4temqt7h" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Ship/Hit/1.png" id="23_pddb5"]
@@ -35,7 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://dexc3qo6uq38j" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Destroyed/1.png" id="33_q3wjg"]
 [ext_resource type="Texture2D" uid="uid://c4h84xcg46c5j" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Destroyed/2.png" id="34_t88x0"]
 [ext_resource type="Texture2D" uid="uid://cbhl42begt6uq" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Destroyed/3.png" id="35_3g6h4"]
-[ext_resource type="Script" uid="uid://cc0jmpe6yntsh" path="res://Scenes/waterAcceleratorZone.gd" id="35_pddb5"]
+[ext_resource type="Script" uid="uid://cc0jmpe6yntsh" path="res://Scripts/waterAcceleratorZone.gd" id="35_pddb5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtyfn"]
 texture = ExtResource("1_o20dk")
@@ -179,6 +180,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o01uv"]
+size = Vector2(27, 94)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xagnb"]
 size = Vector2(225, 54)
 
@@ -201,6 +205,9 @@ animations = [{
 "name": &"default",
 "speed": 6.5
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fifeb"]
+size = Vector2(102.407364, 34.210213)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0cvp5"]
 animations = [{
@@ -276,16 +283,23 @@ tile_map_data = PackedByteArray("AAABABMAAAABAAAAAAACABMAAAABAAAAAAADABMAAAABAAA
 tile_set = SubResource("TileSet_1vivr")
 physics_quadrant_size = 32
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=291628111]
-position = Vector2(344, 569)
+[node name="Winflag" type="AnimatedSprite2D" parent="." unique_id=291628111]
+position = Vector2(1583, -1583)
 sprite_frames = SubResource("SpriteFrames_s7wsd")
 autoplay = "default"
+script = ExtResource("12_h04g6")
+
+[node name="Area2D" type="Area2D" parent="Winflag" unique_id=1550999504]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Winflag/Area2D" unique_id=2146731786]
+position = Vector2(-5.5, -1)
+shape = SubResource("RectangleShape2D_o01uv")
 
 [node name="QuitNow" type="HFlowContainer" parent="." unique_id=1404243637]
-offset_left = 134.0
-offset_top = 530.0
-offset_right = 222.0
-offset_bottom = 570.0
+offset_left = 166.0
+offset_top = 529.0
+offset_right = 254.0
+offset_bottom = 569.0
 scale = Vector2(3, 3)
 theme_override_constants/h_separation = 1
 script = ExtResource("11_7eu53")
@@ -407,7 +421,7 @@ rotation = 0.2617994
 position = Vector2(47.5, -91)
 shape = SubResource("RectangleShape2D_xagnb")
 
-[node name="waterTop" type="AnimatedSprite2D" parent="." unique_id=2004243090]
+[node name="waterTop" type="AnimatedSprite2D" parent="." unique_id=2004243090 groups=["water"]]
 visible = false
 z_index = -2
 position = Vector2(471.96393, 653.5)
@@ -418,7 +432,7 @@ frame = 3
 frame_progress = 0.91485626
 metadata/_edit_group_ = true
 
-[node name="waterBottom" type="Sprite2D" parent="." unique_id=843781063]
+[node name="waterBottom" type="Sprite2D" parent="." unique_id=843781063 groups=["water"]]
 z_index = -2
 position = Vector2(471.49985, 1002)
 scale = Vector2(27.15625, 20.812498)
@@ -429,6 +443,14 @@ metadata/_edit_group_ = true
 [node name="delay" type="Timer" parent="waterBottom" unique_id=173644079]
 wait_time = 0.2
 one_shot = true
+
+[node name="Area2D" type="Area2D" parent="waterBottom" unique_id=1566961470 groups=["water"]]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="waterBottom/Area2D" unique_id=690232909 groups=["water"]]
+position = Vector2(-2.4303732, 1.1050987)
+shape = SubResource("RectangleShape2D_fifeb")
 
 [node name="spawnShip" type="AnimatedSprite2D" parent="." unique_id=1202042763]
 z_index = 5
@@ -488,7 +510,10 @@ position = Vector2(593, -1187)
 [node name="Spike5" parent="." unique_id=710405819 instance=ExtResource("15_jsv3t")]
 position = Vector2(976, -1289)
 
+[connection signal="body_entered" from="Winflag/Area2D" to="Winflag" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="VerticalPlatform/GoArea" to="VerticalPlatform" method="_on_go_area_body_entered"]
+[connection signal="body_entered" from="waterBottom/Area2D" to="Winflag" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="waterBottom/Area2D" to="waterBottom" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="DestroyShipZone" to="QuitNow" method="_on_destroy_ship_zone_body_entered"]
 [connection signal="body_entered" from="DestroyShipZone" to="DestroyShipZone" method="_on_body_entered"]
 [connection signal="timeout" from="DestroyShipZone/Timer" to="DestroyShipZone" method="_on_timer_timeout"]

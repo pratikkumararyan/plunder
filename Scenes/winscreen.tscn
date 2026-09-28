@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dn4ufgip1qkbj"]
+
+[ext_resource type="Texture2D" uid="uid://cil1rpppe84hv" path="res://Assets/Wood and Paper UI/Sprites/Prefabs/9.png" id="1_mgkw0"]
+[ext_resource type="Script" uid="uid://bkwl1ieef04qe" path="res://Scripts/winscreen.gd" id="1_quxxr"]
+[ext_resource type="Script" uid="uid://f7y686ihm2f4" path="res://Scripts/textRender.gd" id="2_quxxr"]
+[ext_resource type="Script" uid="uid://dkuia2y6m0h6b" path="res://Scripts/TryAgainButton.gd" id="3_1u6cg"]
+[ext_resource type="Texture2D" uid="uid://cqcsegx1aj7ft" path="res://Assets/ThirdParty/Pirate Treasure/Sprites/Gold Coin/01.png" id="5_1u6cg"]
+
+[node name="WINSCREEN" type="CanvasLayer" unique_id=676536138]
+script = ExtResource("1_quxxr")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1942371715]
+offset_left = 255.0
+offset_top = 11.0
+offset_right = 858.0
+offset_bottom = 614.0
+texture = ExtResource("1_mgkw0")
+
+[node name="Title" type="HFlowContainer" parent="Background" unique_id=452868846]
+layout_mode = 0
+offset_left = 120.00001
+offset_top = 208.0
+offset_right = 228.0
+offset_bottom = 220.66667
+scale = Vector2(4, 4)
+script = ExtResource("2_quxxr")
+text = "You WON"
+
+[node name="Stats" type="HFlowContainer" parent="Background" unique_id=629353759]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 352.0
+offset_right = 320.0
+offset_bottom = 364.6667
+scale = Vector2(4, 4)
+script = ExtResource("2_quxxr")
+text = "60000"
+
+[node name="Button2" type="Button" parent="Background" unique_id=1134507123]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 283.0
+offset_right = 476.0
+offset_bottom = 328.0
+script = ExtResource("3_1u6cg")
+metadata/_edit_group_ = true
+
+[node name="Button" type="HFlowContainer" parent="Background/Button2" unique_id=1247945938]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 120.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+script = ExtResource("2_quxxr")
+text = "Try again?"
+
+[node name="coinIcon" type="Sprite2D" parent="Background" unique_id=129174494]
+position = Vector2(125, 330)
+scale = Vector2(5, 5)
+texture = ExtResource("5_1u6cg")
+centered = false
+
+[connection signal="pressed" from="Background/Button2" to="Background/Title" method="_on_button_2_pressed"]

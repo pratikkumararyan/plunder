@@ -13,3 +13,8 @@ func _process(delta: float) -> void:
 
 	var heightIncrease = (scale.y - startScaleY) * texture.get_height()
 	$"../waterTop".position.y = 1002.0 - heightIncrease
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		PlayerStats.health -= 100

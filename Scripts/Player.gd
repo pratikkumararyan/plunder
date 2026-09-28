@@ -25,15 +25,25 @@ const THROWABLE_COIN = preload("uid://cleb4u60w66dx")
 @onready var shoot_cooldown: Timer = $ShootCooldown
 @onready var trajectory: Line2D = $Trajectory
 @onready var deathscreen: CanvasLayer = $"../../DEATHSCREEN"
+@onready var winscreen: CanvasLayer = $"../../WINSCREEN"
 
 func _ready() -> void:
+	PlayerStats.win = false
+	PlayerStats.waterRiseAcc = 0.01
+	PlayerStats.waterRiseSpeed = 0.2
+	
 	if dead:
 		dead = false
 		deathscreen.visible = false
+		
 
 func _physics_process(delta: float) -> void:
 	if dead:
 		deathscreen.visible = true
+		return
+	
+	if PlayerStats.win:
+		winscreen.visible = true
 		return
 	
 	if PlayerStats.health <= 0:

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cil1rpppe84hv" path="res://Assets/Wood and Paper UI/Sprites/Prefabs/9.png" id="1_jcdth"]
 [ext_resource type="Script" uid="uid://f7y686ihm2f4" path="res://Scripts/textRender.gd" id="2_3anfm"]
-[ext_resource type="Script" uid="uid://dkuia2y6m0h6b" path="res://Scenes/TryAgainButton.gd" id="3_nj0ii"]
+[ext_resource type="Script" uid="uid://dkuia2y6m0h6b" path="res://Scripts/TryAgainButton.gd" id="3_nj0ii"]
 
 [node name="DEATHSCREEN" type="CanvasLayer" unique_id=676536138]
 visible = false

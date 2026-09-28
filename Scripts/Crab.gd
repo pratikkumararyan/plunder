@@ -29,7 +29,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if dead:
 		return
-		
+	
 	if foundPlayer:
 		target = player.global_position
 
