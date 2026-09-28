@@ -1,6 +1,6 @@
 extends Node
 
-var totalCoins = -4
+var totalCoins = -10
 var health = 100
 
 var waterRiseSpeed = 0.2

@@ -4,6 +4,7 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	timer.start()
+	PlayerStats.totalCoins += 1
 	animationPlayer.play("effect")
 
 func _on_timer_timeout() -> void:
