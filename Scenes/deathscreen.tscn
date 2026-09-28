@@ -6,6 +6,13 @@
 
 [node name="DEATHSCREEN" type="CanvasLayer" unique_id=676536138]
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1644654147]
+offset_left = -117.0
+offset_top = -107.0
+offset_right = 1201.0
+offset_bottom = 732.0
+color = Color(0, 0, 0, 1)
+
 [node name="Background" type="TextureRect" parent="." unique_id=1942371715]
 offset_left = 242.0
 offset_top = 15.0
