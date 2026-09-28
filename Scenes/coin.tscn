@@ -45,16 +45,16 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pfio1"]
 
-[node name="Area2D" type="Area2D" unique_id=1590488707]
+[node name="Area2D" type="Area2D" unique_id=1590488707 groups=["coin"]]
 script = ExtResource("1_2l7mo")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=411381625]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=411381625 groups=["coin"]]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_s7wsd")
 animation = &"effect"
 autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=507212504]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=507212504 groups=["coin"]]
 position = Vector2(1, 1)
 shape = SubResource("CircleShape2D_pfio1")
 
