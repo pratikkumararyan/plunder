@@ -21,6 +21,8 @@ var was_on_floor = false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 const THROWABLE_COIN = preload("uid://cleb4u60w66dx")
+const THROWABLE_BOTTLE = preload("uid://chabtc5rq5cwi")
+
 @onready var shoot_direction: Marker2D = $ShootDirection
 @onready var shoot_cooldown: Timer = $ShootCooldown
 @onready var trajectory: Line2D = $Trajectory
@@ -64,22 +66,40 @@ func _physics_process(delta: float) -> void:
 		velocity.y = jump_velocity
 		play_animation("jump", last_direction)
 		
-	if Input.is_action_pressed("Shoot") and shoot_cooldown.is_stopped() and PlayerStats.totalCoins > 0:
+	var has_throwables = PlayerStats.totalCoins > 0 or PlayerStats.totalBottles > 0
+
+	if Input.is_action_pressed("Shoot") and shoot_cooldown.is_stopped() and has_throwables:
 		currentShootRange = min(currentShootRange + 2.0 * delta, 5.0)
 		update_trajectory()
 		trajectory.visible = true
 
-	if Input.is_action_just_released("Shoot") and shoot_cooldown.is_stopped() and PlayerStats.totalCoins > 0:
+	if Input.is_action_just_released("Shoot") and shoot_cooldown.is_stopped() and has_throwables:
 		trajectory.visible = false
 		shoot_cooldown.start()
 
-		PlayerStats.totalCoins -= 1
+		var throwable_scene
 
-		var coin = THROWABLE_COIN.instantiate()
-		get_tree().current_scene.add_child(coin)
+		if PlayerStats.totalCoins > 0 and PlayerStats.totalBottles > 0:
+			if randi() % 2 == 0:
+				throwable_scene = THROWABLE_COIN
+				PlayerStats.totalCoins -= 1
+			else:
+				throwable_scene = THROWABLE_BOTTLE
+				PlayerStats.totalBottles -= 1
 
-		coin.global_position = shoot_direction.global_position
-		coin.linear_velocity = Vector2(
+		elif PlayerStats.totalCoins > 0:
+			throwable_scene = THROWABLE_COIN
+			PlayerStats.totalCoins -= 1
+
+		else:
+			throwable_scene = THROWABLE_BOTTLE
+			PlayerStats.totalBottles -= 1
+
+		var throwable = throwable_scene.instantiate()
+		get_tree().current_scene.add_child(throwable)
+
+		throwable.global_position = shoot_direction.global_position
+		throwable.linear_velocity = Vector2(
 			last_direction.x * 300 * currentShootRange,
 			-200 * currentShootRange
 		)
