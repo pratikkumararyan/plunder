@@ -1,0 +1,247 @@
+[gd_scene format=3 uid="uid://d11rnhekpfckn"]
+
+[ext_resource type="Script" uid="uid://dtyrvbty61bjc" path="res://Scripts/Crab.gd" id="1_yotny"]
+[ext_resource type="Texture2D" uid="uid://ppp11hqknuj3" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 01.png" id="2_yotny"]
+[ext_resource type="Texture2D" uid="uid://dstnm6tel6a2p" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 02.png" id="3_qfgil"]
+[ext_resource type="Texture2D" uid="uid://c2iguapd27liv" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 03.png" id="4_j4y8h"]
+[ext_resource type="Texture2D" uid="uid://c4usib4l0b02" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 04.png" id="5_knatf"]
+[ext_resource type="Texture2D" uid="uid://p5vtypr1dfxm" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/07-Attack/Attack 05.png" id="6_j6ggq"]
+[ext_resource type="Texture2D" uid="uid://barkwa25mgy3o" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/10-Dead Ground/Dead Ground 01.png" id="7_72i8x"]
+[ext_resource type="Texture2D" uid="uid://bc867gr7nu8xy" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/10-Dead Ground/Dead Ground 02.png" id="8_20ieh"]
+[ext_resource type="Texture2D" uid="uid://xc47n5yuu5y6" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/10-Dead Ground/Dead Ground 03.png" id="9_w5wjc"]
+[ext_resource type="Texture2D" uid="uid://bscjt5wk84whp" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/10-Dead Ground/Dead Ground 04.png" id="10_k17dq"]
+[ext_resource type="Texture2D" uid="uid://q2bf0lk6p8tb" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/09-Dead Hit/Dead Hit 01.png" id="10_tr3ip"]
+[ext_resource type="Texture2D" uid="uid://np6b70n5mdv" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/09-Dead Hit/Dead Hit 02.png" id="11_l45kt"]
+[ext_resource type="Texture2D" uid="uid://200k4r3iwwmh" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/09-Dead Hit/Dead Hit 03.png" id="12_w75gn"]
+[ext_resource type="Texture2D" uid="uid://bfok8k0dvypj8" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/09-Dead Hit/Dead Hit 04.png" id="13_gqd3g"]
+[ext_resource type="Texture2D" uid="uid://dwtr1u4utrqwn" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 01.png" id="15_tr3ip"]
+[ext_resource type="Texture2D" uid="uid://bc8e8ecxvafio" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 02.png" id="16_l45kt"]
+[ext_resource type="Texture2D" uid="uid://cjqjbsjveagqt" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 03.png" id="17_w75gn"]
+[ext_resource type="Texture2D" uid="uid://bg2vf6ws8dkmi" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 04.png" id="18_gqd3g"]
+[ext_resource type="Texture2D" uid="uid://ct8meo7ktjifg" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 05.png" id="19_w82k0"]
+[ext_resource type="Texture2D" uid="uid://chi6upd7r2kub" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 06.png" id="20_6xjr2"]
+[ext_resource type="Texture2D" uid="uid://vbuoi52vq6wa" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 07.png" id="21_mogrq"]
+[ext_resource type="Texture2D" uid="uid://cwdwbeotvotwk" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/01-Idle/Idle 08.png" id="22_6e466"]
+[ext_resource type="Texture2D" uid="uid://bnfpufwe7slvx" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/04-Fall/Fall 01.png" id="23_0vcob"]
+[ext_resource type="Texture2D" uid="uid://cc1p4yms1lgf7" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/05-Ground/Ground 01.png" id="24_4nrdm"]
+[ext_resource type="Texture2D" uid="uid://l0j441pq0a7o" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/05-Ground/Ground 02.png" id="25_ca324"]
+[ext_resource type="Texture2D" uid="uid://dr1ksjy8ho1pb" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/08-Hit/Hit 01.png" id="26_l5lr0"]
+[ext_resource type="Texture2D" uid="uid://bm31abpsadhc7" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/08-Hit/Hit 02.png" id="27_84s7e"]
+[ext_resource type="Texture2D" uid="uid://dhvyk2i3opde" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/08-Hit/Hit 03.png" id="28_mhi43"]
+[ext_resource type="Texture2D" uid="uid://crvgcn8jqhe70" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/08-Hit/Hit 04.png" id="29_bs7yy"]
+[ext_resource type="Texture2D" uid="uid://c67o00hgqkxoj" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/03-Jump/Jump 01.png" id="30_6a0am"]
+[ext_resource type="Texture2D" uid="uid://cw8hnn1t2x6ro" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/03-Jump/Jump 02.png" id="31_yt8qk"]
+[ext_resource type="Texture2D" uid="uid://dwlen67vymfkk" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Crabby/03-Jump/Jump 03.png" id="32_m8bs7"]
+[ext_resource type="Texture2D" uid="uid://biskkibqmha4j" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 01.png" id="33_4enid"]
+[ext_resource type="Texture2D" uid="uid://bmuh3im1aepx4" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 02.png" id="34_up36u"]
+[ext_resource type="Texture2D" uid="uid://h0ygi5y6fhg6" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 03.png" id="35_dwht7"]
+[ext_resource type="Texture2D" uid="uid://bqrurda42gndx" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 04.png" id="36_wxx14"]
+[ext_resource type="Texture2D" uid="uid://bnfw7yu5o7pfk" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 05.png" id="37_12jn4"]
+[ext_resource type="Texture2D" uid="uid://djm1pftkd8sa7" path="res://Assets/ThirdParty/The Crusty Crew/Sprites/Fierce Tooth/02-Run/Run 06.png" id="38_0vcob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxqea"]
+size = Vector2(20, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ch8ly"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yotny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qfgil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j4y8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_knatf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j6ggq")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_72i8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_20ieh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w5wjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_k17dq")
+}],
+"loop": 0,
+"name": &"dead_ground",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_tr3ip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_l45kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w75gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gqd3g")
+}],
+"loop": 0,
+"name": &"dead_hit",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_tr3ip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_l45kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_w75gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gqd3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_w82k0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6xjr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_mogrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6e466")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_0vcob")
+}],
+"loop": 0,
+"name": &"fall",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_4nrdm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ca324")
+}],
+"loop": 0,
+"name": &"ground",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_l5lr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_84s7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_mhi43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_bs7yy")
+}],
+"loop": 0,
+"name": &"hit",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_6a0am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_yt8qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_m8bs7")
+}],
+"loop": 0,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_4enid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_up36u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_dwht7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_wxx14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_12jn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_0vcob")
+}],
+"loop": 0,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xagnb"]
+radius = 50.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o01uv"]
+radius = 70.0
+
+[node name="Toothy" type="CharacterBody2D" unique_id=614032878 groups=["enemy"]]
+scale = Vector2(2, 2)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_yotny")
+metadata/Pos1 = Vector2(0, 0)
+metadata/Pos2 = Vector2(0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=401427077 groups=["enemy"]]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_rxqea")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=665429901 groups=["enemy"]]
+sprite_frames = SubResource("SpriteFrames_ch8ly")
+animation = &"dead_ground"
+autoplay = "default"
+
+[node name="innerRange" type="Area2D" parent="." unique_id=1004068429 groups=["enemy"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="innerRange" unique_id=1430664506]
+shape = SubResource("CircleShape2D_xagnb")
+
+[node name="outerRange" type="Area2D" parent="." unique_id=1275411912 groups=["enemy"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="outerRange" unique_id=739586550]
+shape = SubResource("CircleShape2D_o01uv")
+
+[node name="attackCooldown" type="Timer" parent="." unique_id=358208195 groups=["enemy"]]
+one_shot = true
+
+[connection signal="body_entered" from="innerRange" to="." method="_on_inner_range_body_entered"]
+[connection signal="body_exited" from="innerRange" to="." method="_on_inner_range_body_exited"]
+[connection signal="body_exited" from="outerRange" to="." method="_on_outer_range_body_exited"]
+[connection signal="timeout" from="attackCooldown" to="." method="_on_attack_cooldown_timeout"]
