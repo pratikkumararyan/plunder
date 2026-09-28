@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://c4h84xcg46c5j" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Destroyed/2.png" id="34_t88x0"]
 [ext_resource type="Texture2D" uid="uid://cbhl42begt6uq" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Ship/Destroyed/3.png" id="35_3g6h4"]
 [ext_resource type="Script" uid="uid://cc0jmpe6yntsh" path="res://Scripts/waterAcceleratorZone.gd" id="35_pddb5"]
+[ext_resource type="PackedScene" uid="uid://wvuceepyr4tj" path="res://Scenes/heart.tscn" id="38_n1vyb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtyfn"]
 texture = ExtResource("1_o20dk")
@@ -392,7 +393,7 @@ position = Vector2(800, -584)
 rotation = 0.2617994
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="Coin14" parent="." unique_id=1590488707 instance=ExtResource("28_pfio1")]
+[node name="Coin14" parent="." unique_id=1103896965 instance=ExtResource("28_pfio1")]
 position = Vector2(925.99994, -1613.0001)
 rotation = 0.2617994
 scale = Vector2(0.99999994, 0.99999994)
@@ -645,6 +646,9 @@ position = Vector2(593, -1187)
 
 [node name="Spike5" parent="." unique_id=710405819 instance=ExtResource("15_jsv3t")]
 position = Vector2(976, -1289)
+
+[node name="Heart" parent="." unique_id=1590488707 instance=ExtResource("38_n1vyb")]
+position = Vector2(364, 597)
 
 [connection signal="body_entered" from="Winflag/Area2D" to="Winflag" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="VerticalPlatform/GoArea" to="VerticalPlatform" method="_on_go_area_body_entered"]
