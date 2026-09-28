@@ -28,6 +28,7 @@ const THROWABLE_COIN = preload("uid://cleb4u60w66dx")
 @onready var winscreen: CanvasLayer = $"../../WINSCREEN"
 
 func _ready() -> void:
+	PlayerStats.started = false
 	PlayerStats.win = false
 	PlayerStats.waterRiseAcc = 0.01
 	PlayerStats.waterRiseSpeed = 0.2
@@ -38,6 +39,11 @@ func _ready() -> void:
 		
 
 func _physics_process(delta: float) -> void:
+	if !PlayerStats.started:
+		return
+	else: 
+		$"../../MainMenu/CanvasLayer".visible = false
+	
 	if dead:
 		deathscreen.visible = true
 		return

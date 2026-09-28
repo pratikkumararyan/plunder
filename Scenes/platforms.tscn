@@ -184,7 +184,7 @@ animations = [{
 size = Vector2(27, 94)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xagnb"]
-size = Vector2(225, 54)
+size = Vector2(225, 612)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s7rlf"]
 animations = [{
@@ -273,7 +273,7 @@ size = Vector2(61.5, 17.5)
 size = Vector2(11, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
-size = Vector2(119, 157)
+size = Vector2(225, 230.5)
 
 [node name="Map" type="Node2D" unique_id=1052754536]
 metadata/_edit_vertical_guides_ = [-237.0]
@@ -418,7 +418,7 @@ rotation = 0.2617994
 [node name="GoArea" type="Area2D" parent="VerticalPlatform" unique_id=1654325007]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VerticalPlatform/GoArea" unique_id=936089156]
-position = Vector2(47.5, -91)
+position = Vector2(47.5, -370)
 shape = SubResource("RectangleShape2D_xagnb")
 
 [node name="waterTop" type="AnimatedSprite2D" parent="." unique_id=2004243090 groups=["water"]]
@@ -445,6 +445,7 @@ wait_time = 0.2
 one_shot = true
 
 [node name="Area2D" type="Area2D" parent="waterBottom" unique_id=1566961470 groups=["water"]]
+position = Vector2(-0.018406348, -0.048048053)
 collision_layer = 7
 collision_mask = 7
 
@@ -488,7 +489,7 @@ position = Vector2(124, 587)
 script = ExtResource("35_pddb5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AccelerateWaterZone" unique_id=677105337]
-position = Vector2(1162, -231)
+position = Vector2(1155.5, -267.75)
 shape = SubResource("RectangleShape2D_1vivr")
 
 [node name="Timer" type="Timer" parent="AccelerateWaterZone" unique_id=619873796]

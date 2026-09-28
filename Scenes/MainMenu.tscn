@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://b6llmh8dh7qxm"]
+
+[ext_resource type="Texture2D" uid="uid://cil1rpppe84hv" path="res://Assets/Wood and Paper UI/Sprites/Prefabs/9.png" id="1_8saeu"]
+[ext_resource type="Script" uid="uid://f7y686ihm2f4" path="res://Scripts/textRender.gd" id="2_ghw46"]
+[ext_resource type="Script" uid="uid://biolp1ethd3op" path="res://Scripts/PlayButton.gd" id="3_8saeu"]
+
+[node name="Node2D" type="Node2D" unique_id=417730948]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=569554854]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=986435439]
+offset_left = 255.0
+offset_top = 11.0
+offset_right = 858.0
+offset_bottom = 614.0
+texture = ExtResource("1_8saeu")
+
+[node name="Title" type="HFlowContainer" parent="CanvasLayer/Background" unique_id=1047970787]
+layout_mode = 0
+offset_left = 116.00001
+offset_top = 250.0
+offset_right = 212.5
+offset_bottom = 262.6667
+scale = Vector2(4, 4)
+script = ExtResource("2_ghw46")
+text = "Plunder"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Background" unique_id=115615307]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 324.0
+offset_right = 385.0
+offset_bottom = 369.0
+script = ExtResource("3_8saeu")
+metadata/_edit_group_ = true
+
+[node name="Button" type="HFlowContainer" parent="CanvasLayer/Background/Button2" unique_id=1531236994]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 56.0
+offset_bottom = 16.0
+scale = Vector2(3, 3)
+script = ExtResource("2_ghw46")
+text = "Play"
+
+[connection signal="pressed" from="CanvasLayer/Background/Button2" to="CanvasLayer/Background/Title" method="_on_button_2_pressed"]

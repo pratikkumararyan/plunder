@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cccbfsd0k88l" path="res://Scenes/HUD.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://cundhsxfkwpcx" path="res://Scenes/deathscreen.tscn" id="6_i6g32"]
 [ext_resource type="PackedScene" uid="uid://dn4ufgip1qkbj" path="res://Scenes/winscreen.tscn" id="7_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://b6llmh8dh7qxm" path="res://Scenes/MainMenu.tscn" id="8_v158k"]
 
 [node name="Node2D" type="Node2D" unique_id=260088929]
 
@@ -43,3 +44,5 @@ scale = Vector2(552.7188, 290.78125)
 
 [node name="WINSCREEN" parent="." unique_id=1799313748 instance=ExtResource("7_1l0tm")]
 visible = false
+
+[node name="MainMenu" parent="." unique_id=417730948 instance=ExtResource("8_v158k")]
