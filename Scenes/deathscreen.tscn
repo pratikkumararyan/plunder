@@ -5,13 +5,12 @@
 [ext_resource type="Script" uid="uid://dkuia2y6m0h6b" path="res://Scripts/TryAgainButton.gd" id="3_nj0ii"]
 
 [node name="DEATHSCREEN" type="CanvasLayer" unique_id=676536138]
-visible = false
 
 [node name="Background" type="TextureRect" parent="." unique_id=1942371715]
-offset_left = 255.0
-offset_top = 11.0
-offset_right = 858.0
-offset_bottom = 614.0
+offset_left = 242.0
+offset_top = 15.0
+offset_right = 845.0
+offset_bottom = 618.0
 texture = ExtResource("1_jcdth")
 
 [node name="Title" type="HFlowContainer" parent="Background" unique_id=452868846]
@@ -24,12 +23,42 @@ scale = Vector2(4, 4)
 script = ExtResource("2_3anfm")
 text = "You DIED"
 
+[node name="Title2" type="HFlowContainer" parent="Background" unique_id=1467840273]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 301.0
+offset_right = 214.0
+offset_bottom = 313.6667
+scale = Vector2(2, 2)
+script = ExtResource("2_3anfm")
+text = "imagine"
+
+[node name="Title4" type="HFlowContainer" parent="Background" unique_id=301399598]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 353.0
+offset_right = 362.0
+offset_bottom = 365.6667
+scale = Vector2(2, 2)
+script = ExtResource("2_3anfm")
+text = "Loser"
+
+[node name="Title3" type="HFlowContainer" parent="Background" unique_id=1350944022]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 313.0
+offset_right = 414.0
+offset_bottom = 325.6667
+scale = Vector2(2, 2)
+script = ExtResource("2_3anfm")
+text = "being a "
+
 [node name="Button2" type="Button" parent="Background" unique_id=1134507123]
 layout_mode = 0
-offset_left = 126.0
-offset_top = 283.0
-offset_right = 476.0
-offset_bottom = 328.0
+offset_left = 132.0
+offset_top = 456.0
+offset_right = 482.0
+offset_bottom = 501.0
 script = ExtResource("3_nj0ii")
 metadata/_edit_group_ = true
 
