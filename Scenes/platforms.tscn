@@ -297,6 +297,7 @@ position = Vector2(-5.5, -1)
 shape = SubResource("RectangleShape2D_o01uv")
 
 [node name="QuitNow" type="HFlowContainer" parent="." unique_id=1404243637]
+z_index = -9
 offset_left = 166.0
 offset_top = 529.0
 offset_right = 254.0
@@ -308,6 +309,7 @@ lettersFolder = "res://Assets/Wood and Paper UI/Sprites/Small Text/Small Text"
 text = "quit now..."
 
 [node name="OrSeeWorse" type="HFlowContainer" parent="." unique_id=1437779174]
+z_index = -9
 offset_left = 372.0
 offset_top = 531.0
 offset_right = 466.0
@@ -319,6 +321,7 @@ lettersFolder = "res://Assets/Wood and Paper UI/Sprites/Small Text/Small Text"
 text = "or endure worse."
 
 [node name="quicklyGetHigh" type="HFlowContainer" parent="." unique_id=1666168172]
+z_index = -9
 offset_left = 1435.0
 offset_top = -508.0
 offset_right = 1523.6667
@@ -331,6 +334,7 @@ text = "its a flood!!!
 quickly get to high ground!"
 
 [node name="facecomp" type="HFlowContainer" parent="." unique_id=358351852]
+z_index = -9
 offset_left = 321.00003
 offset_top = -867.0
 offset_right = 391.33334
@@ -342,6 +346,7 @@ lettersFolder = "res://Assets/Wood and Paper UI/Sprites/Small Text/Small Text"
 text = "its time to face some ..competition"
 
 [node name="collectLoot" type="HFlowContainer" parent="." unique_id=460201078]
+z_index = -9
 offset_left = 889.25
 offset_top = 494.50003
 offset_right = 960.2499
@@ -540,8 +545,8 @@ metadata/_edit_group_ = true
 
 [node name="waterBottom" type="Sprite2D" parent="." unique_id=843781063 groups=["water"]]
 z_index = -2
-position = Vector2(471.49985, 1002)
-scale = Vector2(27.15625, 20.812498)
+position = Vector2(1508.5, 4135.5)
+scale = Vector2(210.01042, 216.65623)
 texture = ExtResource("16_s2aaq")
 script = ExtResource("20_mp7vf")
 metadata/_edit_group_ = true

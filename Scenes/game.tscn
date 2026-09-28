@@ -9,6 +9,17 @@
 [ext_resource type="PackedScene" uid="uid://dn4ufgip1qkbj" path="res://Scenes/winscreen.tscn" id="7_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://b6llmh8dh7qxm" path="res://Scenes/MainMenu.tscn" id="8_v158k"]
 [ext_resource type="PackedScene" uid="uid://7aoxxgt55wu8" path="res://Scenes/star.tscn" id="9_h4fw4"]
+[ext_resource type="Texture2D" uid="uid://c08lyiqiilvf4" path="res://Assets/ThirdParty/Merchant Ship/Sprites/Box/Hit/2.png" id="10_ldgsr"]
+[ext_resource type="Texture2D" uid="uid://bxpritwte01io" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Background/Big Clouds.png" id="11_rku1e"]
+[ext_resource type="Texture2D" uid="uid://den0sjt0b8orc" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Background/Small Cloud 1.png" id="12_rfjv2"]
+[ext_resource type="Texture2D" uid="uid://v8kpon2bwcjr" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Left 01.png" id="13_7nbq1"]
+[ext_resource type="Texture2D" uid="uid://b6yif2vr8u874" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 04.png" id="14_exi56"]
+[ext_resource type="Texture2D" uid="uid://qfp5n1vdrjjh" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png" id="15_7t8sx"]
+[ext_resource type="Texture2D" uid="uid://bxok5p7g6m80i" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 01.png" id="16_mg4q0"]
+[ext_resource type="Texture2D" uid="uid://brvf3hulxs02h" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 02.png" id="17_vm72l"]
+[ext_resource type="Texture2D" uid="uid://b3nikxlpf3vuu" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 04.png" id="18_22asu"]
+[ext_resource type="Texture2D" uid="uid://dgfknkgqyynt6" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Right 01.png" id="19_fkdbe"]
+[ext_resource type="Texture2D" uid="uid://bwjfk5eym1lm2" path="res://Assets/ThirdParty/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Left 02.png" id="20_81klo"]
 
 [node name="Node2D" type="Node2D" unique_id=260088929]
 
@@ -44,10 +55,9 @@ innerRange = 30.0
 outerRange = 40.0
 
 [node name="background" parent="." unique_id=1760807679 instance=ExtResource("4_3dryh")]
-visible = false
 z_index = -20
-position = Vector2(-23, -37)
-scale = Vector2(552.7188, 290.78125)
+position = Vector2(261, -822.7499)
+scale = Vector2(552.7188, 366.26563)
 
 [node name="HUD" parent="." unique_id=1118143052 instance=ExtResource("5_wowpa")]
 
@@ -69,3 +79,174 @@ position = Vector2(671, -2192)
 ATTACK_DAMAGE = 4.0
 pos1 = Vector2(309, -2192)
 pos2 = Vector2(671, -2192)
+
+[node name="2" type="Sprite2D" parent="." unique_id=10250174]
+position = Vector2(1210, 597)
+scale = Vector2(3.25, 2.5)
+texture = ExtResource("10_ldgsr")
+
+[node name="3" type="Sprite2D" parent="." unique_id=703956882]
+z_index = -12
+position = Vector2(1234, 540)
+scale = Vector2(3.25, 2.5)
+texture = ExtResource("10_ldgsr")
+
+[node name="BigClouds" type="Sprite2D" parent="." unique_id=1885907834]
+z_index = -17
+position = Vector2(-4055, -3404)
+texture = ExtResource("11_rku1e")
+
+[node name="BigClouds2" type="Sprite2D" parent="." unique_id=990519275]
+z_index = -17
+position = Vector2(-4902, -3650)
+texture = ExtResource("11_rku1e")
+
+[node name="BigClouds3" type="Sprite2D" parent="." unique_id=598716943]
+z_index = -17
+position = Vector2(-6104, -3808)
+texture = ExtResource("11_rku1e")
+
+[node name="BigClouds4" type="Sprite2D" parent="." unique_id=570396371]
+z_index = -17
+position = Vector2(-5267, -1828)
+texture = ExtResource("11_rku1e")
+
+[node name="BigClouds5" type="Sprite2D" parent="." unique_id=716877640]
+z_index = -17
+position = Vector2(-5267, -1828)
+texture = ExtResource("11_rku1e")
+
+[node name="BigClouds6" type="Sprite2D" parent="." unique_id=290938906]
+z_index = -17
+position = Vector2(-3110, -1336)
+texture = ExtResource("11_rku1e")
+
+[node name="BigClouds7" type="Sprite2D" parent="." unique_id=1834176820]
+z_index = -17
+position = Vector2(-3681, -1888)
+texture = ExtResource("11_rku1e")
+
+[node name="BigClouds8" type="Sprite2D" parent="." unique_id=1952645346]
+z_index = -17
+position = Vector2(-2371, -3740)
+texture = ExtResource("11_rku1e")
+
+[node name="SmallCloud1" type="Sprite2D" parent="." unique_id=626577633]
+z_index = -17
+position = Vector2(1635, -802)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud3" type="Sprite2D" parent="." unique_id=766351373]
+z_index = -17
+position = Vector2(1707, -1786)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud4" type="Sprite2D" parent="." unique_id=1476530737]
+z_index = -17
+position = Vector2(889, -2328)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud5" type="Sprite2D" parent="." unique_id=1360700484]
+z_index = -17
+position = Vector2(-94, -2516)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud6" type="Sprite2D" parent="." unique_id=1946220922]
+z_index = -17
+position = Vector2(-480, -1882)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud7" type="Sprite2D" parent="." unique_id=1596855293]
+z_index = -17
+position = Vector2(-443, -2760)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud8" type="Sprite2D" parent="." unique_id=1547266802]
+z_index = -17
+position = Vector2(724, -3160)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud9" type="Sprite2D" parent="." unique_id=1619327787]
+z_index = -17
+position = Vector2(866, -2751)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud10" type="Sprite2D" parent="." unique_id=1732111318]
+z_index = -17
+position = Vector2(-508, -3215)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud11" type="Sprite2D" parent="." unique_id=469121949]
+z_index = -17
+position = Vector2(-1657, -2356)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud12" type="Sprite2D" parent="." unique_id=263028495]
+z_index = -17
+position = Vector2(-3118, -3082)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="SmallCloud2" type="Sprite2D" parent="." unique_id=788013829]
+z_index = -17
+position = Vector2(323, -1319)
+scale = Vector2(4, 4)
+texture = ExtResource("12_rfjv2")
+
+[node name="BackPalmTreeLeft01" type="Sprite2D" parent="." unique_id=1245507062]
+position = Vector2(-2222, -2694)
+texture = ExtResource("13_7nbq1")
+
+[node name="BackPalmTreeRegular04" type="Sprite2D" parent="." unique_id=1953229318]
+position = Vector2(-2851, -2803)
+texture = ExtResource("14_exi56")
+
+[node name="BackPalmTreeRegular05" type="Sprite2D" parent="." unique_id=1837620827]
+position = Vector2(-3815, -2924)
+texture = ExtResource("14_exi56")
+
+[node name="BackPalmTreeRegular01" type="Sprite2D" parent="." unique_id=235884819]
+position = Vector2(-4088, -3015)
+texture = ExtResource("15_7t8sx")
+
+[node name="BackPalmTreeRegular02" type="Sprite2D" parent="." unique_id=1648335779]
+position = Vector2(-3774, -2928)
+texture = ExtResource("15_7t8sx")
+
+[node name="BackPalmTreeRegular03" type="Sprite2D" parent="." unique_id=1996670239]
+position = Vector2(-1780, -2769)
+texture = ExtResource("15_7t8sx")
+
+[node name="FrontPalmTreeTop01" type="Sprite2D" parent="." unique_id=302724748]
+position = Vector2(-1502, -2817)
+texture = ExtResource("16_mg4q0")
+
+[node name="FrontPalmTreeTop02" type="Sprite2D" parent="." unique_id=473130366]
+position = Vector2(-1588, -2818)
+texture = ExtResource("17_vm72l")
+
+[node name="FrontPalmTreeTop04" type="Sprite2D" parent="." unique_id=1900545991]
+position = Vector2(-1006, -2689)
+texture = ExtResource("18_22asu")
+
+[node name="BackPalmTreeRight01" type="Sprite2D" parent="." unique_id=1153330898]
+position = Vector2(-952, -2622)
+texture = ExtResource("19_fkdbe")
+
+[node name="BackPalmTreeLeft02" type="Sprite2D" parent="." unique_id=534102364]
+position = Vector2(-172, -2414)
+texture = ExtResource("20_81klo")
+
+[node name="BackPalmTreeRight02" type="Sprite2D" parent="." unique_id=223457641]
+position = Vector2(1863, -2255)
+texture = ExtResource("19_fkdbe")
